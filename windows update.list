@@ -1,0 +1,12 @@
+# windows update
+DOMAIN-SUFFIX,http://windowsupdate.microsoft.com
+DOMAIN-SUFFIX,http://*.windowsupdate.microsoft.com
+DOMAIN-SUFFIX,https://*.windowsupdate.microsoft.com
+DOMAIN-SUFFIX,http://*.update.microsoft.com
+DOMAIN-SUFFIX,https://*.update.microsoft.com
+DOMAIN-SUFFIX,http://*.windowsupdate.com
+DOMAIN-SUFFIX,http://download.windowsupdate.com
+DOMAIN-SUFFIX,http://download.microsoft.com
+DOMAIN-SUFFIX,http://*.download.windowsupdate.com
+DOMAIN-SUFFIX,http://test.stats.update.microsoft.com
+DOMAIN-SUFFIX,http://ntservicepack.microsoft.com
