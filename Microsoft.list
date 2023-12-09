@@ -1,11 +1,13 @@
 # 微软DNS
-IP-CIDR,202.89.233.0/24,no-resolve
-IP-CIDR,40.93.133.0/24,no-resolve
+IP-CIDR,13.107.21.0/24,no-resolve
 IP-CIDR,20.24.249.0/24,no-resolve
 IP-CIDR,20.44.229.0/24,no-resolve
-IP-CIDR,52.109.52.0/24,no-resolve
-IP-CIDR,40.126.35.0/24,no-resolve
+IP-CIDR,20.54.24.0/24,no-resolve
+IP-CIDR,20.195.39.0/24,no-resolve
+IP-CIDR,20.197.71.0/24,no-resolve
 IP-CIDR,20.198.147.0/24,no-resolve
 IP-CIDR,20.205.240.0/24,no-resolve
-IP-CIDR,13.107.21.0/24,no-resolve
-IP-CIDR,20.195.39.0/24,no-resolve
+IP-CIDR,40.93.133.0/24,no-resolve
+IP-CIDR,40.126.35.0/24,no-resolve
+IP-CIDR,52.109.52.0/24,no-resolve
+IP-CIDR,202.89.233.0/24,no-resolve
