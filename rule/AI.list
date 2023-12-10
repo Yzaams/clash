@@ -1,5 +1,4 @@
 # AI工具
-DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,leonardo.ai
 DOMAIN-SUFFIX,fliki.ai
 DOMAIN-SUFFIX,genny.lovo.ai
@@ -13,11 +12,8 @@ DOMAIN-SUFFIX,getintopc.com
 DOMAIN-SUFFIX,dgb.lol
 DOMAIN-SUFFIX,character.ai
 DOMAIN-SUFFIX,api.maxai.me
-DOMAIN-KEYWORD,openai
 DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
-DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,featuregates.org
@@ -28,5 +24,4 @@ DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,pi.ai
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
-DOMAIN,bard.google.com
 DOMAIN,o33249.ingest.sentry.io
