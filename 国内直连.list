@@ -1,6 +1,7 @@
 # 360升级
 DOMAIN-SUFFIX,360safe.com
 DOMAIN-SUFFIX,360.cn
+
 # windows update
 DOMAIN,windowsupdate.microsoft.com
 DOMAIN-SUFFIX,windowsupdate.microsoft.com
@@ -13,6 +14,7 @@ DOMAIN,download.microsoft.com
 DOMAIN-SUFFIX,download.windowsupdate.com
 DOMAIN-SUFFIX,test.stats.update.microsoft.com
 DOMAIN-SUFFIX,ntservicepack.microsoft.com
+
 # 流媒体跳转
 DOMAIN-KEYWORD,555dyy
 DOMAIN-KEYWORD,555dy5s
