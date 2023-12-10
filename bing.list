@@ -56,7 +56,7 @@ IP-CIDR,23.57.224.0/19,no-resolve
 IP-CIDR,23.48.173.0/24,no-resolve
 IP-CIDR,2.23.16.0/20,no-resolve
 IP-CIDR,92.123.106.0/24,no-resolve
-IP-CIDR,	23.53.192.0/20,no-resolve
+IP-CIDR,23.53.192.0/20,no-resolve
 IP-CIDR,23.3.104.0/24,no-resolve
 IP-CIDR,23.193.97.0/24,no-resolve
 IP-CIDR,23.62.212.0/24,no-resolve
