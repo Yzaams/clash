@@ -1,0 +1,9 @@
+# Windows Update
+DOMAIN-SUFFIX,windowsupdate.microsoft.com
+DOMAIN-SUFFIX,update.microsoft.com
+DOMAIN-SUFFIX,windowsupdate.com
+DOMAIN-SUFFIX,download.windowsupdate.com
+DOMAIN-SUFFIX,download.microsoft.com
+DOMAIN-SUFFIX,download.windowsupdate.com
+DOMAIN-SUFFIX,test.stats.update.microsoft.com
+DOMAIN-SUFFIX,ntservicepack.microsoft.com
