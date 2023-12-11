@@ -15,4 +15,4 @@ DOMAIN-SUFFIX,cortana.ai
 DOMAIN-SUFFIX,windowssearch.com
 
 #IPS
-IP-CIDR,20.143.38.2,no-resolve
+IP-CIDR,20.143.38.0/24,no-resolve
