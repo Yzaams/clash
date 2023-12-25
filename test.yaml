@@ -1,13 +1,11 @@
 # 代理集合（获取机场订阅链接内的所有节点）
 proxy-providers:
-  🛫 我的机场 1:
+  🛫 守候网络:
     type: http
     # 机场订阅链接，使用 Clash 链接
-    url: "https://example.com/xxx/xxx&flag=clash"
-    path: ./proxies/airport1.yaml
+    url: "https://sub.xttlove.uk/api/v1/client/subscribe?token=f84e782e405679ad236af4eac8dbd349&flag=clash"
+    path: ./proxies/守候网络.yaml
     interval: 43200
-    # 初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
-    filter: "(?i)港|hk|hongkong|hong kong|台|tw|taiwan|日本|jp|japan|新|sg|singapore|美|us|unitedstates|united states"
     health-check:
       enable: true
       # 未选择到当前代理集合时，不会进行测试，有多个代理集合时可使用
@@ -15,176 +13,523 @@ proxy-providers:
       url: "https://www.gstatic.com/generate_204"
       interval: 600
 
-  🛫 我的机场 2:
+  🛫 MESL:
     type: http
-    url: "https://example.com/xxx/xxx&flag=clash"
-    path: ./proxies/airport2.yaml
+    url: "https://sb.meslcloud.com/api/v1/client/subscribe?token=a65a9e2fe747b64b7d5dbfe68fe7e460&flag=clash"
+    path: ./proxies/MESL.yaml
     interval: 43200
-    filter: "(?i)港|hk|hongkong|hong kong|台|tw|taiwan|日本|jp|japan|新|sg|singapore|美|us|unitedstates|united states"
     health-check:
       enable: true
       lazy: true
       url: "https://www.gstatic.com/generate_204"
       interval: 600
 
+  🛫 CTC:
+    type: http
+    url: "https://www.jinglongyu.com/api/v1/client/subscribe?token=471f73c9e34ccae3b616e4a29673b4a8&flag=clash"
+    path: ./proxies/CTC.yaml
+    interval: 43200
+    health-check:
+      enable: true
+      lazy: true
+      url: "https://www.gstatic.com/generate_204"
+      interval: 600
+      
 # 策略组
 proxy-groups:
-  # 手动选择国家或地区节点；根据“国家或地区策略组”名称对 `proxies` 值进行增删改，须一一对应
-  - {name: 🚀 节点选择, type: select, proxies: [🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点]}
+ - {name: 🚀 低倍节点, type: select, proxies: [🇭🇰 香港低倍, 🇹🇼 台湾低倍, 🇸🇬 狮城低倍, 🇯🇵 日本低倍, 🇺🇲 美国低倍, 🇰🇷 韩国低倍]}
+ - {name: 🚀 高级节点, type: select, proxies: [🇭🇰 香港高级, 🇹🇼 台湾高级, 🇸🇬 狮城高级, 🇯🇵 日本高级, 🇺🇲 美国高级, 🇰🇷 韩国高级]}
+ - {name: 🚀 手动切换, type: select, proxies: [*]} 
+ - {name: ⚛️ AI, type: select, proxies: [🇺🇲 美国高级, 🚀 高级节点, 🚀 手动切换]} 
+ - {name: 🛍️ GooglePlay, type: select, proxies: [🇭🇰 香港低倍, 🇹🇼 台湾低倍, 🇸🇬 狮城低倍, 🇯🇵 日本低倍, 🇺🇲 美国低倍, 🇰🇷 韩国低倍]} 
+ - {name: 📺 YouTube, type: select, proxies: [🇭🇰 香港低倍, 🇹🇼 台湾低倍, 🇸🇬 狮城低倍, 🇯🇵 日本低倍, 🇺🇲 美国低倍, 🇰🇷 韩国低倍]} 
+ - {name: 🌐 Google, type: select, proxies: [🇭🇰 香港高级, 🇹🇼 台湾高级, 🇸🇬 狮城高级, 🇯🇵 日本高级, 🇺🇲 美国高级, 🇰🇷 韩国高级]} 
+ - {name: ☁️ Onedrive, type: select, proxies: [🎯 全球直连, 🇺🇲 美国高级, 🚀 手动切换]} 
+ - {name: Ⓜ️ Microsoft, type: select, proxies: [🎯 全球直连, 🇺🇲 美国高级, 🚀 手动切换]} 
+ - {name: 🍎 Apple, type: select, proxies: [🎯 全球直连, 🇺🇲 美国高级, 🚀 手动切换]} 
+ - {name: 💳 Paypal, type: select, proxies: [🇺🇲 美国高级, 🚀 高级节点, 🚀 手动切换]} 
+ - {name: 🤝 Telegram, type: select, proxies: [🇸🇬 狮城低倍, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 🤝 Discord, type: select, proxies: [🇸🇬 狮城低倍, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 🤝 Facebook, type: select, proxies: [🇸🇬 狮城低倍, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 🤝 Twitter, type: select, proxies: [🇸🇬 狮城低倍, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 🎧 Shopify, type: select, proxies: [🇸🇬 狮城低倍, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 📺 TikTok, type: select, proxies: [🇸🇬 狮城低倍, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 📺 Netflix, type: select, proxies: [🇸🇬 狮城低倍, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 📺 Emby, type: select, proxies: [🌏 守候线路]} 
+ - {name: 🎮 Bahamut, type: select, proxies: [🇹🇼 台湾低倍, 🚀 手动切换]} 
+ - {name: 🎮 游戏加速, type: select, proxies: [🇭🇰 香港游戏, 🇹🇼 台湾游戏, 🇸🇬 狮城游戏, 🇯🇵 日本游戏, 🇺🇲 美国游戏, 🇰🇷 韩国游戏]}
+ - {name: 🎮 游戏下载, type: select, proxies: [🎯 全球直连, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 🎮 游戏平台, type: select, proxies: [🎯 全球直连, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 🌏 国外代理, type: select, proxies: [🌏 守候线路, 🚀 低倍节点, 🚀 手动切换]} 
+ - {name: 📵 Advertising, type: select, proxies: [REJECT, DIRECT]} 
+ - {name: 🚫 Reject, type: select, proxies: [REJECT, DIRECT]} 
+ - {name: 🎯 全球直连, type: select, proxies: [DIRECT]} 
+ - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 低倍节点, 🚀 高级节点, 🚀 手动切换]} 
+ 
+# ----------------国家或地区策略组---------------------
 
-  # 选择`🎯 全球直连`为测试本地网络（运营商网络速度和 IPv6 支持情况），可选择其它节点用于测试机场节点速度和 IPv6 支持情况
-  - {name: 📈 网络测试, type: select, proxies: [🎯 全球直连, 🇭🇰 香港节点, 🇹🇼 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇸 美国节点]}
+# timeout 超过时长判定超时（默认5s）
+# interval 测试间隔（默认86400s（24h）默认60s）
+# tolerance 超过差值才会切换（默认100ms）
 
-  # 若机场的 UDP 质量不是很好，导致某游戏无法登录或进入房间，可以添加 `disable-udp: true` 配置项解决
-  - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 节点选择, 🎯 全球直连]}
+# HK低倍
+- {name: 🇭🇰 守候低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(hk).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇭🇰 MESL低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(hk).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇭🇰 CTC低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(hk).*(0\.[1-9])|(0\.0[1-9])"}
 
-  - {name: 🔗 直连域名, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+# TW低倍
+- {name: 🇹🇼 守候低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(tw).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇹🇼 MESL低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(tw).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇹🇼 CTC低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(tw).*(0\.[1-9])|(0\.0[1-9])"}
 
-  - {name: 🪜 代理域名, type: select, proxies: [🚀 节点选择, 🎯 全球直连]}
+# SG低倍
+- {name: 🇸🇬 守候低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(sg).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇸🇬 MESL低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(sg).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇸🇬 CTC低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(sg).*(0\.[1-9])|(0\.0[1-9])"}
 
-  - {name: 🎮 游戏平台, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+# JP低倍
+- {name: 🇯🇵 守候低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(jp).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇯🇵 MESL低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(jp).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇯🇵 CTC低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(jp).*(0\.[1-9])|(0\.0[1-9])"}
 
-  - {name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+# US低倍
+- {name: 🇺🇲 守候低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(us).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇺🇲 MESL低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(us).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇺🇲 CTC低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(us).*(0\.[1-9])|(0\.0[1-9])"}
 
-  - {name: 📢 谷歌服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+# KR低倍
+- {name: 🇰🇷 守候低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(kr).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇰🇷 MESL低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(kr).*(0\.[1-9])|(0\.0[1-9])"}
+- {name: 🇰🇷 CTC低倍, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(kr).*(0\.[1-9])|(0\.0[1-9])"}
 
-  - {name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+# HK高级
+- {name: 🇭🇰 守候高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(hk).*(?i)([1-9]\d*x)"}
+- {name: 🇭🇰 MESL高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(hk).*(?i)([1-9]\d*x)"}
+- {name: 🇭🇰 CTC高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(hk).*(?i)([1-9]\d*x)"}
 
-  - {name: 🇨🇳 国内 IP, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+# TW高级
+- {name: 🇹🇼 守候高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(tw).*(?i)([1-9]\d*x)"}
+- {name: 🇹🇼 MESL高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(tw).*(?i)([1-9]\d*x)"}
+- {name: 🇹🇼 CTC高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(tw).*(?i)([1-9]\d*x)"}
 
-  - {name: 📲 电报消息, type: select, proxies: [🚀 节点选择]}
+# SG高级
+- {name: 🇸🇬 守候高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(sg).*(?i)([1-9]\d*x)"}
+- {name: 🇸🇬 MESL高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(sg).*(?i)([1-9]\d*x)"}
+- {name: 🇸🇬 CTC高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(sg).*(?i)([1-9]\d*x)"}
 
-  # 若使用 ShellClash，由于无法判断非本机进程，需删除此条`🖥️ 直连软件`
-  - {name: 🖥️ 直连软件, type: select, proxies: [🎯 全球直连]}
+# JP高级
+- {name: 🇯🇵 守候高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(jp).*(?i)([1-9]\d*x)"}
+- {name: 🇯🇵 MESL高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(jp).*(?i)([1-9]\d*x)"}
+- {name: 🇯🇵 CTC高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(jp).*(?i)([1-9]\d*x)"}
 
-  - {name: 🔒 私有网络, type: select, proxies: [🎯 全球直连]}
+# US高级
+- {name: 🇺🇲 守候高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(us).*(?i)([1-9]\d*x)"}
+- {name: 🇺🇲 MESL高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(us).*(?i)([1-9]\d*x)"}
+- {name: 🇺🇲 CTC高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(us).*(?i)([1-9]\d*x)"}
 
-  - {name: 🛑 广告拦截, type: select, proxies: [REJECT]}
+# KR高级
+- {name: 🇰🇷 守候高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 守候网络], filter: "(?i)(kr).*(?i)([1-9]\d*x)"}
+- {name: 🇰🇷 MESL高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL], filter: "(?i)(kr).*(?i)([1-9]\d*x)"}
+- {name: 🇰🇷 CTC高级, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 CTC], filter: "(?i)(kr).*(?i)([1-9]\d*x)"}
 
-  - {name: 🎯 全球直连, type: select, proxies: [DIRECT]}
 
-  # ----------------国家或地区策略组---------------------
+- {name: 🇭🇰 香港低倍, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇭🇰 守候低倍, 🇭🇰 MESL低倍, 🇭🇰 CTC低倍]"}
+- {name: 🇹🇼 台湾低倍, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇹🇼 守候低倍, 🇹🇼 MESL低倍, 🇹🇼 CTC低倍]"}
+- {name: 🇸🇬 狮城低倍, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇸🇬 守候低倍, 🇸🇬 MESL低倍, 🇸🇬 CTC低倍]"}
+- {name: 🇯🇵 日本低倍, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇯🇵 守候低倍, 🇯🇵 MESL低倍, 🇯🇵 CTC低倍]"}
+- {name: 🇺🇲 美国低倍, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇺🇲 守候低倍, 🇺🇲 MESL低倍, 🇺🇲 CTC低倍]"}
+- {name: 🇰🇷 韩国低倍, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇰🇷 守候低倍, 🇰🇷 MESL低倍, 🇰🇷 CTC低倍]"}
 
-  # 自动选择节点，即按照 url 测试结果使用延迟最低的节点；测试后容差大于 100ms 才会切换到延迟低的那个节点；未选择到当前策略组时不会进行延迟测试；筛选出“香港”节点，支持正则表达式
-  - {name: 🇭🇰 香港节点, type: url-test, tolerance: 100, lazy: true, use: [🛫 我的机场 1, 🛫 我的机场 2], filter: "(?i)港|hk|hongkong|hong kong"}
+- {name: 🇭🇰 香港高级, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇭🇰 MESL高级, 🇭🇰 CTC高级, 🇭🇰 守候高级]"}
+- {name: 🇹🇼 台湾高级, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇹🇼 MESL高级, 🇹🇼 CTC高级, 🇹🇼 守候高级]"}
+- {name: 🇸🇬 狮城高级, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇸🇬 MESL高级, 🇸🇬 CTC高级, 🇸🇬 守候高级]"}
+- {name: 🇯🇵 日本高级, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇯🇵 MESL高级, 🇯🇵 CTC高级, 🇯🇵 守候高级]"}
+- {name: 🇺🇲 美国高级, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇺🇲 MESL高级, 🇺🇲 CTC高级, 🇺🇲 守候高级]"}
+- {name: 🇰🇷 韩国高级, type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, lazy: true, use: [🇰🇷 MESL高级, 🇰🇷 CTC高级, 🇰🇷 守候高级]"}
 
-  # 节点负载均衡，即将请求均匀分配到多个节点上，优点是更稳定，速度可能有提升；将相同顶级域名的请求分配给策略组内的同一个代理节点；推荐在节点复用比较多的情况下使用
-  - {name: 🇹🇼 台湾节点, type: load-balance, strategy: consistent-hashing, lazy: true, use: [🛫 我的机场 1, 🛫 我的机场 2], filter: "(?i)台|tw|taiwan"}
+- {name: 🇭🇰 香港游戏, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL, 🛫 CTC, 🛫 守候网络], filter: "(?i)(hk).*(?i)(udpn)"}
+- {name: 🇹🇼 台湾游戏, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL, 🛫 CTC, 🛫 守候网络], filter: "(?i)(tw).*(?i)(udpn)"}
+- {name: 🇸🇬 狮城游戏, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL, 🛫 CTC, 🛫 守候网络], filter: "(?i)(sg).*(?i)(udpn)"}
+- {name: 🇯🇵 日本游戏, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL, 🛫 CTC, 🛫 守候网络], filter: "(?i)(jp).*(?i)(udpn)"}
+- {name: 🇺🇲 美国游戏, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL, 🛫 CTC, 🛫 守候网络], filter: "(?i)(us).*(?i)(udpn)"}
+- {name: 🇰🇷 韩国游戏, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 100, lazy: true, use: [🛫 MESL, 🛫 CTC, 🛫 守候网络], filter: "(?i)(kr).*(?i)(udpn)"}
 
-  - {name: 🇯🇵 日本节点, type: url-test, tolerance: 100, lazy: true, use: [🛫 我的机场 1, 🛫 我的机场 2], filter: "(?i)日本|jp|japan"}
-
-  - {name: 🇸🇬 新加坡节点, type: url-test, tolerance: 100, lazy: true, use: [🛫 我的机场 1, 🛫 我的机场 2], filter: "(?i)新|sg|singapore"}
-
-  - {name: 🇺🇸 美国节点, type: url-test, tolerance: 100, lazy: true, use: [🛫 我的机场 1, 🛫 我的机场 2], filter: "(?i)美|us|unitedstates|united states"}
+- {name: 🌏 守候线路, type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 60, timeout: 5, tolerance: 20, lazy: true, use: [🛫 守候网络], filter: "(?i)(hk|tw|sg|jp).*(0\.[1-9])|(0\.0[1-9])"}"}
 
 # 规则集（yaml 文件每天自动更新）
 rule-providers:
-  ads:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/ads.yaml"
-    path: ./ruleset/ads.yaml
-    interval: 86400
-
-  private:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/private.yaml"
-    path: ./ruleset/private.yaml
-    interval: 86400
-
-  microsoft-cn:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/microsoft-cn.yaml"
-    path: ./ruleset/microsoft-cn.yaml
-    interval: 86400
-
-  apple-cn:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/apple-cn.yaml"
-    path: ./ruleset/apple-cn.yaml
-    interval: 86400
-
-  google-cn:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/google-cn.yaml"
-    path: ./ruleset/google-cn.yaml
-    interval: 86400
-
-  games-cn:
-    type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/games-cn.yaml"
-    path: ./ruleset/games-cn.yaml
-    interval: 86400
-
-  networktest:
+# 本地网络
+  LocalAreaNetwork:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/networktest.yaml"
-    path: ./ruleset/networktest.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
+    path: ./ruleset/LocalAreaNetwork.yaml
     interval: 86400
 
-  # 若使用 ShellClash，由于无法判断非本机进程，需删除此条 `applications`
-  applications:
+# 特殊
+  UnBan:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/applications.yaml"
-    path: ./ruleset/applications.yaml
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
+    path: ./ruleset/UnBan.yaml
     interval: 86400
 
-  proxy:
+# 360
+  360:
     type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/proxy.yaml"
-    path: ./ruleset/proxy.yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/360/360.yaml"
+    path: ./ruleset/360.yaml
+    interval: 86400
+    
+# 自定义直连
+  国内代理:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E5%9B%BD%E5%86%85%E4%BB%A3%E7%90%86.yaml"
+    path: ./ruleset/国内代理.yaml
     interval: 86400
 
-  cn:
+  国内下载:
     type: http
-    behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/cn.yaml"
-    path: ./ruleset/cn.yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Download.yaml"
+    path: ./ruleset/国内下载.yaml
     interval: 86400
 
-  telegramip:
+  国内媒体:
     type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/telegramip.yaml"
-    path: ./ruleset/telegramip.yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaMedia.yaml"
+    path: ./ruleset/ChinaMedia.yaml
     interval: 86400
 
-  privateip:
+  游戏加速:
     type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/privateip.yaml"
-    path: ./ruleset/privateip.yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E6%B8%B8%E6%88%8F%E5%8A%A0%E9%80%9F.yaml"
+    path: ./ruleset/游戏加速.yaml
+    interval: 86400
+       
+# BAN广告关键字/广告联盟
+  BanAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
+    path: ./ruleset/BanAD.yaml
     interval: 86400
 
-  cnip:
+# AdblockPlus
+  BanEasyList:
     type: http
-    behavior: ipcidr
-    url: "https://cdn.jsdelivr.net/gh/DustinWin/clash-ruleset@release/cnip.yaml"
-    path: ./ruleset/cnip.yaml
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyList.yaml"
+    path: ./ruleset/BanEasyList.yaml
     interval: 86400
+
+# 常用软件广告
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    path: ./ruleset/BanProgramAD.yaml
+    interval: 86400
+
+  Bing:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bing.yaml"
+    path: ./ruleset/Bing.yaml
+    interval: 86400
+
+  OPENAI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./ruleset/OPENAI.yaml
+    interval: 86400
+
+  Claude:
+    type: http
+    behavior: classical
+    url: "https://https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
+    path: ./ruleset/Claude.yaml
+    interval: 86400
+
+  Notion:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion.yaml"
+    path: ./ruleset/Notion.yaml
+    interval: 86400
+
+# 自用AI
+  AI合集:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/AI%E5%90%88%E9%9B%86.yaml"
+    path: ./ruleset/AI合集.yaml
+    interval: 86400
+
+# 谷歌商店添加规则
+  GooglePlaymy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/Googleplay.yaml"
+    path: ./ruleset/GooglePlay.yaml
+    interval: 86400
+
+# ACL4SSR 谷歌商店IP
+  GooglePlay:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCNProxyIP.yaml"
+    path: ./ruleset/GooglePlay.yaml
+    interval: 86400
+
+  YouTube:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml"
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTubeMusic.yaml"
+    path: ./ruleset/YouTubeMusic.yaml
+    interval: 86400
+
+  Google:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Google.yaml"
+    path: ./ruleset/Google.yaml
+    interval: 86400
+ 
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCN.yaml"
+    path: ./ruleset/GoogleCN.yaml
+    interval: 86400
+
+  GoogleEarth:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleEarth.yaml"
+    path: ./ruleset/GoogleEarth.yaml
+    interval: 86400
+
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml"
+    path: ./ruleset/GoogleFCM.yaml
+    interval: 86400
+
+  OneDrive:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OneDrive.yaml"
+    path: ./ruleset/OneDrive.yaml
+    interval: 86400
+
+  Microsoft:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+
+  Apple:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml"
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+
+  PayPal:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml"
+    path: ./ruleset/PayPal.yaml
+    interval: 86400
+
+  Telegram:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+
+  Discord:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml"
+    path: ./ruleset/Discord.yaml
+    interval: 86400
+
+  Facebook:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml"
+    path: ./ruleset/Facebook.yaml
+    interval: 86400
+
+  Twitter:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
+    path: ./ruleset/Twitter.yaml
+    interval: 86400
+
+  Shopify:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Shopify/Shopify.yaml"
+    path: ./ruleset/Shopify.yaml
+    interval: 86400
+
+  TikTok:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml"
+    path: ./ruleset/TikTok.yaml
+    interval: 86400
+    
+  Netflix:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical.yaml"
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+
+  Bahamut:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml"
+    path: ./ruleset/Bahamut.yaml
+    interval: 86400  
+    
+  Emby:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml"
+    path: ./ruleset/Emby.yaml
+    interval: 86400
+    
+  机场Emby:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E6%9C%BA%E5%9C%BAEmby.yaml"
+    path: ./ruleset/机场Emby.yaml
+    interval: 86400
+
+  GameDownload:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.yaml"
+    path: ./ruleset/GameDownload.yaml
+    interval: 86400
+
+   GameDownloadCN:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml"
+    path: ./ruleset/GameDownloadCN.yaml
+    interval: 86400
+
+  游戏平台:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml"
+    path: ./ruleset/游戏平台.yaml
+    interval: 86400
+    
+  国外代理:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
+    path: ./ruleset/国外代理.yaml
+    interval: 86400
+
+  国外媒体:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml"
+    path: ./ruleset/国外媒体.yaml
+    interval: 86400
+
+  ChinaIp:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml"
+    path: ./ruleset/ChinaIp.yaml
+    interval: 86400
+
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml"
+    path: ./ruleset/ChinaDomain.yaml
+    interval: 86400
+
+  国内公司:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml"
+    path: ./ruleset/国内公司.yaml
+    interval: 86400    
 
 # 规则
 rules:
-  - RULE-SET,ads,🛑 广告拦截
-  - RULE-SET,private,🔒 私有网络
-  - RULE-SET,microsoft-cn,Ⓜ️ 微软服务
-  - RULE-SET,apple-cn,🍎 苹果服务
-  - RULE-SET,google-cn,📢 谷歌服务
-  - RULE-SET,games-cn,🎮 游戏平台
-  - RULE-SET,networktest,📈 网络测试
-  # 若使用 ShellClash，由于无法判断非本机进程，需删除此条 `RULE-SET`
-  - RULE-SET,applications,🖥️ 直连软件
-  - RULE-SET,proxy,🪜 代理域名
-  - RULE-SET,cn,🔗 直连域名
-  - RULE-SET,telegramip,📲 电报消息
-  - RULE-SET,privateip,🔒 私有网络,no-resolve
-  - RULE-SET,cnip,🇨🇳 国内 IP
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,UnBan,🎯 全球直连
+  - RULE-SET,360,🎯 全球直连
+  - RULE-SET,国内代理,🎯 全球直连
+  - RULE-SET,国内下载,🎯 全球直连
+  - RULE-SET,国内媒体,🎯 全球直连
+  - RULE-SET,BanAD,📵 Advertising
+  - RULE-SET,BanEasyList,📵 Advertising
+  - RULE-SET,BanProgramAD,🚫 Reject
+  - RULE-SET,Bing,⚛️ AI
+  - RULE-SET,OPENAI,⚛️ AI
+  - RULE-SET,Claude,⚛️ AI
+  - RULE-SET,Notion,⚛️ AI
+  - RULE-SET,AI合集,⚛️ AI
+  - RULE-SET,GooglePlaymy,🛍️ GooglePlay
+  - RULE-SET,GooglePlay,🛍️ GooglePlay
+  - RULE-SET,YouTube,📺 YouTube
+  - RULE-SET,YouTubeMusic,📺 YouTube
+  - RULE-SET,Google,🌐 Google
+  - RULE-SET,GoogleCN,🌐 Google
+  - RULE-SET,GoogleEarth,🌐 Google
+  - RULE-SET,GoogleFCM,🌐 Google
+  - RULE-SET,OneDrive,☁️ Onedrive
+  - RULE-SET,Microsoft,Ⓜ️ Microsoft
+  - RULE-SET,Apple,🍎 Apple
+  - RULE-SET,Paypal,💳 Paypal
+  - RULE-SET,Telegram,🤝 Telegram
+  - RULE-SET,Discord,🤝 Discord
+  - RULE-SET,Facebook,🤝 Facebook
+  - RULE-SET,Twitter,🤝 Twitter
+  - RULE-SET,Shopify,🎧 Shopify
+  - RULE-SET,TikTok,📺 TikTok
+  - RULE-SET,Netflix,📺 Netflix
+  - RULE-SET,Emby,📺 Emby
+  - RULE-SET,机场Emby,📺 Emby
+  - RULE-SET,Bahamut,🎮 Bahamut
+  - RULE-SET,游戏加速,🎮 游戏加速
+  - RULE-SET,GameDownload,🎮 游戏下载
+  - RULE-SET,GameDownloadCN,🎮 游戏下载
+  - RULE-SET,游戏平台,🎮 游戏平台
+  - RULE-SET,国外代理,🌏 国外代理
+  - RULE-SET,国外媒体,🌏 国外代理
+  - RULE-SET,ChinaIp,🎯 全球直连
+  - RULE-SET,ChinaDomain,🎯 全球直连
+  - RULE-SET, 国内公司,🎯 全球直连
+  - RULE-SET,Lan_rule,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
