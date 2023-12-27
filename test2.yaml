@@ -745,7 +745,7 @@ proxy-groups:
     use:
       - 🛫 守候网络
     filter:
-      - "(?i)hk.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)hk.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -758,7 +758,7 @@ proxy-groups:
     use:
       - 🛫 MESL
     filter:
-      - "(?i)hk.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)hk.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -771,7 +771,7 @@ proxy-groups:
     use:
       - 🛫 CTC
     filter:
-      - "(?i)hk.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)hk.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -785,7 +785,7 @@ proxy-groups:
     use:
       - 🛫 守候网络
     filter:
-      - "(?i)tw.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)tw.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -798,7 +798,7 @@ proxy-groups:
     use:
       - 🛫 MESL
     filter:
-      - "(?i)tw.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)tw.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -811,7 +811,7 @@ proxy-groups:
     use:
       - 🛫 CTC
     filter:
-      - "(?i)tw.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)tw.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -825,7 +825,7 @@ proxy-groups:
     use:
       - 🛫 守候网络
     filter:
-      - "(?i)sg.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)sg.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -838,7 +838,7 @@ proxy-groups:
     use:
       - 🛫 MESL
     filter:
-      - "(?i)sg.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)sg.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -851,7 +851,7 @@ proxy-groups:
     use:
       - 🛫 CTC
     filter:
-      - "(?i)sg.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)sg.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -865,7 +865,7 @@ proxy-groups:
     use:
       - 🛫 守候网络
     filter:
-      - "(?i)jp.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)jp.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -878,7 +878,7 @@ proxy-groups:
     use:
       - 🛫 MESL
     filter:
-      - "(?i)jp.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)jp.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -891,7 +891,7 @@ proxy-groups:
     use:
       - 🛫 CTC
     filter:
-      - "(?i)jp.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)jp.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -905,7 +905,7 @@ proxy-groups:
     use:
       - 🛫 守候网络
     filter:
-      - "(?i)us.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)us.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -918,7 +918,7 @@ proxy-groups:
     use:
       - 🛫 MESL
     filter:
-      - "(?i)us.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)us.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -931,7 +931,7 @@ proxy-groups:
     use:
       - 🛫 CTC
     filter:
-    - "(?i)us.*((0\.[1-9])|(0\.0[1-9]))"
+    - "(?i)us.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -945,7 +945,7 @@ proxy-groups:
     use:
       - 🛫 守候网络
     filter:
-      - "(?i)kr.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)kr.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -958,7 +958,7 @@ proxy-groups:
     use:
       - 🛫 MESL
     filter:
-      - "(?i)kr.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)kr.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -971,7 +971,7 @@ proxy-groups:
     use:
       - 🛫 CTC
     filter:
-      - "(?i)kr.*((0\.[1-9])|(0\.0[1-9]))"
+      - "(?i)kr.*(?i)[1-9]\d*X"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
