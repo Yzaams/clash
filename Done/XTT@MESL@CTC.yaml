@@ -202,9 +202,8 @@ proxy-groups:
   - name: "📺 Emby"
     type: fallback
     proxies:
-      - 🌏 守候低倍
-      - 🌏 MESL低倍
-      - 🌏 CTC低倍
+      - 🌏 守候线路
+      - 🚀 低倍节点
 
   - name: "🎮 Bahamut"
     type: select
@@ -222,7 +221,6 @@ proxy-groups:
       - 🇺🇲 美国游戏
       - 🇰🇷 韩国游戏
       - 🚀 手动切换
-
 
   - name: "🎮 游戏下载"
     type: select
@@ -934,34 +932,10 @@ proxy-groups:
     tolerance: 100
     lazy: true
 
-  - name: "🌏 守候低倍"
+  - name: "🌏 守候线路"
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 100
-    lazy: true
-
-  - name: "🌏 MESL低倍"
-    type: url-test
-    use:
-      - 🛫 MESL
-    filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 100
-    lazy: true
-
-  - name: "🌏 CTC低倍"
-    type: url-test
-    use:
-      - 🛫 CTC
     filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
     health-check:
     enable: true
