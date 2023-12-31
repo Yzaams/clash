@@ -27,7 +27,7 @@ ipv6: false
 proxy-providers:
   🛫 守候网络:
     type: http
-    url: "https://sub.xttlove.uk/api/v1/client/subscribe?token=c58d7603282828bebaea3d510f4f7f8c&flag=clash"
+    url: "https://sub.xttlove.uk/api/v1/client/subscribe?token=3c49d87dba5b906c143a8e63b0a8b18b&flag=clash"
     interval: 172800
     path: ./守候网络.yaml
     health-check:
@@ -38,7 +38,7 @@ proxy-providers:
       
   🛫 MESL:
     type: http
-    url: "https://sb.meslcloud.com/api/v1/client/subscribe?token=a65a9e2fe747b64b7d5dbfe68fe7e460&flag=clash"
+    url: "https://sb.meslcloud.com/api/v1/client/subscribe?token=2fa90227408233c58efae1ced10c9e41&flag=clash"
     interval: 172800
     path: ./MESL.yaml
     health-check:
@@ -49,7 +49,7 @@ proxy-providers:
 
   🛫 CTC:
     type: http
-    url: "https://www.jinglongyu.com/api/v1/client/subscribe?token=471f73c9e34ccae3b616e4a29673b4a8&flag=clash"
+    url: "https://www.jinglongyu.com/api/v1/client/subscribe?token=25c29730bdfa76fc0edcd87439eaa101&flag=clash"
     interval: 172800
     path: ./CTC.yaml
     health-check:
