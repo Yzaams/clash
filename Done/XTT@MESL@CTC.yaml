@@ -200,9 +200,11 @@ proxy-groups:
       - 🚀 手动切换
 
   - name: "📺 Emby"
-    type: select
+    type: fallback
     proxies:
-      - 🌏 守候线路
+      - 🌏 守候低倍
+      - 🌏 MESL低倍
+      - 🌏 CTC低倍
 
   - name: "🎮 Bahamut"
     type: select
@@ -219,6 +221,8 @@ proxy-groups:
       - 🇯🇵 日本游戏
       - 🇺🇲 美国游戏
       - 🇰🇷 韩国游戏
+      - 🚀 手动切换
+
 
   - name: "🎮 游戏下载"
     type: select
@@ -245,8 +249,8 @@ proxy-groups:
   - name: "🌏 国外代理"
     type: select
     proxies:
-      - 🌏 守候线路
       - 🚀 低倍节点
+      - 🚀 高级节点
       - 🚀 手动切换
 
   - name: "📵 广告拦截"
@@ -269,7 +273,6 @@ proxy-groups:
   - name: "🐟 漏网之鱼"
     type: select
     proxies:
-      - 🌏 守候线路
       - 🚀 低倍节点
       - 🚀 高级节点
       - 🚀 手动切换
@@ -714,7 +717,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(HK)(?!.*(0.[1-9]))"
+    filter: "(HK).*((?i)[2-9]x)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -751,7 +754,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(TW)(?!.*(0.[1-9]))"
+    filter: "(TW).*((?i)[2-9]x)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -788,7 +791,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(SG)(?!.*(0.[1-9]))"
+    filter: "(SG).*((?i)[2-9]x)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -825,7 +828,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(JP)(?!.*(0.[1-9]))"
+    filter: "(JP).*((?i)[2-9]x)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -862,7 +865,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(US)(?!.*(0.[1-9]))"
+    filter: "(US).*((?i)[2-9]x)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -899,7 +902,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(KR)(?!.*(0.[1-9]))"
+    filter: "(KR).*((?i)[2-9]x)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -931,10 +934,34 @@ proxy-groups:
     tolerance: 100
     lazy: true
 
-  - name: "🌏 守候线路"
+  - name: "🌏 守候低倍"
     type: url-test
     use:
       - 🛫 守候网络
+    filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+
+  - name: "🌏 MESL低倍"
+    type: url-test
+    use:
+      - 🛫 MESL
+    filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+
+  - name: "🌏 CTC低倍"
+    type: url-test
+    use:
+      - 🛫 CTC
     filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
     health-check:
     enable: true
