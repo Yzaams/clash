@@ -27,7 +27,7 @@ ipv6: false
 proxy-providers:
   🛫 守候网络:
     type: http
-    url: "https://sub.xttlove.uk/api/v1/client/subscribe?token=f84e782e405679ad236af4eac8dbd349&flag=clash"
+    url: "https://sub.xttlove.uk/api/v1/client/subscribe?token=c58d7603282828bebaea3d510f4f7f8c&flag=clash"
     interval: 172800
     path: ./守候网络.yaml
     health-check:
