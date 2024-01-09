@@ -411,7 +411,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇹🇼 台湾游戏"
@@ -425,7 +425,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇸🇬 狮城游戏"
@@ -439,7 +439,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇯🇵 日本游戏"
@@ -453,7 +453,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇺🇲 美国游戏"
@@ -467,7 +467,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇰🇷 韩国游戏"
@@ -481,7 +481,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 倍率地区分组
@@ -495,7 +495,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇭🇰 MESL低倍"
@@ -507,7 +507,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇭🇰 CTC低倍"
@@ -519,7 +519,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 台湾低倍
@@ -532,7 +532,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇹🇼 MESL低倍"
@@ -544,7 +544,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇹🇼 CTC低倍"
@@ -556,7 +556,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 狮城低倍
@@ -569,7 +569,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇸🇬 MESL低倍"
@@ -581,7 +581,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇸🇬 CTC低倍"
@@ -593,7 +593,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 日本低倍
@@ -606,7 +606,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇯🇵 MESL低倍"
@@ -618,7 +618,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇯🇵 CTC低倍"
@@ -630,7 +630,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 美国低倍
@@ -643,7 +643,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇺🇲 MESL低倍"
@@ -655,7 +655,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇺🇲 CTC低倍"
@@ -667,7 +667,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 韩国低倍
@@ -680,7 +680,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇰🇷 MESL低倍"
@@ -692,7 +692,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇰🇷 CTC低倍"
@@ -704,7 +704,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 香港高级
@@ -717,7 +717,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇭🇰 MESL高级"
@@ -729,7 +729,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇭🇰 CTC高级"
@@ -741,7 +741,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 台湾高级
@@ -754,7 +754,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇹🇼 MESL高级"
@@ -766,7 +766,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇹🇼 CTC高级"
@@ -778,7 +778,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 狮城高级
@@ -791,7 +791,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇸🇬 MESL高级"
@@ -803,7 +803,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇸🇬 CTC高级"
@@ -815,7 +815,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 日本高级
@@ -828,7 +828,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇯🇵 MESL高级"
@@ -840,7 +840,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇯🇵 CTC高级"
@@ -852,7 +852,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 美国高级
@@ -865,7 +865,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇺🇲 MESL高级"
@@ -877,7 +877,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇺🇲 CTC高级"
@@ -889,7 +889,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 # 韩国高级
@@ -902,7 +902,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇰🇷 MESL高级"
@@ -914,7 +914,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🇰🇷 CTC高级"
@@ -926,7 +926,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
   - name: "🌏 守候线路"
@@ -938,7 +938,7 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
+    tolerance: 50
     lazy: true
 
 rule-providers:
