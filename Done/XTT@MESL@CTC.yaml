@@ -24,7 +24,7 @@ clash-for-android:
 proxy-providers:
   🛫 守候网络:
     type: http
-    url: "https://sub.xttlove.uk/api/v1/client/subscribe?token=b90f432200313aaf864285ec5f801a45"
+    url: "https://sub.xttlove.uk/api/v1/client/subscribe?token=5569ef6b224ea1623d34f18cf9b837ef"
     interval: 172800
     path: ./守候网络.yaml
     health-check:
@@ -35,7 +35,7 @@ proxy-providers:
       
   🛫 MESL:
     type: http
-    url: "https://gixs.org/api/v1/client/subscribe?token=5d2ffa4f89d1e9c845c61c16af7d3291"
+    url: "https://gixs.org/api/v1/client/subscribe?token=8cc8461467ba343a945b081553938fcb"
     interval: 172800
     path: ./MESL.yaml
     health-check:
@@ -46,7 +46,7 @@ proxy-providers:
 
   🛫 CTC:
     type: http
-    url: "https://www.jinglongyu.com/api/v1/client/subscribe?token=efb2155ccb940beee1e43d0cc3766f53"
+    url: "https://38.47.221.60:10000/api/v1/client/subscribe?token=abbde927cc38aea924a00dfa6594bca6"
     interval: 172800
     path: ./CTC.yaml
     health-check:
