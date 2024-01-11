@@ -95,6 +95,7 @@ proxy-groups:
       - 🛫 守候网络
       - 🛫 MESL
       - 🛫 CTC
+      - 🛫 ETON
 
   - name: "⚛️ AI"
     type: select
