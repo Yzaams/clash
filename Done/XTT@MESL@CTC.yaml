@@ -55,6 +55,17 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
+  🛫 ETON:
+    type: http
+    url: "https://one.eton.one/api/v1/client/subscribe?token=5f3dbbf8b13bfd2d5925563332d01d62"
+    interval: 172800
+    path: ./ETON.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
 # 规则分组
 # 引用proxy-providers用use，其他proxies
 proxy-groups:
@@ -406,7 +417,8 @@ proxy-groups:
       - 🛫 MESL
       - 🛫 CTC
       - 🛫 守候网络
-    filter: "(HK).*((?i)(udpn))"
+      - 🛫 ETON
+    filter: "(HK).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -420,7 +432,8 @@ proxy-groups:
       - 🛫 MESL
       - 🛫 CTC
       - 🛫 守候网络
-    filter: "(TW).*((?i)(udpn))"
+      - 🛫 ETON
+    filter: "(TW).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -434,7 +447,8 @@ proxy-groups:
       - 🛫 MESL
       - 🛫 CTC
       - 🛫 守候网络
-    filter: "(SG).*((?i)(udpn))"
+      - 🛫 ETON
+    filter: "(SG).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -448,7 +462,8 @@ proxy-groups:
       - 🛫 MESL
       - 🛫 CTC
       - 🛫 守候网络
-    filter: "(JP).*((?i)(udpn))"
+      - 🛫 ETON
+    filter: "(JP).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -462,7 +477,8 @@ proxy-groups:
       - 🛫 MESL
       - 🛫 CTC
       - 🛫 守候网络
-    filter: "(US).*((?i)(udpn))"
+      - 🛫 ETON
+    filter: "(US).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -476,7 +492,8 @@ proxy-groups:
       - 🛫 MESL
       - 🛫 CTC
       - 🛫 守候网络
-    filter: "(KR).*((?i)(udpn))"
+      - 🛫 ETON
+    filter: "(KR).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
