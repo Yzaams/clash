@@ -419,7 +419,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 守候网络
       - 🛫 ETON
-    filter: "(HK).*((?i)(game))"
+    filter: "(HK).*((?i)(game|iplc|iepl|udpn))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -434,7 +434,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 守候网络
       - 🛫 ETON
-    filter: "(TW).*((?i)(game))"
+    filter: "(TW).*((?i)(game|iplc|iepl|udpn))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -449,7 +449,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 守候网络
       - 🛫 ETON
-    filter: "(SG).*((?i)(game))"
+    filter: "(SG).*((?i)(game|iplc|iepl|udpn))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -464,7 +464,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 守候网络
       - 🛫 ETON
-    filter: "(JP).*((?i)(game))"
+    filter: "(JP).*((?i)(game|iplc|iepl|udpn))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -479,7 +479,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 守候网络
       - 🛫 ETON
-    filter: "(US).*((?i)(game))"
+    filter: "(US).*((?i)(game|iplc|iepl|udpn))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -494,7 +494,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 守候网络
       - 🛫 ETON
-    filter: "(KR).*((?i)(game))"
+    filter: "(KR).*((?i)(game|iplc|iepl|udpn))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
