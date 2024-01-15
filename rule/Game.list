@@ -1,7 +1,6 @@
 # 魔兽大作战
 DOMAIN-SUFFIX,braze.com
-DOMAIN-SUFFIX,api.blizzard.com
-DOMAIN-SUFFIX,gdp.blizzard.com
+DOMAIN-SUFFIX,blizzard.com
 DOMAIN-SUFFIX,battle.net
 DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,backtrace.io
