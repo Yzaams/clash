@@ -730,7 +730,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(HK).*((?i)[2-9]x)"
+    filter: "(HK).*((?i)[2-9]+x)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
