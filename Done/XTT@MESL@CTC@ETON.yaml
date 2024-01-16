@@ -730,7 +730,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(\b(HK)\b).*([1-9]\d*(\.\d+)?X)"
+    filter: "(HK)(?!.*(0.[1-9]))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -767,7 +767,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(TW).*((?i)[2-9]x)"
+    filter: "(TW)(?!.*(0.[1-9]))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -804,7 +804,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(SG).*((?i)[2-9]x)"
+    filter: "(SG)(?!.*(0.[1-9]))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -841,7 +841,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(JP).*((?i)[2-9]x)"
+    filter: "(JP)(?!.*(0.[1-9]))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -878,7 +878,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(US).*((?i)[2-9]x)"
+    filter: "(US)(?!.*(0.[1-9]))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -915,7 +915,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(KR).*((?i)[2-9]x)"
+    filter: "(KR)(?!.*(0.[1-9]))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
