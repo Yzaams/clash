@@ -218,6 +218,7 @@ proxy-groups:
   - name: "📺 Emby"
     type: fallback
     proxies:
+      - 🎯 全球直连
       - 🌏 守候线路
       - 🚀 低倍节点
 
