@@ -35,7 +35,7 @@ proxy-providers:
       
   🛫 MESL:
     type: http
-    url: "https://gixs.org/api/v1/client/subscribe?token=7211d952fc7fba3de25bd88700c15bd9"
+    url: "https://msub.go-d.cn/api/v1/client/subscribe?token=7211d952fc7fba3de25bd88700c15bd9"
     interval: 172800
     path: ./MESL.yaml
     health-check:
@@ -57,7 +57,7 @@ proxy-providers:
 
   🛫 ETON:
     type: http
-    url: "https://one.eton.one/api/v1/client/subscribe?token=5f3dbbf8b13bfd2d5925563332d01d62"
+    url: "https://sub2024.eton.one/api/v1/client/subscribe?token=5f3dbbf8b13bfd2d5925563332d01d62"
     interval: 172800
     path: ./ETON.yaml
     health-check:
