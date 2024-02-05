@@ -55,6 +55,17 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
+  🛫 Ayanami:
+    type: http
+    url: "https://url.ayanami-subscribe-url.online/api/v1/client/subscribe?token=5c4b4b7f11de82fa32aeb5a7493ca75b"
+    interval: 172800
+    path: ./Ayanami.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
   🛫 ETON:
     type: http
     url: "https://sub2024.eton.one/api/v1/client/subscribe?token=5f3dbbf8b13bfd2d5925563332d01d62"
@@ -424,9 +435,10 @@ proxy-groups:
   - name: "🇭🇰 香港游戏"
     type: url-test
     use:
+      - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(HK).*((?i)(game|3X))"
+    filter: "(HK).*((?i)(game|1X|3X|IPCL))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -437,9 +449,10 @@ proxy-groups:
   - name: "🇹🇼 台湾游戏"
     type: url-test
     use:
+      - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(TW).*((?i)(game|3X))"
+    filter: "(TW).*((?i)(game|1X|3X|IPCL))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -450,9 +463,10 @@ proxy-groups:
   - name: "🇸🇬 狮城游戏"
     type: url-test
     use:
+      - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(SG).*((?i)(game|3X))"
+    filter: "(SG).*((?i)(game|1X|3X|IPCL))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -463,9 +477,10 @@ proxy-groups:
   - name: "🇯🇵 日本游戏"
     type: url-test
     use:
+      - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(JP).*((?i)(game|3X))"
+    filter: "(JP).*((?i)(game|1X|3X|IPCL))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -476,9 +491,10 @@ proxy-groups:
   - name: "🇺🇲 美国游戏"
     type: url-test
     use:
+      - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(US).*((?i)(game|3X))"
+    filter: "(US).*((?i)(game|1X|3X|IPCL))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -489,9 +505,10 @@ proxy-groups:
   - name: "🇰🇷 韩国游戏"
     type: url-test
     use:
+      - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(KR).*((?i)(game|3X))"
+    filter: "(KR).*((?i)(game|1X|3X|IPCL))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
