@@ -106,6 +106,7 @@ proxy-groups:
       - 🛫 守候网络
       - 🛫 MESL
       - 🛫 CTC
+      - 🛫 Ayanami
       - 🛫 ETON
 
   - name: "⚛️ AI"
@@ -480,7 +481,7 @@ proxy-groups:
       - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(JP).*(((?i)(game|1X|3X|IPLC))|(?!.*(0.[1-9])))"
+    filter: "(?!.*(0.[1-9])).*((?!)(JP)).*((?!)(game|1X|3X|IPLC))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
