@@ -945,7 +945,7 @@ proxy-groups:
     lazy: true
 
 # 游戏节点细分
- - name: "🇭🇰 香港游戏(Game)"
+  - name: "🇭🇰 香港游戏(Game)"
     type: url-test
     use:
       - 🛫 守候网络
