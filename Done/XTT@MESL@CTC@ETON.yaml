@@ -424,11 +424,9 @@ proxy-groups:
   - name: "🇭🇰 香港游戏"
     type: url-test
     use:
-      - 🛫 MESL
       - 🛫 CTC
-      - 🛫 守候网络
       - 🛫 ETON
-    filter: "(HK).*((?i)(game|iplc|iepl|udpn))"
+    filter: "(HK).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -439,11 +437,9 @@ proxy-groups:
   - name: "🇹🇼 台湾游戏"
     type: url-test
     use:
-      - 🛫 MESL
       - 🛫 CTC
-      - 🛫 守候网络
       - 🛫 ETON
-    filter: "(TW).*((?i)(game|iplc|iepl|udpn))"
+    filter: "(TW).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -454,11 +450,9 @@ proxy-groups:
   - name: "🇸🇬 狮城游戏"
     type: url-test
     use:
-      - 🛫 MESL
       - 🛫 CTC
-      - 🛫 守候网络
       - 🛫 ETON
-    filter: "(SG).*((?i)(game|iplc|iepl|udpn))"
+    filter: "(SG).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -469,11 +463,9 @@ proxy-groups:
   - name: "🇯🇵 日本游戏"
     type: url-test
     use:
-      - 🛫 MESL
       - 🛫 CTC
-      - 🛫 守候网络
       - 🛫 ETON
-    filter: "(JP).*((?i)(game|iplc|iepl|udpn))"
+    filter: "(JP).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -484,11 +476,9 @@ proxy-groups:
   - name: "🇺🇲 美国游戏"
     type: url-test
     use:
-      - 🛫 MESL
       - 🛫 CTC
-      - 🛫 守候网络
       - 🛫 ETON
-    filter: "(US).*((?i)(game|iplc|iepl|udpn))"
+    filter: "(US).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -499,11 +489,9 @@ proxy-groups:
   - name: "🇰🇷 韩国游戏"
     type: url-test
     use:
-      - 🛫 MESL
       - 🛫 CTC
-      - 🛫 守候网络
       - 🛫 ETON
-    filter: "(KR).*((?i)(game|iplc|iepl|udpn))"
+    filter: "(KR).*((?i)(game))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
