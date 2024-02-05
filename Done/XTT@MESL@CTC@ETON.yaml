@@ -438,7 +438,7 @@ proxy-groups:
       - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(HK).*((?i)(game|1X|3X|IPCL))"
+    filter: "(HK).*((?i)(game|1X|3X|IPLC))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -452,7 +452,7 @@ proxy-groups:
       - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(TW).*((?i)(game|1X|3X|IPCL))"
+    filter: "(TW).*((?i)(game|1X|3X|IPLC))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -466,7 +466,7 @@ proxy-groups:
       - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(SG).*((?i)(game|1X|3X|IPCL))"
+    filter: "(SG).*((?i)(game|1X|3X|IPLC))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -480,7 +480,7 @@ proxy-groups:
       - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(JP).*((?i)(game|1X|3X|IPCL))"
+    filter: "(JP).*(((?i)(game|1X|3X|IPLC))|(?!.*(0.[1-9])))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -494,7 +494,7 @@ proxy-groups:
       - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(US).*((?i)(game|1X|3X|IPCL))"
+    filter: "(US).*((?i)(game|1X|3X|IPLC))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -508,7 +508,7 @@ proxy-groups:
       - 🛫 Ayanami
       - 🛫 CTC
       - 🛫 ETON
-    filter: "(KR).*((?i)(game|1X|3X|IPCL))"
+    filter: "(KR).*((?i)(game|1X|3X|IPLC))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
