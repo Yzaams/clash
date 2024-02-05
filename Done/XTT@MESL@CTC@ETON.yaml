@@ -1049,7 +1049,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 Ayanami
       - 🛫 ETON
-    filter: "(HK).*((?i)(\b3X\b|IPLC|UPDN))"
+    filter: "(HK).*((?i)(3X|IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1065,7 +1065,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 Ayanami
       - 🛫 ETON
-    filter: "(TW).*((?i)(\b3X\b|IPLC|UPDN))"
+    filter: "(TW).*((?i)(3X|IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1081,7 +1081,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 Ayanami
       - 🛫 ETON
-    filter: "(SG).*((?i)(\b3X\b|IPLC|UPDN))"
+    filter: "(SG).*((?i)(3X|IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1097,7 +1097,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 Ayanami
       - 🛫 ETON
-    filter: "((JP).*((?i)(\b3X\b|IPLC|UPDN))"
+    filter: "((JP).*((?i)(3X|IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1113,7 +1113,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 Ayanami
       - 🛫 ETON
-    filter: "(US).*((?i)(\b3X\b|IPLC|UPDN))"
+    filter: "(US).*((?i)(3X|IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1129,7 +1129,7 @@ proxy-groups:
       - 🛫 CTC
       - 🛫 Ayanami
       - 🛫 ETON
-    filter: "(KR).*((?i)(\b3X\b|IPLC|UPDN))"
+    filter: "(KR).*((?i)(3X|IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
