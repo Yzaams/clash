@@ -434,89 +434,59 @@ proxy-groups:
 
 # 游戏节点
   - name: "🇭🇰 香港游戏"
-    type: url-test
-    use:
-      - 🛫 Ayanami
-      - 🛫 CTC
-      - 🛫 ETON
-    filter: "(HK).*((?i)(game|1X|3X|IPLC))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
+    type: fallback
+    proxies:
+      - 🇭🇰 香港游戏(Game)
+      - 🇭🇰 香港游戏(Normal)
+    url: 'https://www.gstatic.com/generate_204'
     interval: 60
-    tolerance: 50
     lazy: true
 
   - name: "🇹🇼 台湾游戏"
-    type: url-test
-    use:
-      - 🛫 Ayanami
-      - 🛫 CTC
-      - 🛫 ETON
-    filter: "(TW).*((?i)(game|1X|3X|IPLC))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
+    type: fallback
+    proxies:
+      - 🇹🇼 台湾游戏(Game)
+      - 🇹🇼 台湾游戏(Normal)
+    url: 'https://www.gstatic.com/generate_204'
     interval: 60
-    tolerance: 50
     lazy: true
 
   - name: "🇸🇬 狮城游戏"
-    type: url-test
-    use:
-      - 🛫 Ayanami
-      - 🛫 CTC
-      - 🛫 ETON
-    filter: "(SG).*((?i)(game|1X|3X|IPLC))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
+    type: fallback
+    proxies:
+      - 🇸🇬 狮城游戏(Game)
+      - 🇸🇬 狮城游戏(Normal)
+    url: 'https://www.gstatic.com/generate_204'
     interval: 60
-    tolerance: 50
     lazy: true
 
   - name: "🇯🇵 日本游戏"
-    type: url-test
-    use:
-      - 🛫 Ayanami
-      - 🛫 CTC
-      - 🛫 ETON
-    filter: "(?!.*(0.[1-9])).*((?!)(JP)).*((?!)(game|1X|3X|IPLC))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
+    type: fallback
+    proxies:
+      - 🇯🇵 日本游戏(Game)
+      - 🇯🇵 日本游戏(Normal)
+    url: 'https://www.gstatic.com/generate_204'
     interval: 60
-    tolerance: 50
     lazy: true
 
   - name: "🇺🇲 美国游戏"
-    type: url-test
-    use:
-      - 🛫 Ayanami
-      - 🛫 CTC
-      - 🛫 ETON
-    filter: "(US).*((?i)(game|1X|3X|IPLC))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
+    type: fallback
+    proxies:
+      - 🇺🇲 美国游戏(Game)
+      - 🇺🇲 美国游戏(Normal)
+    url: 'https://www.gstatic.com/generate_204'
     interval: 60
-    tolerance: 50
     lazy: true
 
   - name: "🇰🇷 韩国游戏"
-    type: url-test
-    use:
-      - 🛫 Ayanami
-      - 🛫 CTC
-      - 🛫 ETON
-    filter: "(KR).*((?i)(game|1X|3X|IPLC))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
+    type: fallback
+    proxies:
+      - 🇰🇷 韩国游戏(Game)
+      - 🇰🇷 韩国游戏(Normal)
+    url: 'https://www.gstatic.com/generate_204'
     interval: 60
-    tolerance: 50
     lazy: true
-
+    
 # 倍率地区分组
 # 香港低倍
   - name: "🇭🇰 守候低倍"
@@ -967,6 +937,199 @@ proxy-groups:
     use:
       - 🛫 守候网络
     filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+# 游戏节点细分
+ - name: "🇭🇰 香港游戏(Game)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(HK).*((?i)(game))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+    
+  - name: "🇹🇼 台湾游戏(Game)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(TW).*((?i)(game))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇸🇬 狮城游戏(Game)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(SG).*((?i)(game))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇯🇵 日本游戏(Game)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(JP).*((?i)(game))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇺🇲 美国游戏(Game)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(US).*((?i)(game))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇰🇷 韩国游戏(Game)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(KR).*((?i)(game))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇭🇰 香港游戏(Normal)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(HK).*((?i)(\b3X\b|IPLC|UPDN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇹🇼 台湾游戏(Normal)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(TW).*((?i)(\b3X\b|IPLC|UPDN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇸🇬 狮城游戏(Normal)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(SG).*((?i)(\b3X\b|IPLC|UPDN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇯🇵 日本游戏(Normal)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "((JP).*((?i)(\b3X\b|IPLC|UPDN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇺🇲 美国游戏(Normal)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(US).*((?i)(\b3X\b|IPLC|UPDN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🇰🇷 韩国游戏(Normal)"
+    type: url-test
+    use:
+      - 🛫 守候网络
+      - 🛫 MESL
+      - 🛫 CTC
+      - 🛫 Ayanami
+      - 🛫 ETON
+    filter: "(KR).*((?i)(\b3X\b|IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
