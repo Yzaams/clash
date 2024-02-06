@@ -949,10 +949,7 @@ proxy-groups:
   - name: "🇭🇰 香港游戏(Game)"
     type: url-test
     use:
-      - 🛫 守候网络
-      - 🛫 MESL
-      - 🛫 CTC
-      - 🛫 Ayanami
+      - 🛫 ESNC
       - 🛫 ETON
     filter: "(HK).*((?i)(game))"
     health-check:
@@ -965,10 +962,7 @@ proxy-groups:
   - name: "🇹🇼 台湾游戏(Game)"
     type: url-test
     use:
-      - 🛫 守候网络
-      - 🛫 MESL
-      - 🛫 CTC
-      - 🛫 Ayanami
+      - 🛫 ESNC
       - 🛫 ETON
     filter: "(TW).*((?i)(game))"
     health-check:
@@ -981,10 +975,7 @@ proxy-groups:
   - name: "🇸🇬 狮城游戏(Game)"
     type: url-test
     use:
-      - 🛫 守候网络
-      - 🛫 MESL
-      - 🛫 CTC
-      - 🛫 Ayanami
+      - 🛫 ESNC
       - 🛫 ETON
     filter: "(SG).*((?i)(game))"
     health-check:
@@ -1037,8 +1028,7 @@ proxy-groups:
     type: url-test
     use:                      
       - 🛫 MESL
-      - 🛫 Ayanami
-    filter: "(HK).*((?i)(IPLC|UPDN))"
+    filter: "(HK).*((?i)(UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1050,8 +1040,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 MESL
-      - 🛫 Ayanami
-    filter: "(TW).*((?i)(IPLC|UPDN))"
+    filter: "(TW).*((?i)(UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1063,8 +1052,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 MESL
-      - 🛫 Ayanami
-    filter: "(SG).*((?i)(IPLC|UPDN))"
+    filter: "(SG).*((?i)(UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1076,8 +1064,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 MESL
-      - 🛫 Ayanami
-    filter: "((JP).*((?i)(IPLC|UPDN))"
+    filter: "((JP).*((?i)(UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1089,8 +1076,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 MESL
-      - 🛫 Ayanami
-    filter: "(US).*((?i)(IPLC|UPDN))"
+    filter: "(US).*((?i)(UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1102,8 +1088,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 MESL
-      - 🛫 Ayanami
-    filter: "(KR).*((?i)(IPLC|UPDN))"
+    filter: "(KR).*((?i)(UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
