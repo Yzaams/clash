@@ -55,22 +55,23 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  🛫 Ayanami:
-    type: http
-    url: "https://url.ayanami-subscribe-url.online/api/v1/client/subscribe?token=5c4b4b7f11de82fa32aeb5a7493ca75b"
-    interval: 172800
-    path: ./Ayanami.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204
 
   🛫 ETON:
     type: http
     url: "https://sub2024.eton.one/api/v1/client/subscribe?token=5f3dbbf8b13bfd2d5925563332d01d62"
     interval: 172800
     path: ./ETON.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
+  🛫 ESNC:
+    type: http
+    url: "https://tokyu.top/api/v1/client/subscribe?token=af4ff352d71be6ed09069789d129b2bb"
+    interval: 172800
+    path: ./ESNC.yaml
     health-check:
       enable: true
       interval: 600
@@ -996,10 +997,7 @@ proxy-groups:
   - name: "🇯🇵 日本游戏(Game)"
     type: url-test
     use:
-      - 🛫 守候网络
-      - 🛫 MESL
-      - 🛫 CTC
-      - 🛫 Ayanami
+      - 🛫 ESNC
       - 🛫 ETON
     filter: "(JP).*((?i)(game))"
     health-check:
@@ -1012,10 +1010,7 @@ proxy-groups:
   - name: "🇺🇲 美国游戏(Game)"
     type: url-test
     use:
-      - 🛫 守候网络
-      - 🛫 MESL
-      - 🛫 CTC
-      - 🛫 Ayanami
+      - 🛫 ESNC
       - 🛫 ETON
     filter: "(US).*((?i)(game))"
     health-check:
@@ -1028,10 +1023,7 @@ proxy-groups:
   - name: "🇰🇷 韩国游戏(Game)"
     type: url-test
     use:
-      - 🛫 守候网络
-      - 🛫 MESL
-      - 🛫 CTC
-      - 🛫 Ayanami
+      - 🛫 ESNC
       - 🛫 ETON
     filter: "(KR).*((?i)(game))"
     health-check:
@@ -1043,13 +1035,10 @@ proxy-groups:
 
   - name: "🇭🇰 香港游戏(Normal)"
     type: url-test
-    use:
-      - 🛫 守候网络
+    use:                      
       - 🛫 MESL
-      - 🛫 CTC
       - 🛫 Ayanami
-      - 🛫 ETON
-    filter: "(HK).*((?i)(3X|IPLC|UPDN))"
+    filter: "(HK).*((?i)(IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1060,12 +1049,9 @@ proxy-groups:
   - name: "🇹🇼 台湾游戏(Normal)"
     type: url-test
     use:
-      - 🛫 守候网络
       - 🛫 MESL
-      - 🛫 CTC
       - 🛫 Ayanami
-      - 🛫 ETON
-    filter: "(TW).*((?i)(3X|IPLC|UPDN))"
+    filter: "(TW).*((?i)(IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1076,12 +1062,9 @@ proxy-groups:
   - name: "🇸🇬 狮城游戏(Normal)"
     type: url-test
     use:
-      - 🛫 守候网络
       - 🛫 MESL
-      - 🛫 CTC
       - 🛫 Ayanami
-      - 🛫 ETON
-    filter: "(SG).*((?i)(3X|IPLC|UPDN))"
+    filter: "(SG).*((?i)(IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1092,12 +1075,9 @@ proxy-groups:
   - name: "🇯🇵 日本游戏(Normal)"
     type: url-test
     use:
-      - 🛫 守候网络
       - 🛫 MESL
-      - 🛫 CTC
       - 🛫 Ayanami
-      - 🛫 ETON
-    filter: "((JP).*((?i)(3X|IPLC|UPDN))"
+    filter: "((JP).*((?i)(IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1108,12 +1088,9 @@ proxy-groups:
   - name: "🇺🇲 美国游戏(Normal)"
     type: url-test
     use:
-      - 🛫 守候网络
       - 🛫 MESL
-      - 🛫 CTC
       - 🛫 Ayanami
-      - 🛫 ETON
-    filter: "(US).*((?i)(3X|IPLC|UPDN))"
+    filter: "(US).*((?i)(IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1124,12 +1101,9 @@ proxy-groups:
   - name: "🇰🇷 韩国游戏(Normal)"
     type: url-test
     use:
-      - 🛫 守候网络
       - 🛫 MESL
-      - 🛫 CTC
       - 🛫 Ayanami
-      - 🛫 ETON
-    filter: "(KR).*((?i)(3X|IPLC|UPDN))"
+    filter: "(KR).*((?i)(IPLC|UPDN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
