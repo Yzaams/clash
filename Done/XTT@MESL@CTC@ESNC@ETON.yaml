@@ -669,7 +669,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(KR|Korea).*(0.[1-9])"
+    filter: "(Korea).*(0.[1-9])"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -681,7 +681,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 MESL
-    filter: "(KR|Korea).*(0.[1-9])"
+    filter: "(KR).*(0.[1-9])"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -693,7 +693,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 CTC
-    filter: "(KR|Korea).*(0.[1-9])"
+    filter: "(KR).*(0.[1-9])"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -891,7 +891,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
-    filter: "(KR|Korea).*((?i)(IPLC))"
+    filter: "(Korea).*((?i)(IPLC))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -903,7 +903,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 MESL
-    filter: "(KR|Korea)(?!.*(0.[1-9]))"
+    filter: "(KR)(?!.*(0.[1-9]))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -915,7 +915,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 CTC
-    filter: "(KR|Korea)(?!.*(0.[1-9]))"
+    filter: "(KR)(?!.*(0.[1-9]))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
