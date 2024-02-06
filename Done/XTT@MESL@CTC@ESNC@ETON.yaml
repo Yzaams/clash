@@ -106,6 +106,7 @@ proxy-groups:
       - 🛫 守候网络
       - 🛫 MESL
       - 🛫 CTC
+      - 🛫 ESNC
       - 🛫 ETON
 
   - name: "⚛️ AI"
