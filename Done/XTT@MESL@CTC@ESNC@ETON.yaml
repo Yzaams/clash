@@ -35,7 +35,7 @@ proxy-providers:
       
   🛫 MESL:
     type: http
-    url: "https://gixs.org/api/v1/client/subscribe?token=8cc8461467ba343a945b081553938fcb"
+    url: "https://api.msub.gixs.org/api/v1/client/subscribe?token=7211d952fc7fba3de25bd88700c15bd9"
     interval: 172800
     path: ./MESL.yaml
     health-check:
@@ -57,7 +57,7 @@ proxy-providers:
 
   🛫 ESNC:
     type: http
-    url: "  https://tokyu.top/api/v1/client/subscribe?token=af4ff352d71be6ed09069789d129b2bb"
+    url: "https://tokyu.top/api/v1/client/subscribe?token=af4ff352d71be6ed09069789d129b2bb"
     interval: 172800
     path: ./ESNC.yaml
     health-check:
@@ -68,7 +68,7 @@ proxy-providers:
 
   🛫 ETON:
     type: http
-    url: "https://one.eton.one/api/v1/client/subscribe?token=5f3dbbf8b13bfd2d5925563332d01d62"
+    url: "https://sub2024.eton.one/api/v1/client/subscribe?token=5f3dbbf8b13bfd2d5925563332d01d62"
     interval: 172800
     path: ./ETON.yaml
     health-check:
