@@ -77,6 +77,17 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
+  🛫 ACA:
+    type: http
+    url: "https://api.acaisbest.shop/api/v1/client/subscribe?token=c120326ac48ec8bd41e864c859ec5b72"
+    interval: 172800
+    path: ./ACA.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
 # 规则分组
 # 引用proxy-providers用use，其他proxies
 proxy-groups:
@@ -224,7 +235,7 @@ proxy-groups:
     type: fallback
     proxies:
       - 🌏 守候线路
-      - 🚀 低倍节点
+      - 🌏 ACA线路
 
   - name: "🎮 Bahamut"
     type: select
@@ -927,6 +938,18 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 守候网络
+    filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+
+  - name: "🌏 ACA线路"
+    type: url-test
+    use:
+      - 🛫 ACA
     filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
     health-check:
     enable: true
