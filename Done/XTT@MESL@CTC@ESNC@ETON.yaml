@@ -6,7 +6,7 @@ dns:
     listen: '0.0.0.0:1053'
     enhanced-mode: fake-ip
     nameserver: [119.29.29.29, 223.5.5.5]
-    fallback: ['https://120112.alidns.com/dns-query', 1.1.1.1]
+    fallback: ['https://149813.alidns.com/dns-query', 8.8.8.8, 1.1.1.1]
     fallback-filter: { geoip: true, geoip-code: CN }
     fake-ip-filter: [dns.msftncsi.com, www.msftncsi.com, www.msftconnecttest.com, '+.stun.*.*', '+.stun.*.*.*', '+.stun.*.*.*.*', '+.stun.*.*.*.*.*', '*.n.n.srv.nintendo.net', +.stun.playstation.net, 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.msftncsi.com', '*.msftconnecttest.com', '*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', time-ios.apple.com, 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, '*.xiami.com', '*.music.migu.cn', music.migu.cn, +.msftconnecttest.com, +.msftncsi.com, localhost.ptlogin2.qq.com, localhost.sec.qq.com, +.qq.com, +.tencent.com, +.srv.nintendo.net, '*.n.n.srv.nintendo.net', +.stun.playstation.net, 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', 'xbox.*.microsoft.com', xnotify.xboxlive.com, +.battlenet.com.cn, +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, proxy.golang.org, heartbeat.belkin.com, '*.linksys.com', '*.linksyssmartwifi.com', '*.router.asus.com', mesu.apple.com, swscan.apple.com, swquery.apple.com, swdownload.apple.com, swcdn.apple.com, swdist.apple.com, lens.l.google.com, stun.l.google.com, +.nflxvideo.net, '*.square-enix.com', '*.finalfantasyxiv.com', '*.ffxiv.com', '*.ff14.sdo.com', ff.dorado.sdo.com, '*.mcdn.bilivideo.cn', +.media.dssott.com, shark007.net, +.cmbchina.com, +.cmbimg.com, local.adguard.org, +.sandai.net, +.n0808.com]
 tun:
@@ -24,7 +24,7 @@ clash-for-android:
 proxy-providers:
   🛫 守候网络:
     type: http
-    url: "https://sub.xttlove.uk/api/v1/client/subscribe?token=5569ef6b224ea1623d34f18cf9b837ef"
+    url: "https://sub.xttlove.uk/api/v1/client/subscribe?token=171c8c41ad36e62e7373f61bd924d169"
     interval: 172800
     path: ./守候网络.yaml
     health-check:
@@ -35,7 +35,7 @@ proxy-providers:
       
   🛫 MESL:
     type: http
-    url: "https://api.msub.gixs.org/api/v1/client/subscribe?token=7211d952fc7fba3de25bd88700c15bd9"
+    url: "https://msub.go-d.cn/api/v1/client/subscribe?token=25819eb69e033d7618912a56d69766bf"
     interval: 172800
     path: ./MESL.yaml
     health-check:
@@ -46,7 +46,7 @@ proxy-providers:
 
   🛫 CTC:
     type: http
-    url: "https://38.47.221.60:10000/api/v1/client/subscribe?token=abbde927cc38aea924a00dfa6594bca6"
+    url: "https://38.47.221.60:10000/api/v1/client/subscribe?token=4b29a76d102cb683965acb0a9a6493b9"
     interval: 172800
     path: ./CTC.yaml
     health-check:
@@ -57,7 +57,7 @@ proxy-providers:
 
   🛫 ESNC:
     type: http
-    url: "https://tokyu.top/api/v1/client/subscribe?token=af4ff352d71be6ed09069789d129b2bb"
+    url: "https://tokyu.top/api/v1/client/subscribe?token=ba4f059182c4ecdd6db6bfbe73013fc2"
     interval: 172800
     path: ./ESNC.yaml
     health-check:
@@ -68,7 +68,7 @@ proxy-providers:
 
   🛫 ETON:
     type: http
-    url: "https://sub2024.eton.one/api/v1/client/subscribe?token=5f3dbbf8b13bfd2d5925563332d01d62"
+    url: "https://sub2024.eton.one/api/v1/client/subscribe?token=8012c32d0023daeb695af6f84bda4f07"
     interval: 172800
     path: ./ETON.yaml
     health-check:
