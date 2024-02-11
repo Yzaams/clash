@@ -24,7 +24,7 @@ clash-for-android:
 proxy-providers:
   🛫 守候网络:
     type: http
-    url: "日你妈逼盗订阅狗"
+    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
     interval: 172800
     path: ./守候网络.yaml
     health-check:
@@ -35,7 +35,7 @@ proxy-providers:
       
   🛫 MESL:
     type: http
-    url: "日你妈逼盗订阅狗"
+    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
     interval: 172800
     path: ./MESL.yaml
     health-check:
@@ -46,7 +46,7 @@ proxy-providers:
 
   🛫 CTC:
     type: http
-    url: "日你妈逼盗订阅狗"
+    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
     interval: 172800
     path: ./CTC.yaml
     health-check:
@@ -57,7 +57,7 @@ proxy-providers:
 
   🛫 ESNC:
     type: http
-    url: "日你妈逼盗订阅狗"
+    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
     interval: 172800
     path: ./ESNC.yaml
     health-check:
@@ -68,7 +68,7 @@ proxy-providers:
 
   🛫 ETON:
     type: http
-    url: "日你妈逼盗订阅狗"
+    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
     interval: 172800
     path: ./ETON.yaml
     health-check:
@@ -79,7 +79,7 @@ proxy-providers:
 
   🛫 ACA:
     type: http
-    url: "日你妈逼盗订阅狗"
+    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
     interval: 172800
     path: ./ACA.yaml
     health-check:
