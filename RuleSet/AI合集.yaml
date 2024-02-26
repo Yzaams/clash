@@ -1,5 +1,6 @@
 payload:
-# 内容：再用ai
+# 内容：自用ai
+  - DOMAIN-KEYWORD,chatgpt
   - DOMAIN-SUFFIX,leonardo.ai
   - DOMAIN-SUFFIX,fliki.ai
   - DOMAIN-SUFFIX,genny.lovo.ai
