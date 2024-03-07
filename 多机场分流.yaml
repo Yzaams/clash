@@ -1110,83 +1110,78 @@ proxy-groups:
     lazy: true
 
 rule-providers:
-# 本地网络
-  LocalAreaNetwork:
+# 本地
+  Lan:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
-    path: ./ruleset/LocalAreaNetwork.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    path: ./RuleSet/Lan.yaml
     interval: 86400
 
-# 特殊
-  UnBan:
+# 防误杀
+  Direct:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/UnBan.yaml"
-    path: ./ruleset/UnBan.yaml
-    interval: 86400
-
-# 360
-  360:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/360/360.yaml"
-    path: ./ruleset/360.yaml
-    interval: 86400
-    
-# 自定义直连
-  国内代理:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E5%9B%BD%E5%86%85%E4%BB%A3%E7%90%86.yaml"
-    path: ./ruleset/国内代理.yaml
-    interval: 86400
-
-  国内下载:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Download.yaml"
-    path: ./ruleset/国内下载.yaml
-    interval: 86400
-
-  国内媒体:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaMedia.yaml"
-    path: ./ruleset/ChinaMedia.yaml
-    interval: 86400
-
-  游戏加速:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E6%B8%B8%E6%88%8F%E5%8A%A0%E9%80%9F.yaml"
-    path: ./ruleset/游戏加速.yaml
-    interval: 86400
-       
-# BAN广告关键字/广告联盟
-  BanAD:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
-    path: ./ruleset/BanAD.yaml
-    interval: 86400
-
-# AdblockPlus
-  BanEasyList:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanEasyList.yaml"
-    path: ./ruleset/BanEasyList.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml"
+    path: ./RuleSet/Direct.yaml
     interval: 86400
 
 # 常用软件广告
-  BanProgramAD:
+  AdvertisingLite:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
-    path: ./ruleset/BanProgramAD.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml"
+    path: ./ruleset/AdvertisingLite.yaml
     interval: 86400
 
+# 反劫持
+  Hijacking:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml"
+    path: ./ruleset/Hijacking.yaml
+    interval: 86400
+
+# 隐私保护
+  Privacy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical.yaml"
+    path: ./ruleset/Privacy.yaml
+    interval: 86400
+
+# 国内DNS劫持
+  BlockHttpDNS:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml"
+    path: ./ruleset/BlockHttpDNS.yaml
+    interval: 86400
+
+# 常用下载软件
+  Download:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml"
+    path: ./RuleSet/Download.yaml
+    interval: 86400
+
+# 自用域名
+  Media_cn:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E5%9B%BD%E5%86%85%E4%BB%A3%E7%90%86.yaml"
+    path: ./ruleset/Media_cn.yaml
+    interval: 86400
+
+  Game_acceleration:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E6%B8%B8%E6%88%8F%E5%8A%A0%E9%80%9F.yaml"
+    path: ./ruleset/Game_acceleration.yaml
+    interval: 86400
+
+# 常用域名
   Bing:
     type: http
     behavior: classical
@@ -1204,7 +1199,7 @@ rule-providers:
   Claude:
     type: http
     behavior: classical
-    url: "https://https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
     path: ./ruleset/Claude.yaml
     interval: 86400
 
@@ -1216,19 +1211,19 @@ rule-providers:
     interval: 86400
 
 # 自用AI
-  AI合集:
+  AI_tools:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/AI%E5%90%88%E9%9B%86.yaml"
-    path: ./ruleset/AI合集.yaml
+    path: ./ruleset/Common AI_tools.yaml
     interval: 86400
 
 # 谷歌商店添加规则
-  GooglePlaymy:
+  GooglePlay_my:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/Googleplay.yaml"
-    path: ./ruleset/GooglePlay.yaml
+    path: ./ruleset/GooglePlay_my.yaml
     interval: 86400
 
 # ACL4SSR 谷歌商店IP
@@ -1372,86 +1367,64 @@ rule-providers:
     path: ./ruleset/Emby.yaml
     interval: 86400
     
-  机场Emby:
+  Emby_VPN:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E6%9C%BA%E5%9C%BAEmby.yaml"
-    path: ./ruleset/机场Emby.yaml
+    path: ./ruleset/Emby_VPN.yaml
     interval: 86400
 
-  GameDownload:
+  Game_Dwonload:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.yaml"
     path: ./ruleset/GameDownload.yaml
     interval: 86400
 
-  GameDownloadCN:
+  Game_Downloadcn:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml"
     path: ./ruleset/GameDownloadCN.yaml
     interval: 86400
 
-  游戏平台:
+  gaming_platform:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml"
-    path: ./ruleset/游戏平台.yaml
+    path: ./ruleset/gaming_platform.yaml
     interval: 86400
     
-  国外代理:
+  Global_proxy:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
-    path: ./ruleset/国外代理.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml"
+    path: ./ruleset/Global_proxy.yaml
     interval: 86400
 
-  国外媒体:
+  CN_max:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml"
-    path: ./ruleset/国外媒体.yaml
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
+    path: ./RuleSet/ChinaMax_Classical.yaml
     interval: 86400
-
-  ChinaIp:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaIp.yaml"
-    path: ./ruleset/ChinaIp.yaml
-    interval: 86400
-
-  ChinaDomain:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml"
-    path: ./ruleset/ChinaDomain.yaml
-    interval: 86400
-
-  国内公司:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaCompanyIp.yaml"
-    path: ./ruleset/国内公司.yaml
-    interval: 86400    
 
 # 规则
 rules:
-  - RULE-SET,LocalAreaNetwork,🎯 全球直连
-  - RULE-SET,UnBan,🎯 全球直连
-  - RULE-SET,360,🎯 全球直连
-  - RULE-SET,国内代理,🎯 全球直连
-  - RULE-SET,国内下载,🎯 全球直连
-  - RULE-SET,国内媒体,🎯 全球直连
-  - RULE-SET,BanAD,📵 广告拦截
-  - RULE-SET,BanEasyList,📵 广告拦截
-  - RULE-SET,BanProgramAD,🍃 应用净化
+  - RULE-SET,Lan,🎯 全球直连
+  - RULE-SET,Direct,🎯 全球直连
+  - RULE-SET,AdvertisingLite,📵 广告拦截
+  - RULE-SET,Hijacking,🍃 应用净化
+  - RULE-SET,Privacy,🍃 应用净化
+  - RULE-SET,BlockHttpDNS,🍃 应用净化
+  - RULE-SET,Download,🎯 全球直连
+  - RULE-SET,Media_cn,🎯 全球直连
   - RULE-SET,Bing,⚛️ AI
   - RULE-SET,OPENAI,⚛️ AI
   - RULE-SET,Claude,⚛️ AI
   - RULE-SET,Notion,⚛️ AI
-  - RULE-SET,AI合集,⚛️ AI
-  - RULE-SET,GooglePlaymy,🛍️ GooglePlay
+  - RULE-SET,AI_tools,⚛️ AI
+  - RULE-SET,GooglePlay_my,🛍️ GooglePlay
   - RULE-SET,GooglePlay,🛍️ GooglePlay
   - RULE-SET,YouTube,📺 YouTube
   - RULE-SET,YouTubeMusic,📺 YouTube
@@ -1471,16 +1444,13 @@ rules:
   - RULE-SET,TikTok,📺 TikTok
   - RULE-SET,Netflix,📺 Netflix
   - RULE-SET,Emby,📺 Emby
-  - RULE-SET,机场Emby,📺 Emby
+  - RULE-SET,Emby_VPN,📺 Emby
   - RULE-SET,Bahamut,🎮 Bahamut
-  - RULE-SET,游戏加速,🎮 游戏加速
-  - RULE-SET,GameDownload,🎮 游戏下载
-  - RULE-SET,GameDownloadCN,🎮 游戏下载
-  - RULE-SET,游戏平台,🎮 游戏平台
-  - RULE-SET,国外代理,🌏 国外代理
-  - RULE-SET,国外媒体,🌏 国外代理
-  - RULE-SET,ChinaIp,🎯 全球直连
-  - RULE-SET,ChinaDomain,🎯 全球直连
-  - RULE-SET, 国内公司,🎯 全球直连
+  - RULE-SET,Game_acceleration,🎮 游戏加速
+  - RULE-SET,Game_Dwonload,🎮 游戏下载
+  - RULE-SET,Game_Downloadcn,🎮 游戏下载
+  - RULE-SET,gaming_platform,🎮 游戏平台
+  - RULE-SET,Global_proxy,🌏 国外代理
+  - RULE-SET,CN_max,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
