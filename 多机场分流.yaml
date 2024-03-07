@@ -1126,20 +1126,12 @@ rule-providers:
     path: ./RuleSet/Direct.yaml
     interval: 86400
 
-# 360Update
-  360Update:
-    type: http
-    behavior: classical
-    url: "https://https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/360.yaml"
-    path: ./RuleSet/360Update.yaml
-    interval: 86400
-
 # 常用软件广告
-  AdvertisingLite:
+  Advertising:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml"
-    path: ./ruleset/AdvertisingLite.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising_Classical.yaml"
+    path: ./ruleset/Advertising.yaml
     interval: 86400
 
 # 反劫持
@@ -1421,8 +1413,7 @@ rule-providers:
 rules:
   - RULE-SET,Lan,🎯 全球直连
   - RULE-SET,Direct,🎯 全球直连
-  - RULE-SET,360Update,🎯 全球直连
-  - RULE-SET,AdvertisingLite,📵 广告拦截
+  - RULE-SET,Advertising,📵 广告拦截
   - RULE-SET,Hijacking,🍃 应用净化
   - RULE-SET,Privacy,🍃 应用净化
   - RULE-SET,BlockHttpDNS,🍃 应用净化
