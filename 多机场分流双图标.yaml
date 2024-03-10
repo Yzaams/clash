@@ -151,10 +151,10 @@ proxy-groups:
   - name: "🚀 手动切换"
     type: select
     use:
-      - 🛫 守候网络
-      - 🛫 MESL
-      - 🛫 CTC
-      - 🛫 ETON
+      - ✈️ 守候网络
+      - ✈️ MESL
+      - ✈️ CTC
+      - ✈️ ETON
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 
   - name: "⚛️ AI"
@@ -516,8 +516,8 @@ proxy-groups:
   - name: "🇭🇰 香港游戏"
     type: url-test
     use:
-      - 🛫 MESL
-      - 🛫 ETON
+      - ✈️ MESL
+      - ✈️ ETON
     filter: "(HK).*((?i)(udpn)|(iepl))"
     health-check:
     enable: true
@@ -530,8 +530,8 @@ proxy-groups:
   - name: "🇹🇼 台湾游戏"
     type: url-test
     use:
-      - 🛫 MESL
-      - 🛫 ETON
+      - ✈️ MESL
+      - ✈️ ETON
     filter: "(TW).*((?i)(udpn)|(iepl))"
     health-check:
     enable: true
@@ -544,8 +544,8 @@ proxy-groups:
   - name: "🇸🇬 狮城游戏"
     type: url-test
     use:
-      - 🛫 MESL
-      - 🛫 ETON
+      - ✈️ MESL
+      - ✈️ ETON
     filter: "(SG).*((?i)(udpn)|(iepl))"
     health-check:
     enable: true
@@ -558,8 +558,8 @@ proxy-groups:
   - name: "🇯🇵 日本游戏"
     type: url-test
     use:
-      - 🛫 MESL
-      - 🛫 ETON
+      - ✈️ MESL
+      - ✈️ ETON
     filter: "(JP).*((?i)(udpn)|(iepl))"
     health-check:
     enable: true
@@ -572,8 +572,8 @@ proxy-groups:
   - name: "🇺🇲 美国游戏"
     type: url-test
     use:
-      - 🛫 MESL
-      - 🛫 ETON
+      - ✈️ MESL
+      - ✈️ ETON
     filter: "(US).*((?i)(udpn)|(iepl))"
     health-check:
     enable: true
@@ -586,8 +586,8 @@ proxy-groups:
   - name: "🇰🇷 韩国游戏"
     type: url-test
     use:
-      - 🛫 MESL
-      - 🛫 ETON
+      - ✈️ MESL
+      - ✈️ ETON
     filter: "(KR).*((?i)(udpn)|(iepl))"
     health-check:
     enable: true
@@ -603,7 +603,7 @@ proxy-groups:
   - name: "🇭🇰 守候低倍"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(HK).*(0.[1-9])"
     health-check:
     enable: true
@@ -616,7 +616,7 @@ proxy-groups:
   - name: "🇭🇰 MESL低倍"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(HK).*(0.[1-9])"
     health-check:
     enable: true
@@ -629,7 +629,7 @@ proxy-groups:
   - name: "🇭🇰 CTC低倍"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(HK).*(0.[1-9])"
     health-check:
     enable: true
@@ -643,7 +643,7 @@ proxy-groups:
   - name: "🇹🇼 守候低倍"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(TW).*(0.[1-9])"
     health-check:
     enable: true
@@ -656,7 +656,7 @@ proxy-groups:
   - name: "🇹🇼 MESL低倍"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(TW).*(0.[1-9])"
     health-check:
     enable: true
@@ -669,7 +669,7 @@ proxy-groups:
   - name: "🇹🇼 CTC低倍"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(TW).*(0.[1-9])"
     health-check:
     enable: true
@@ -683,7 +683,7 @@ proxy-groups:
   - name: "🇸🇬 守候低倍"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(SG).*(0.[1-9])"
     health-check:
     enable: true
@@ -696,7 +696,7 @@ proxy-groups:
   - name: "🇸🇬 MESL低倍"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(SG).*(0.[1-9])"
     health-check:
     enable: true
@@ -709,7 +709,7 @@ proxy-groups:
   - name: "🇸🇬 CTC低倍"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(SG).*(0.[1-9])"
     health-check:
     enable: true
@@ -723,7 +723,7 @@ proxy-groups:
   - name: "🇯🇵 守候低倍"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(JP).*(0.[1-9])"
     health-check:
     enable: true
@@ -736,7 +736,7 @@ proxy-groups:
   - name: "🇯🇵 MESL低倍"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(JP).*(0.[1-9])"
     health-check:
     enable: true
@@ -749,7 +749,7 @@ proxy-groups:
   - name: "🇯🇵 CTC低倍"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(JP).*(0.[1-9])"
     health-check:
     enable: true
@@ -763,7 +763,7 @@ proxy-groups:
   - name: "🇺🇲 守候低倍"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(US).*(0.[1-9])"
     health-check:
     enable: true
@@ -776,7 +776,7 @@ proxy-groups:
   - name: "🇺🇲 MESL低倍"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(US).*(0.[1-9])"
     health-check:
     enable: true
@@ -789,7 +789,7 @@ proxy-groups:
   - name: "🇺🇲 CTC低倍"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(US).*(0.[1-9])"
     health-check:
     enable: true
@@ -803,7 +803,7 @@ proxy-groups:
   - name: "🇰🇷 守候低倍"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(Korea).*(0.[1-9])"
     health-check:
     enable: true
@@ -816,7 +816,7 @@ proxy-groups:
   - name: "🇰🇷 MESL低倍"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(KR).*(0.[1-9])"
     health-check:
     enable: true
@@ -829,7 +829,7 @@ proxy-groups:
   - name: "🇰🇷 CTC低倍"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(KR).*(0.[1-9])"
     health-check:
     enable: true
@@ -843,7 +843,7 @@ proxy-groups:
   - name: "🇭🇰 守候高级"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(HK).*((?i)(IPLC))"
     health-check:
     enable: true
@@ -856,7 +856,7 @@ proxy-groups:
   - name: "🇭🇰 MESL高级"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(HK)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -869,7 +869,7 @@ proxy-groups:
   - name: "🇭🇰 CTC高级"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(HK)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -883,7 +883,7 @@ proxy-groups:
   - name: "🇹🇼 守候高级"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(TW).*((?i)(IPLC))"
     health-check:
     enable: true
@@ -896,7 +896,7 @@ proxy-groups:
   - name: "🇹🇼 MESL高级"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(TW)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -909,7 +909,7 @@ proxy-groups:
   - name: "🇹🇼 CTC高级"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(TW)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -923,7 +923,7 @@ proxy-groups:
   - name: "🇸🇬 守候高级"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(SG).*((?i)(IPLC))"
     health-check:
     enable: true
@@ -936,7 +936,7 @@ proxy-groups:
   - name: "🇸🇬 MESL高级"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(SG)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -949,7 +949,7 @@ proxy-groups:
   - name: "🇸🇬 CTC高级"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(SG)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -963,7 +963,7 @@ proxy-groups:
   - name: "🇯🇵 守候高级"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(JP).*((?i)(IPLC))"
     health-check:
     enable: true
@@ -976,7 +976,7 @@ proxy-groups:
   - name: "🇯🇵 MESL高级"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(JP)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -989,7 +989,7 @@ proxy-groups:
   - name: "🇯🇵 CTC高级"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(JP)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -1003,7 +1003,7 @@ proxy-groups:
   - name: "🇺🇲 守候高级"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(US).*((?i)(IPLC))"
     health-check:
     enable: true
@@ -1016,7 +1016,7 @@ proxy-groups:
   - name: "🇺🇲 MESL高级"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(US)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -1029,7 +1029,7 @@ proxy-groups:
   - name: "🇺🇲 CTC高级"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(US)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -1043,7 +1043,7 @@ proxy-groups:
   - name: "🇰🇷 守候高级"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(Korea).*((?i)(IPLC))"
     health-check:
     enable: true
@@ -1056,7 +1056,7 @@ proxy-groups:
   - name: "🇰🇷 MESL高级"
     type: url-test
     use:
-      - 🛫 MESL
+      - ✈️ MESL
     filter: "(KR)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -1069,7 +1069,7 @@ proxy-groups:
   - name: "🇰🇷 CTC高级"
     type: url-test
     use:
-      - 🛫 CTC
+      - ✈️ CTC
     filter: "(KR)(?!.*(0.[1-9]))"
     health-check:
     enable: true
@@ -1082,7 +1082,7 @@ proxy-groups:
   - name: "🌏 守候线路"
     type: url-test
     use:
-      - 🛫 守候网络
+      - ✈️ 守候网络
     filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
     health-check:
     enable: true
@@ -1095,7 +1095,7 @@ proxy-groups:
   - name: "🌏 ACA线路"
     type: url-test
     use:
-      - 🛫 ACA
+      - ✈️ ACA
     filter: "(?i)(emby|lite)"
     health-check:
     enable: true
