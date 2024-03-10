@@ -22,55 +22,55 @@ clash-for-android:
 
 # 机场
 proxy-providers:
-  🛫 守候网络:
+  🛫 ****:
     type: http
-    url: "https://subs.xttlove.uk/api/v1/client/subscribe?token=9ee150e12c8b3157f424aa5864f1aa0f"
+    url: "****"
     interval: 172800
-    path: ./守候网络.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
       
-  🛫 MESL:
+  🛫 ****:
     type: http
-    url: "https://msub.go-d.cn/api/v1/client/subscribe?token=8ae0c15f62c504d2e1818189c53efaec"
+    url: "****"
     interval: 172800
-    path: ./MESL.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  🛫 CTC:
+  🛫 ****:
     type: http
-    url: "https://38.47.221.60:10000/api/v1/client/subscribe?token=47e45af47ce8efddfc84b207b757128b"
+    url: "****"
     interval: 172800
-    path: ./CTC.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  🛫 ETON:
+  🛫 ****:
     type: http
-    url: "https://one.eton.club/api/v1/client/subscribe?token=f0494f7bcb65bab39f3490a3b74d2eea"
+    url: "****"
     interval: 172800
-    path: ./ETON.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  🛫 ACA:
+  🛫 ****:
     type: http
-    url: "https://api.acaisbest.shop/api/v1/client/subscribe?token=e9cd5ff5d9143f03a5ef8acadb397bce"
+    url: "*****"
     interval: 172800
-    path: ./ACA.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
