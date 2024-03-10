@@ -80,162 +80,182 @@ proxy-providers:
 # 规则分组
 # 引用proxy-providers用use，其他proxies
 proxy-groups:
-  - name: "🚀 低倍节点"
+  - name: "低倍节点"
     type: select
     proxies:
-      - 🇭🇰 香港低倍
-      - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
-      - 🇯🇵 日本低倍
-      - 🇺🇲 美国低倍
-      - 🇰🇷 韩国低倍
+      - 香港低倍
+      - 台湾低倍
+      - 狮城低倍
+      - 日本低倍
+      - 美国低倍
+      - 韩国低倍
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/＊0.5.png
 
-  - name: "🚀 高级节点"
+  - name: "高级节点"
     type: select
     proxies:
-      - 🇭🇰 香港高级
-      - 🇹🇼 台湾高级
-      - 🇸🇬 狮城高级
-      - 🇯🇵 日本高级
-      - 🇺🇲 美国高级
-      - 🇰🇷 韩国高级
+      - 香港高级
+      - 台湾高级
+      - 狮城高级
+      - 日本高级
+      - 美国高级
+      - 韩国高级
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/＊2.png
 
-  - name: "🚀 手动切换"
+  - name: "手动切换"
     type: select
     use:
       - 🛫 守候网络
       - 🛫 MESL
       - 🛫 CTC
       - 🛫 ETON
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 
-  - name: "⚛️ AI"
+  - name: "AI"
     type: select
     proxies:
-      - 🇺🇲 美国高级
-      - 🇸🇬 狮城高级
-      - 🚀 高级节点
-      - 🚀 手动切换
+      - 美国高级
+      - 狮城高级
+      - 高级节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png
 
-  - name: "🛍️ GooglePlay"
+  - name: "GooglePlay"
     type: select
     proxies:
-      - 🇭🇰 香港低倍
-      - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
-      - 🇯🇵 日本低倍
-      - 🇺🇲 美国低倍
-      - 🇰🇷 韩国低倍
+      - 香港低倍
+      - 台湾低倍
+      - 狮城低倍
+      - 日本低倍
+      - 美国低倍
+      - 韩国低倍
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
 
-  - name: "📺 YouTube"
+  - name: "YouTube"
     type: select
     proxies:
-      - 🇭🇰 香港低倍
-      - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
-      - 🇯🇵 日本低倍
-      - 🇺🇲 美国低倍
-      - 🇰🇷 韩国低倍
+      - 香港低倍
+      - 台湾低倍
+      - 狮城低倍
+      - 日本低倍
+      - 美国低倍
+      - 韩国低倍
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 
-  - name: "🌐 Google"
+  - name: "Google"
     type: select
     proxies:
-      - 🇭🇰 香港高级
-      - 🇹🇼 台湾高级
-      - 🇸🇬 狮城高级
-      - 🇯🇵 日本高级
-      - 🇺🇲 美国高级
-      - 🇰🇷 韩国高级
+      - 香港高级
+      - 台湾高级
+      - 狮城高级
+      - 日本高级
+      - 美国高级
+      - 韩国高级
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
 
-  - name: "☁️ Onedrive"
+  - name: "Onedrive"
     type: select
     proxies:
-      - 🎯 全球直连
+      - 全球直连
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/OneDrive.png
 
-  - name: "Ⓜ️ Microsoft"
+  - name: "Microsoft"
     type: select
     proxies:
-      - 🎯 全球直连
-      - 🇺🇲 美国高级
-      - 🇸🇬 狮城高级
-      - 🚀 高级节点
-      - 🚀 手动切换
+      - 全球直连
+      - 美国高级
+      - 狮城高级
+      - 高级节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
 
-  - name: "🍎 Apple"
+  - name: "Apple"
     type: select
     proxies:
-      - 🎯 全球直连
+      - 全球直连
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 
-  - name: "💳 Paypal"
+  - name: "Paypal"
     type: select
     proxies:
-      - 🇺🇲 美国高级
-      - 🇸🇬 狮城高级
-      - 🚀 高级节点
-      - 🚀 手动切换
+      - 美国高级
+      - 狮城高级
+      - 高级节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
 
-  - name: "🤝 Telegram"
+  - name: "Telegram"
     type: select
     proxies:
       - 🇸🇬 守候低倍
       - 🇸🇬 MESL低倍
       - 🇸🇬 CTC低倍
-      - 🚀 手动切换
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
 
-  - name: "🤝 Discord"
+  - name: "Discord"
     type: select
     proxies:
-      - 🇸🇬 狮城低倍
-      - 🚀 低倍节点
-      - 🚀 手动切换
-
-  - name: "🤝 Facebook"
+      - 狮城低倍
+      - 低倍节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
+    
+  - name: "Facebook"
     type: select
     proxies:
-      - 🇸🇬 狮城低倍
-      - 🚀 低倍节点
-      - 🚀 手动切换
+      - 狮城低倍
+      - 低倍节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
 
-  - name: "🤝 Twitter"
+  - name: "Twitter"
     type: select
     proxies:
-      - 🇸🇬 狮城低倍
-      - 🚀 低倍节点
-      - 🚀 手动切换
+      - 狮城低倍
+      - 低倍节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
 
-  - name: "🎧 Shopify"
+  - name: "Spotify"
     type: select
     proxies:
-      - 🇸🇬 狮城低倍
-      - 🚀 低倍节点
-      - 🚀 手动切换
+      - 狮城低倍
+      - 低倍节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
 
-  - name: "📺 TikTok"
+  - name: "TikTok"
     type: select
     proxies:
-      - 🇯🇵 日本低倍
-      - 🚀 低倍节点
-      - 🚀 手动切换
+      - 日本低倍
+      - 低倍节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
 
-  - name: "📺 Netflix"
+  - name: "Netflix"
     type: select
     proxies:
-      - 🇸🇬 狮城低倍
-      - 🚀 低倍节点
-      - 🚀 手动切换
+      - 狮城低倍
+      - 低倍节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
 
-  - name: "📺 Emby"
+  - name: "Emby"
     type: fallback
     proxies:
       - 🌏 守候线路
       - 🌏 ACA线路
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 
-  - name: "🎮 Bahamut"
+  - name: "Bahamut"
     type: select
     proxies:
-      - 🇹🇼 台湾低倍
-      - 🚀 手动切换
+      - 台湾低倍
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
 
-  - name: "🎮 游戏加速"
+  - name: "游戏加速"
     type: select
     proxies:
       - 🇭🇰 香港游戏
@@ -244,68 +264,76 @@ proxy-groups:
       - 🇯🇵 日本游戏
       - 🇺🇲 美国游戏
       - 🇰🇷 韩国游戏
-      - 🚀 手动切换
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
 
-  - name: "🎮 游戏下载"
+  - name: "游戏下载"
     type: select
     proxies:
-      - 🎯 全球直连
-      - 🇭🇰 香港低倍
-      - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
-      - 🇯🇵 日本低倍
-      - 🇺🇲 美国低倍
-      - 🇰🇷 韩国低倍
+      - 全球直连
+      - 香港低倍
+      - 台湾低倍
+      - 狮城低倍
+      - 日本低倍
+      - 美国低倍
+      - 韩国低倍
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
 
-  - name: "🎮 游戏平台"
+  - name: "游戏平台"
     type: select
     proxies:
-      - 🎯 全球直连
-      - 🇭🇰 香港低倍
-      - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
-      - 🇯🇵 日本低倍
-      - 🇺🇲 美国低倍
-      - 🇰🇷 韩国低倍
+      - 全球直连
+      - 香港低倍
+      - 台湾低倍
+      - 狮城低倍
+      - 日本低倍
+      - 美国低倍
+      - 韩国低倍
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
 
-  - name: "🌏 国外代理"
+  - name: "国外代理"
     type: select
     proxies:
-      - 🚀 低倍节点
-      - 🚀 高级节点
-      - 🚀 手动切换
+      - 低倍节点
+      - 高级节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
 
-  - name: "📵 广告拦截"
+  - name: "广告拦截"
     type: select
     proxies:
       - REJECT
       - DIRECT
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
 
-  - name: "🍃 应用净化"
+  - name: "应用净化"
     type: select
     proxies:
       - REJECT
       - DIRECT
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Reject.png
 
-  - name: "🎯 全球直连"
+  - name: "全球直连"
     type: select
     proxies:
       - DIRECT
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png
 
-  - name: "🐟 漏网之鱼"
+  - name: "漏网之鱼"
     type: select
     proxies:
-      - 🚀 低倍节点
-      - 🚀 高级节点
-      - 🚀 手动切换
-
+      - 低倍节点
+      - 高级节点
+      - 手动切换
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    
 # ----------------国家或地区策略组---------------------
 # timeout 超过时长判定超时（默认5s）
 # interval 测试间隔（默认86400s（24h）默认60s）
 # tolerance 超过差值才会切换（默认100ms）
 
 # 低倍节点
-  - name: "🇭🇰 香港低倍"
+  - name: "香港低倍"
     type: fallback
     proxies:
       - 🇭🇰 守候低倍
@@ -315,7 +343,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇹🇼 台湾低倍"
+  - name: "台湾低倍"
     type: fallback
     proxies:
       - 🇹🇼 守候低倍
@@ -325,7 +353,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇸🇬 狮城低倍"
+  - name: "狮城低倍"
     type: fallback
     proxies:
       - 🇸🇬 守候低倍
@@ -335,7 +363,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇯🇵 日本低倍"
+  - name: "日本低倍"
     type: fallback
     proxies:
       - 🇯🇵 守候低倍
@@ -345,7 +373,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇺🇲 美国低倍"
+  - name: "美国低倍"
     type: fallback
     proxies:
       - 🇺🇲 守候低倍
@@ -355,7 +383,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇰🇷 韩国低倍"
+  - name: "韩国低倍"
     type: fallback
     proxies:
       - 🇰🇷 守候低倍
@@ -366,7 +394,7 @@ proxy-groups:
     lazy: true
 
 # 高级节点
-  - name: "🇭🇰 香港高级"
+  - name: "香港高级"
     type: fallback
     proxies:
       - 🇭🇰 MESL高级
@@ -376,7 +404,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇹🇼 台湾高级"
+  - name: "台湾高级"
     type: fallback
     proxies:
       - 🇹🇼 MESL高级
@@ -386,7 +414,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇸🇬 狮城高级"
+  - name: "狮城高级"
     type: fallback
     proxies:
       - 🇸🇬 MESL高级
@@ -396,7 +424,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇯🇵 日本高级"
+  - name: "日本高级"
     type: fallback
     proxies:
       - 🇯🇵 MESL高级
@@ -406,7 +434,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇺🇲 美国高级"
+  - name: "美国高级"
     type: fallback
     proxies:
       - 🇺🇲 MESL高级
@@ -416,7 +444,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "🇰🇷 韩国高级"
+  - name: "韩国高级"
     type: fallback
     proxies:
       - 🇰🇷 MESL高级
@@ -1284,47 +1312,47 @@ rule-providers:
 
 # 规则
 rules:
-  - RULE-SET,Lan,🎯 全球直连
-  - RULE-SET,Direct,🎯 全球直连
-  - RULE-SET,360,🎯 全球直连
-  - RULE-SET,Advertising,📵 广告拦截
-  - RULE-SET,Hijacking,🍃 应用净化
-  - RULE-SET,Privacy,🍃 应用净化
-  - RULE-SET,BlockHttpDNS,🍃 应用净化
-  - RULE-SET,Download,🎯 全球直连
-  - RULE-SET,Media_cn,🎯 全球直连
-  - RULE-SET,Bing,⚛️ AI
-  - RULE-SET,OPENAI,⚛️ AI
-  - RULE-SET,Claude,⚛️ AI
-  - RULE-SET,Notion,⚛️ AI
-  - RULE-SET,AI_tools,⚛️ AI
-  - RULE-SET,GooglePlay_my,🛍️ GooglePlay
-  - RULE-SET,GooglePlay,🛍️ GooglePlay
-  - RULE-SET,YouTube,📺 YouTube
-  - RULE-SET,YouTubeMusic,📺 YouTube
-  - RULE-SET,Google,🌐 Google
-  - RULE-SET,GoogleCN,🌐 Google
-  - RULE-SET,GoogleEarth,🌐 Google
-  - RULE-SET,GoogleFCM,🌐 Google
-  - RULE-SET,OneDrive,☁️ Onedrive
-  - RULE-SET,Microsoft,Ⓜ️ Microsoft
-  - RULE-SET,Apple,🍎 Apple
-  - RULE-SET,Paypal,💳 Paypal
-  - RULE-SET,Telegram,🤝 Telegram
-  - RULE-SET,Discord,🤝 Discord
-  - RULE-SET,Facebook,🤝 Facebook
-  - RULE-SET,Twitter,🤝 Twitter
-  - RULE-SET,Shopify,🎧 Shopify
-  - RULE-SET,TikTok,📺 TikTok
-  - RULE-SET,Netflix,📺 Netflix
-  - RULE-SET,Emby,📺 Emby
-  - RULE-SET,Emby_VPN,📺 Emby
-  - RULE-SET,Bahamut,🎮 Bahamut
-  - RULE-SET,Game_acceleration,🎮 游戏加速
-  - RULE-SET,Game_Dwonload,🎮 游戏下载
-  - RULE-SET,Game_Downloadcn,🎮 游戏下载
-  - RULE-SET,gaming_platform,🎮 游戏平台
-  - RULE-SET,Global_proxy,🌏 国外代理
-  - RULE-SET,CN_max,🎯 全球直连
-  - GEOIP,CN,🎯 全球直连
-  - MATCH,🐟 漏网之鱼
+  - RULE-SET,Lan,全球直连
+  - RULE-SET,Direct,全球直连
+  - RULE-SET,360,全球直连
+  - RULE-SET,Advertising,广告拦截
+  - RULE-SET,Hijacking,应用净化
+  - RULE-SET,Privacy,应用净化
+  - RULE-SET,BlockHttpDNS,应用净化
+  - RULE-SET,Download,全球直连
+  - RULE-SET,Media_cn,全球直连
+  - RULE-SET,Bing,AI
+  - RULE-SET,OPENAI,AI
+  - RULE-SET,Claude,AI
+  - RULE-SET,Notion,AI
+  - RULE-SET,AI_tools,AI
+  - RULE-SET,GooglePlay_my,GooglePlay
+  - RULE-SET,GooglePlay,GooglePlay
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,YouTubeMusic,YouTube
+  - RULE-SET,Google,Google
+  - RULE-SET,GoogleCN,Google
+  - RULE-SET,GoogleEarth,Google
+  - RULE-SET,GoogleFCM,Google
+  - RULE-SET,OneDrive,Onedrive
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Paypal,Paypal
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Discord,Discord
+  - RULE-SET,Facebook,Facebook
+  - RULE-SET,Twitter,Twitter
+  - RULE-SET,Shopify,Spotify
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,Emby,Emby
+  - RULE-SET,Emby_VPN,Emby
+  - RULE-SET,Bahamut,Bahamut
+  - RULE-SET,Game_acceleration,游戏加速
+  - RULE-SET,Game_Dwonload,游戏下载
+  - RULE-SET,Game_Downloadcn,游戏下载
+  - RULE-SET,gaming_platform,游戏平台
+  - RULE-SET,Global_proxy,国外代理
+  - RULE-SET,CN_max,全球直连
+  - GEOIP,CN,全球直连
+  - MATCH,漏网之鱼
