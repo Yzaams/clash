@@ -1,11 +1,3 @@
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-allow-lan: false
-mode: Rule
-log-level: info
-
 ipv6: true
 allow-lan: true
 mixed-port: 7890
@@ -79,7 +71,7 @@ proxy-providers:
   ✈️ ****:
     type: http
     url: "****"
-    interval: 172800
+    interval: 86400
     path: ./****.yaml
     health-check:
       enable: true
@@ -90,7 +82,7 @@ proxy-providers:
   ✈️ ****:
     type: http
     url: "****"
-    interval: 172800
+    interval: 86400
     path: ./****.yaml
     health-check:
       enable: true
@@ -101,7 +93,7 @@ proxy-providers:
   ✈️ ****:
     type: http
     url: "****"
-    interval: 172800
+    interval: 86400
     path: ./****.yaml
     health-check:
       enable: true
@@ -112,7 +104,7 @@ proxy-providers:
   ✈️ ****:
     type: http
     url: "****"
-    interval: 172800
+    interval: 86400
     path: ./****.yaml
     health-check:
       enable: true
@@ -123,7 +115,7 @@ proxy-providers:
   ✈️ ****:
     type: http
     url: "*****"
-    interval: 172800
+    interval: 86400
     path: ./****.yaml
     health-check:
       enable: true
