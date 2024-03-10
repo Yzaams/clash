@@ -83,24 +83,24 @@ proxy-groups:
   - name: "低倍节点"
     type: select
     proxies:
-      - 香港低倍
-      - 台湾低倍
-      - 狮城低倍
-      - 日本低倍
-      - 美国低倍
-      - 韩国低倍
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/＊0.5.png
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
 
   - name: "高级节点"
     type: select
     proxies:
-      - 香港高级
-      - 台湾高级
-      - 狮城高级
-      - 日本高级
-      - 美国高级
-      - 韩国高级
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/＊2.png
+      - 🇭🇰 香港高级
+      - 🇹🇼 台湾高级
+      - 🇸🇬 狮城高级
+      - 🇯🇵 日本高级
+      - 🇺🇲 美国高级
+      - 🇰🇷 韩国高级
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
 
   - name: "手动切换"
     type: select
@@ -114,8 +114,8 @@ proxy-groups:
   - name: "AI"
     type: select
     proxies:
-      - 美国高级
-      - 狮城高级
+      - 🇺🇲 美国高级
+      - 🇸🇬 狮城高级
       - 高级节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bot.png
@@ -123,34 +123,34 @@ proxy-groups:
   - name: "GooglePlay"
     type: select
     proxies:
-      - 香港低倍
-      - 台湾低倍
-      - 狮城低倍
-      - 日本低倍
-      - 美国低倍
-      - 韩国低倍
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
 
   - name: "YouTube"
     type: select
     proxies:
-      - 香港低倍
-      - 台湾低倍
-      - 狮城低倍
-      - 日本低倍
-      - 美国低倍
-      - 韩国低倍
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 
   - name: "Google"
     type: select
     proxies:
-      - 香港高级
-      - 台湾高级
-      - 狮城高级
-      - 日本高级
-      - 美国高级
-      - 韩国高级
+      - 🇭🇰 香港高级
+      - 🇹🇼 台湾高级
+      - 🇸🇬 狮城高级
+      - 🇯🇵 日本高级
+      - 🇺🇲 美国高级
+      - 🇰🇷 韩国高级
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png
 
   - name: "Onedrive"
@@ -163,8 +163,8 @@ proxy-groups:
     type: select
     proxies:
       - 全球直连
-      - 美国高级
-      - 狮城高级
+      - 🇺🇲 美国高级
+      - 🇸🇬 狮城高级
       - 高级节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
@@ -178,8 +178,8 @@ proxy-groups:
   - name: "Paypal"
     type: select
     proxies:
-      - 美国高级
-      - 狮城高级
+      - 🇺🇲 美国高级
+      - 🇸🇬 狮城高级
       - 高级节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
@@ -196,7 +196,7 @@ proxy-groups:
   - name: "Discord"
     type: select
     proxies:
-      - 狮城低倍
+      - 🇸🇬 狮城低倍
       - 低倍节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
@@ -204,7 +204,7 @@ proxy-groups:
   - name: "Facebook"
     type: select
     proxies:
-      - 狮城低倍
+      - 🇸🇬 狮城低倍
       - 低倍节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
@@ -212,7 +212,7 @@ proxy-groups:
   - name: "Twitter"
     type: select
     proxies:
-      - 狮城低倍
+      - 🇸🇬 狮城低倍
       - 低倍节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
@@ -220,7 +220,7 @@ proxy-groups:
   - name: "Spotify"
     type: select
     proxies:
-      - 狮城低倍
+      - 🇸🇬 狮城低倍
       - 低倍节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
@@ -228,7 +228,7 @@ proxy-groups:
   - name: "TikTok"
     type: select
     proxies:
-      - 日本低倍
+      - 🇯🇵 日本低倍
       - 低倍节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
@@ -236,13 +236,13 @@ proxy-groups:
   - name: "Netflix"
     type: select
     proxies:
-      - 狮城低倍
+      - 🇸🇬 狮城低倍
       - 低倍节点
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
 
   - name: "Emby"
-    type: fallback
+    type: select
     proxies:
       - 🌏 守候线路
       - 🌏 ACA线路
@@ -251,7 +251,7 @@ proxy-groups:
   - name: "Bahamut"
     type: select
     proxies:
-      - 台湾低倍
+      - 🇹🇼 台湾低倍
       - 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
 
@@ -271,24 +271,24 @@ proxy-groups:
     type: select
     proxies:
       - 全球直连
-      - 香港低倍
-      - 台湾低倍
-      - 狮城低倍
-      - 日本低倍
-      - 美国低倍
-      - 韩国低倍
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
 
   - name: "游戏平台"
     type: select
     proxies:
       - 全球直连
-      - 香港低倍
-      - 台湾低倍
-      - 狮城低倍
-      - 日本低倍
-      - 美国低倍
-      - 韩国低倍
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
 
   - name: "国外代理"
@@ -333,7 +333,7 @@ proxy-groups:
 # tolerance 超过差值才会切换（默认100ms）
 
 # 低倍节点
-  - name: "香港低倍"
+  - name: "🇭🇰 香港低倍"
     type: fallback
     proxies:
       - 🇭🇰 守候低倍
@@ -343,7 +343,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "台湾低倍"
+  - name: "🇹🇼 台湾低倍"
     type: fallback
     proxies:
       - 🇹🇼 守候低倍
@@ -353,7 +353,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "狮城低倍"
+  - name: "🇸🇬 狮城低倍"
     type: fallback
     proxies:
       - 🇸🇬 守候低倍
@@ -363,7 +363,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "日本低倍"
+  - name: "🇯🇵 日本低倍"
     type: fallback
     proxies:
       - 🇯🇵 守候低倍
@@ -373,7 +373,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "美国低倍"
+  - name: "🇺🇲 美国低倍"
     type: fallback
     proxies:
       - 🇺🇲 守候低倍
@@ -383,7 +383,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "韩国低倍"
+  - name: "🇰🇷 韩国低倍"
     type: fallback
     proxies:
       - 🇰🇷 守候低倍
@@ -394,7 +394,7 @@ proxy-groups:
     lazy: true
 
 # 高级节点
-  - name: "香港高级"
+  - name: "🇭🇰 香港高级"
     type: fallback
     proxies:
       - 🇭🇰 MESL高级
@@ -404,7 +404,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "台湾高级"
+  - name: "🇹🇼 台湾高级"
     type: fallback
     proxies:
       - 🇹🇼 MESL高级
@@ -414,7 +414,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "狮城高级"
+  - name: "🇸🇬 狮城高级"
     type: fallback
     proxies:
       - 🇸🇬 MESL高级
@@ -424,7 +424,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "日本高级"
+  - name: "🇯🇵 日本高级"
     type: fallback
     proxies:
       - 🇯🇵 MESL高级
@@ -434,7 +434,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "美国高级"
+  - name: "🇺🇲 美国高级"
     type: fallback
     proxies:
       - 🇺🇲 MESL高级
@@ -444,7 +444,7 @@ proxy-groups:
     interval: 60
     lazy: true
 
-  - name: "韩国高级"
+  - name: "🇰🇷 韩国高级"
     type: fallback
     proxies:
       - 🇰🇷 MESL高级
@@ -535,7 +535,7 @@ proxy-groups:
 
 
 # 倍率地区分组
-# 香港低倍
+# 🇭🇰 香港低倍
   - name: "🇭🇰 守候低倍"
     type: url-test
     use:
@@ -572,7 +572,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 台湾低倍
+# 🇹🇼 台湾低倍
   - name: "🇹🇼 守候低倍"
     type: url-test
     use:
@@ -609,7 +609,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 狮城低倍
+# 🇸🇬 狮城低倍
   - name: "🇸🇬 守候低倍"
     type: url-test
     use:
@@ -646,7 +646,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 日本低倍
+# 🇯🇵 日本低倍
   - name: "🇯🇵 守候低倍"
     type: url-test
     use:
@@ -683,7 +683,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 美国低倍
+# 🇺🇲 美国低倍
   - name: "🇺🇲 守候低倍"
     type: url-test
     use:
@@ -720,7 +720,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 韩国低倍
+# 🇰🇷 韩国低倍
   - name: "🇰🇷 守候低倍"
     type: url-test
     use:
@@ -757,7 +757,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 香港高级
+# 🇭🇰 香港高级
   - name: "🇭🇰 守候高级"
     type: url-test
     use:
@@ -794,7 +794,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 台湾高级
+# 🇹🇼 台湾高级
   - name: "🇹🇼 守候高级"
     type: url-test
     use:
@@ -831,7 +831,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 狮城高级
+# 🇸🇬 狮城高级
   - name: "🇸🇬 守候高级"
     type: url-test
     use:
@@ -868,7 +868,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 日本高级
+# 🇯🇵 日本高级
   - name: "🇯🇵 守候高级"
     type: url-test
     use:
@@ -905,7 +905,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 美国高级
+# 🇺🇲 美国高级
   - name: "🇺🇲 守候高级"
     type: url-test
     use:
@@ -942,7 +942,7 @@ proxy-groups:
     tolerance: 50
     lazy: true
 
-# 韩国高级
+# 🇰🇷 韩国高级
   - name: "🇰🇷 守候高级"
     type: url-test
     use:
@@ -1233,11 +1233,11 @@ rule-providers:
     path: ./ruleset/Twitter.yaml
     interval: 86400
 
-  Shopify:
+  spotify:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Shopify/Shopify.yaml"
-    path: ./ruleset/Shopify.yaml
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml"
+    path: ./ruleset/spotify.yaml
     interval: 86400
 
   TikTok:
@@ -1342,7 +1342,7 @@ rules:
   - RULE-SET,Discord,Discord
   - RULE-SET,Facebook,Facebook
   - RULE-SET,Twitter,Twitter
-  - RULE-SET,Shopify,Spotify
+  - RULE-SET,spotify,Spotify
   - RULE-SET,TikTok,TikTok
   - RULE-SET,Netflix,Netflix
   - RULE-SET,Emby,Emby
