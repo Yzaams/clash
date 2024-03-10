@@ -1,30 +1,30 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: false
 mode: Rule
 log-level: info
-external-controller: ':9090'
+ipv6: true
+hosts: null
 dns:
     enable: true
+    ipv6: true
     listen: '0.0.0.0:1053'
-    enhanced-mode: fake-ip
-    nameserver: [119.29.29.29, 223.5.5.5]
-    fallback: ['https://149813.alidns.com/dns-query', 8.8.8.8, 1.1.1.1]
-    fallback-filter: { geoip: true, geoip-code: CN }
-    fake-ip-filter: [dns.msftncsi.com, www.msftncsi.com, www.msftconnecttest.com, '+.stun.*.*', '+.stun.*.*.*', '+.stun.*.*.*.*', '+.stun.*.*.*.*.*', '*.n.n.srv.nintendo.net', +.stun.playstation.net, 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.msftncsi.com', '*.msftconnecttest.com', '*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', time-ios.apple.com, 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, '*.xiami.com', '*.music.migu.cn', music.migu.cn, +.msftconnecttest.com, +.msftncsi.com, localhost.ptlogin2.qq.com, localhost.sec.qq.com, +.qq.com, +.tencent.com, +.srv.nintendo.net, '*.n.n.srv.nintendo.net', +.stun.playstation.net, 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', 'xbox.*.microsoft.com', xnotify.xboxlive.com, +.battlenet.com.cn, +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, proxy.golang.org, heartbeat.belkin.com, '*.linksys.com', '*.linksyssmartwifi.com', '*.router.asus.com', mesu.apple.com, swscan.apple.com, swquery.apple.com, swdownload.apple.com, swcdn.apple.com, swdist.apple.com, lens.l.google.com, stun.l.google.com, +.nflxvideo.net, '*.square-enix.com', '*.finalfantasyxiv.com', '*.ffxiv.com', '*.ff14.sdo.com', ff.dorado.sdo.com, '*.mcdn.bilivideo.cn', +.media.dssott.com, shark007.net, +.cmbchina.com, +.cmbimg.com, local.adguard.org, +.sandai.net, +.n0808.com]
-tun:
-    enable: false
-    stack: gvisor
-    auto-route: true
-    auto-detect-interface: true
-    dns-hijack: ['114.114.114.114:53', '180.76.76.76:53', '119.29.29.29:53', '223.5.5.5:53', '8.8.8.8:53', '8.8.4.4:53', '1.1.1.1:53', '1.0.0.1:53']
-mixin:
-    dns: { enable: true, enhanced-mode: fake-ip, listen: ':53', default-nameserver: [210.5.56.145], nameserver: [114.114.114.114], fallback: ['https://8.8.8.8/dns-query', 'https://1.0.0.1/dns-query', 'https://dns.twnic.tw/dns-query', 'https://doh.opendns.com/dns-query', 'https://dns-nyc.aaflalo.me/dns-query', 'https://dns.aa.net.uk/dns-query', 'https://sg.adhole.org/dns-query', 'https://kaitain.restena.lu/dns-query', 'https://hydra.plan9-ns1.com/dns-query', 'https://jp.tiar.app/dns-query', 'https://doh.asia.dnswarden.com/adblock'], fallback-filter: { geoip: true, geoip-code: CN } }
+    use-hosts: true
+    default-nameserver: [119.29.29.29, 8.8.8.8, 1.1.1.1]
+    nameserver: [223.5.5.5, 119.29.29.29]
+    fake-ip-range: 198.18.0.1/16
+    fake-ip-filter: ['*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, 'stun.*.*', 'stun.*.*.*', swscan.apple.com, mesu.apple.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, localhost.ptlogin2.qq.com, '*.msftconnecttest.com', '*.msftncsi.com', '*.xiami.com', '*.music.migu.cn', music.migu.cn, +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.ipv6.microsoft.com', 'teredo.*.*.*', 'teredo.*.*', speedtest.cros.wr.pvp.net, +.jjvip8.com, www.douyu.com, activityapi.huya.com, activityapi.huya.com.w.cdngslb.com, www.bilibili.com, api.bilibili.com, a.w.bilicdn1.com]
+external-controller: '127.0.0.1:9090'
 clash-for-android:
     append-system-dns: false
 
 # 机场
 proxy-providers:
-  🛫 A:
+  🛫 守候网络:
     type: http
-    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
+    url: "https://subs.xttlove.uk/api/v1/client/subscribe?token=9ee150e12c8b3157f424aa5864f1aa0f"
     interval: 172800
     path: ./守候网络.yaml
     health-check:
@@ -33,9 +33,9 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
       
-  🛫 B:
+  🛫 MESL:
     type: http
-    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
+    url: "https://msub.go-d.cn/api/v1/client/subscribe?token=8ae0c15f62c504d2e1818189c53efaec"
     interval: 172800
     path: ./MESL.yaml
     health-check:
@@ -44,9 +44,9 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  🛫 C:
+  🛫 CTC:
     type: http
-    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
+    url: "https://38.47.221.60:10000/api/v1/client/subscribe?token=47e45af47ce8efddfc84b207b757128b"
     interval: 172800
     path: ./CTC.yaml
     health-check:
@@ -55,20 +55,9 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  🛫 D:
+  🛫 ETON:
     type: http
-    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
-    interval: 172800
-    path: ./ESNC.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204
-
-  🛫 E:
-    type: http
-    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
+    url: "https://one.eton.club/api/v1/client/subscribe?token=f0494f7bcb65bab39f3490a3b74d2eea"
     interval: 172800
     path: ./ETON.yaml
     health-check:
@@ -77,9 +66,9 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  🛫 F:
+  🛫 ACA:
     type: http
-    url: "日你妈逼盗订阅狗你妈升天了还喜欢分享把你妈也分了啊"
+    url: "https://api.acaisbest.shop/api/v1/client/subscribe?token=e9cd5ff5d9143f03a5ef8acadb397bce"
     interval: 172800
     path: ./ACA.yaml
     health-check:
@@ -117,13 +106,13 @@ proxy-groups:
       - 🛫 守候网络
       - 🛫 MESL
       - 🛫 CTC
-      - 🛫 ESNC
       - 🛫 ETON
 
   - name: "⚛️ AI"
     type: select
     proxies:
       - 🇺🇲 美国高级
+      - 🇸🇬 狮城高级
       - 🚀 高级节点
       - 🚀 手动切换
 
@@ -167,6 +156,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🇺🇲 美国高级
+      - 🇸🇬 狮城高级
       - 🚀 高级节点
       - 🚀 手动切换
 
@@ -179,14 +169,16 @@ proxy-groups:
     type: select
     proxies:
       - 🇺🇲 美国高级
+      - 🇸🇬 狮城高级
       - 🚀 高级节点
       - 🚀 手动切换
 
   - name: "🤝 Telegram"
     type: select
     proxies:
-      - 🇸🇬 狮城低倍
-      - 🚀 低倍节点
+      - 🇸🇬 守候低倍
+      - 🇸🇬 MESL低倍
+      - 🇸🇬 CTC低倍
       - 🚀 手动切换
 
   - name: "🤝 Discord"
@@ -436,58 +428,83 @@ proxy-groups:
 
 # 游戏节点
   - name: "🇭🇰 香港游戏"
-    type: fallback
-    proxies:
-      - 🇭🇰 香港游戏(Game)
-      - 🇭🇰 香港游戏(Normal)
-    url: 'https://www.gstatic.com/generate_204'
+    type: url-test
+    use:
+      - 🛫 MESL
+      - 🛫 ETON
+    filter: "(HK).*((?i)(udpn)|(iepl))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
     interval: 60
+    tolerance: 50
     lazy: true
 
   - name: "🇹🇼 台湾游戏"
-    type: fallback
-    proxies:
-      - 🇹🇼 台湾游戏(Game)
-      - 🇹🇼 台湾游戏(Normal)
-    url: 'https://www.gstatic.com/generate_204'
+    type: url-test
+    use:
+      - 🛫 MESL
+      - 🛫 ETON
+    filter: "(TW).*((?i)(udpn)|(iepl))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
     interval: 60
+    tolerance: 50
     lazy: true
 
   - name: "🇸🇬 狮城游戏"
-    type: fallback
-    proxies:
-      - 🇸🇬 狮城游戏(Game)
-      - 🇸🇬 狮城游戏(Normal)
-    url: 'https://www.gstatic.com/generate_204'
+    type: url-test
+    use:
+      - 🛫 MESL
+      - 🛫 ETON
+    filter: "(SG).*((?i)(udpn)|(iepl))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
     interval: 60
+    tolerance: 50
     lazy: true
 
   - name: "🇯🇵 日本游戏"
-    type: fallback
-    proxies:
-      - 🇯🇵 日本游戏(Game)
-      - 🇯🇵 日本游戏(Normal)
-    url: 'https://www.gstatic.com/generate_204'
+    type: url-test
+    use:
+      - 🛫 MESL
+      - 🛫 ETON
+    filter: "(JP).*((?i)(udpn)|(iepl))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
     interval: 60
+    tolerance: 50
     lazy: true
 
   - name: "🇺🇲 美国游戏"
-    type: fallback
-    proxies:
-      - 🇺🇲 美国游戏(Game)
-      - 🇺🇲 美国游戏(Normal)
-    url: 'https://www.gstatic.com/generate_204'
+    type: url-test
+    use:
+      - 🛫 MESL
+      - 🛫 ETON
+    filter: "(US).*((?i)(udpn)|(iepl))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
     interval: 60
+    tolerance: 50
     lazy: true
 
   - name: "🇰🇷 韩国游戏"
-    type: fallback
-    proxies:
-      - 🇰🇷 韩国游戏(Game)
-      - 🇰🇷 韩国游戏(Normal)
-    url: 'https://www.gstatic.com/generate_204'
+    type: url-test
+    use:
+      - 🛫 MESL
+      - 🛫 ETON
+    filter: "(KR).*((?i)(udpn)|(iepl))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
     interval: 60
+    tolerance: 50
     lazy: true
+
 
 # 倍率地区分组
 # 香港低倍
@@ -950,158 +967,7 @@ proxy-groups:
     type: url-test
     use:
       - 🛫 ACA
-    filter: "(?i)(hk|tw|sg|jp).*(0.[1-9])"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-# 游戏节点细分
-  - name: "🇭🇰 香港游戏(Game)"
-    type: url-test
-    use:
-      - 🛫 ESNC
-      - 🛫 ETON
-    filter: "(HK).*((?i)(game))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇹🇼 台湾游戏(Game)"
-    type: url-test
-    use:
-      - 🛫 ESNC
-      - 🛫 ETON
-    filter: "(TW).*((?i)(game))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇸🇬 狮城游戏(Game)"
-    type: url-test
-    use:
-      - 🛫 ESNC
-      - 🛫 ETON
-    filter: "(SG).*((?i)(game))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇯🇵 日本游戏(Game)"
-    type: url-test
-    use:
-      - 🛫 ESNC
-      - 🛫 ETON
-    filter: "(JP).*((?i)(game))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇺🇲 美国游戏(Game)"
-    type: url-test
-    use:
-      - 🛫 ESNC
-      - 🛫 ETON
-    filter: "(US).*((?i)(game))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇰🇷 韩国游戏(Game)"
-    type: url-test
-    use:
-      - 🛫 ESNC
-      - 🛫 ETON
-    filter: "(KR).*((?i)(game))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇭🇰 香港游戏(Normal)"
-    type: url-test
-    use:
-      - 🛫 MESL
-    filter: "(HK).*((?i)(udpn))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇹🇼 台湾游戏(Normal)"
-    type: url-test
-    use:
-      - 🛫 MESL
-    filter: "(TW).*((?i)(udpn))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇸🇬 狮城游戏(Normal)"
-    type: url-test
-    use:
-      - 🛫 MESL
-    filter: "(SG).*((?i)(udpn))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇯🇵 日本游戏(Normal)"
-    type: url-test
-    use:
-      - 🛫 MESL
-    filter: "(JP).*((?i)(udpn))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇺🇲 美国游戏(Normal)"
-    type: url-test
-    use:
-      - 🛫 MESL
-    filter: "(US).*((?i)(udpn))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 50
-    lazy: true
-
-  - name: "🇰🇷 韩国游戏(Normal)"
-    type: url-test
-    use:
-      - 🛫 MESL
-    filter: "(KR).*((?i)(udpn))"
+    filter: "(?i)(emby|lite)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
