@@ -1,7 +1,7 @@
 mixed-port: 7890
 allow-lan: true
 external-controller: '127.0.0.1:9090'
-ipv6: ture
+ipv6: false
 tcp-concurrent: true
 unified-delay: true
 global-client-fingerprint: chrome
@@ -11,7 +11,7 @@ dns:
     enable: true
     listen: '0.0.0.0:1053'
     use-hosts: true
-    ipv6: ture
+    ipv6: false
     enhanced-mode: fake-ip
     fake-ip-range: 28.0.0.1/8
     fake-ip-filter: ['*', +.lan, +.local]
@@ -101,9 +101,9 @@ proxy-groups:
   - name: "🚀 低倍节点"
     type: select
     proxies:
+      - 🇸🇬 狮城低倍
       - 🇭🇰 香港低倍
       - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
       - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
@@ -112,9 +112,9 @@ proxy-groups:
   - name: "🚀 高级节点"
     type: select
     proxies:
+      - 🇸🇬 狮城高级
       - 🇭🇰 香港高级
       - 🇹🇼 台湾高级
-      - 🇸🇬 狮城高级
       - 🇯🇵 日本高级
       - 🇺🇲 美国高级
       - 🇰🇷 韩国高级
@@ -127,6 +127,7 @@ proxy-groups:
       - ✈️ MESL
       - ✈️ CTC
       - ✈️ ETON
+      - ✈️ ACA
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
 
   - name: "⚛️ AI"
@@ -141,9 +142,9 @@ proxy-groups:
   - name: "🛍️ GooglePlay"
     type: select
     proxies:
+      - 🇸🇬 狮城低倍
       - 🇭🇰 香港低倍
       - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
       - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
@@ -152,9 +153,9 @@ proxy-groups:
   - name: "📺 YouTube"
     type: select
     proxies:
+      - 🇸🇬 狮城低倍
       - 🇭🇰 香港低倍
       - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
       - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
@@ -163,9 +164,9 @@ proxy-groups:
   - name: "🌐 Google"
     type: select
     proxies:
+      - 🇸🇬 狮城高级
       - 🇭🇰 香港高级
       - 🇹🇼 台湾高级
-      - 🇸🇬 狮城高级
       - 🇯🇵 日本高级
       - 🇺🇲 美国高级
       - 🇰🇷 韩国高级
