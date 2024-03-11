@@ -34,7 +34,7 @@ dns:
   proxy-server-nameserver:
     - https://doh.pub/dns-query
   nameserver-policy:
-    "rule-set:cn_domain,private":
+    "rule-set:CN_max,private":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
     "rule-set:geolocation-!cn":
@@ -57,6 +57,7 @@ sniffer:
       ports: [443, 8443]
   skip-domain:
     - "Mijia Cloud"
+    
 # 机场
 proxy-providers:
   ✈️ 守候网络:
@@ -1105,6 +1106,15 @@ rule-providers:
     path: ./RuleSet/Lan.yaml
     interval: 86400
 
+#私人
+  private:
+    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
+    path: ./ruleset/private.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+
 # 防误杀
   Direct:
     type: http
@@ -1407,6 +1417,7 @@ rule-providers:
 # 规则
 rules:
   - RULE-SET,Lan,🎯 全球直连
+  - RULE-SET,private,🎯 全球直连
   - RULE-SET,Direct,🎯 全球直连
   - RULE-SET,360,🎯 全球直连
   - RULE-SET,Game_acceleration,🎮 游戏加速
