@@ -1,45 +1,20 @@
-ipv6: ture
-unified-delay: true
+ipv6: true
+allow-lan: true
+mixed-port: 7890
+unified-delay: false
 tcp-concurrent: true
+external-controller: 127.0.0.1:9090
+external-ui: ui
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+
+geodata-mode: true
+geox-url:
+  geoip: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
+
 find-process-mode: strict
 global-client-fingerprint: chrome
-clash-for-android:
-  append-system-dns: false
-
-tun:
-  enable: true
-  stack: mixed
-  dns-hijack:
-    - "any:53"
-  auto-route: true
-  auto-detect-interface: true
-
-dns:
-  enable: true
-  listen: :1053
-  ipv6: true
-  enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
-  fake-ip-filter:
-    - "*"
-    - "+.lan"
-    - "+.local"
-  default-nameserver:
-    - 223.5.5.5
-    - 223.6.6.6
-    - 119.29.29.29
-  nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  proxy-server-nameserver:
-    - https://doh.pub/dns-query
-  nameserver-policy:
-    "rule-set:CN_max,private":
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
-    "rule-set:geolocation-!cn":
-      - https://dns.cloudflare.com/dns-query#dns
-      - https://dns.google/dns-query#dns
 
 profile:
   store-selected: true
@@ -57,58 +32,91 @@ sniffer:
       ports: [443, 8443]
   skip-domain:
     - "Mijia Cloud"
-    
+
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack:
+    - "any:53"
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  listen: :1053
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - "*"
+    - "+.lan"
+    - "+.local"
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  proxy-server-nameserver:
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    "geosite:cn,private":
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+    "geosite:geolocation-!cn":
+      - "https://dns.cloudflare.com/dns-query#dns"
+      - "https://dns.google/dns-query#dns"
+
+clash-for-android:
+    append-system-dns: false
+
 # 机场
 proxy-providers:
-  ✈️ 守候网络:
+  ✈️ ****:
     type: http
-    url: "https://subs.xttlove.uk/api/v1/client/subscribe?token=7f79e47361f59563f5dcaf8bf0569de7"
+    url: "****"
     interval: 86400
-    path: ./守候网络.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
       
-  ✈️ MESL:
+  ✈️ ****:
     type: http
-    url: "https://911tg3rs.com/api/v1/client/subscribe?token=5d61547e8cee3db95187e4a69966c7f7"
+    url: "****"
     interval: 86400
-    path: ./MESL.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  ✈️ CTC:
+  ✈️ ****:
     type: http
-    url: "https://38.47.221.60:10000/api/v1/client/subscribe?token=c3076ca13c055e2fa309ce0802b955fd"
+    url: "****"
     interval: 86400
-    path: ./CTC.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  ✈️ ETON:
+  ✈️ ****:
     type: http
-    url: "https://su2024.eton.club/api/v1/client/subscribe?token=7fcf7eb9c133d33bb4ff1c0247c83fd8"
+    url: "****"
     interval: 86400
-    path: ./ETON.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  ✈️ ACA:
+  ✈️ ****:
     type: http
-    url: "https://api.acaisbest.shop/api/v1/client/subscribe?token=208f423f5b8c7d38c8df0084389a7499"
+    url: "*****"
     interval: 86400
-    path: ./ACA.yaml
+    path: ./****.yaml
     health-check:
       enable: true
       interval: 600
@@ -1106,15 +1114,6 @@ rule-providers:
     path: ./RuleSet/Lan.yaml
     interval: 86400
 
-#私人
-  private:
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.yaml
-    path: ./ruleset/private.yaml
-    behavior: domain
-    interval: 86400
-    format: yaml
-    type: http
-
 # 防误杀
   Direct:
     type: http
@@ -1129,8 +1128,8 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/360/360.yaml"
     path: ./RuleSet/360.yaml
     interval: 86400
-    
-# 自用游戏抓包
+
+# 自用抓包游戏域名
   Game_acceleration:
     type: http
     behavior: classical
@@ -1399,13 +1398,6 @@ rule-providers:
     url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml"
     path: ./ruleset/gaming_platform.yaml
     interval: 86400
-
-  geolocation-!cn:
-    type: http
-    behavior: domain
-    url: https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml
-    path: ./ruleset/geolocation-!cn.yaml
-    interval: 86400
     
   Global_proxy:
     type: http
@@ -1424,7 +1416,6 @@ rule-providers:
 # 规则
 rules:
   - RULE-SET,Lan,🎯 全球直连
-  - RULE-SET,private,🎯 全球直连
   - RULE-SET,Direct,🎯 全球直连
   - RULE-SET,360,🎯 全球直连
   - RULE-SET,Game_acceleration,🎮 游戏加速
@@ -1464,7 +1455,6 @@ rules:
   - RULE-SET,Game_Dwonload,🎮 游戏下载
   - RULE-SET,Game_Downloadcn,🎮 游戏下载
   - RULE-SET,gaming_platform,🎮 游戏平台
-  - RULE-SET,geolocation-!cn,🌏 国外代理
   - RULE-SET,Global_proxy,🌏 国外代理
   - RULE-SET,CN_max,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
