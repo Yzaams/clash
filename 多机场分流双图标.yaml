@@ -68,55 +68,55 @@ clash-for-android:
 
 # 机场
 proxy-providers:
-  ✈️ ****:
+  ✈️ 守候网络:
     type: http
     url: "****"
     interval: 86400
-    path: ./****.yaml
+    path: ./守候网络.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
       
-  ✈️ ****:
+  ✈️ MESL:
     type: http
     url: "****"
     interval: 86400
-    path: ./****.yaml
+    path: ./MESL.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  ✈️ ****:
+  ✈️ CTC:
     type: http
     url: "****"
     interval: 86400
-    path: ./****.yaml
+    path: ./CTC.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  ✈️ ****:
+  ✈️ ETON:
     type: http
     url: "****"
     interval: 86400
-    path: ./****.yaml
+    path: ./ETON.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
-  ✈️ ****:
+  ✈️ ACA:
     type: http
     url: "*****"
     interval: 86400
-    path: ./****.yaml
+    path: ./ACA.yaml
     health-check:
       enable: true
       interval: 600
