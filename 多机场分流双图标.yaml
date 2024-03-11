@@ -1408,7 +1408,6 @@ rule-providers:
 # 规则
 rules:
   - RULE-SET,Lan,🎯 全球直连
-  - RULE-SET,Direct,🎯 全球直连
   - RULE-SET,360,🎯 全球直连
   - RULE-SET,Game_acceleration,🎮 游戏加速
   - RULE-SET,AdvertisingLite,📵 广告拦截
