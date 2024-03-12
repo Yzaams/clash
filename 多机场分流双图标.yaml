@@ -45,12 +45,20 @@ dns:
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
-  fake-ip-filter: ['*', +.lan, +.local]
-  default-nameserver: [223.5.5.5]
-  nameserver: ['tls://8.8.4.4#dns', 'tls://1.0.0.1#dns']
-  proxy-server-nameserver: ['https://doh.pub/dns-query']
-  nameserver-policy: { 'geosite:cn,private': ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query'] }
-  
+  fake-ip-filter:
+  - '*'
+  - '+.lan'
+  default-nameserver:
+  - 223.5.5.5
+  nameserver:
+  - 'tls://8.8.4.4#dns'
+  - 'tls://1.0.0.1#dns'
+  proxy-server-nameserver:
+  - https://doh.pub/dns-query
+  nameserver-policy:
+    "geosite:cn,private":
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
 hosts:
     time.android.com: 203.107.6.88
     time.facebook.com: 203.107.6.88
