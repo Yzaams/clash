@@ -1,7 +1,7 @@
 mixed-port: 7890
 allow-lan: true
 external-controller: '127.0.0.1:9090'
-ipv6: true
+ipv6: false
 tcp-concurrent: true
 unified-delay: true
 global-client-fingerprint: chrome
@@ -13,22 +13,14 @@ dns:
     enable: true
     listen: '0.0.0.0:1053'
     use-hosts: true
-    ipv6: true
+    ipv6: false
     enhanced-mode: fake-ip
     fake-ip-range: 28.0.0.1/8
     fake-ip-filter: ['*', +.lan, +.local]
-    default-nameserver: [223.5.5.5, 119.29.29.29]
-    nameserver: [[119.29.29.29, 8.8.8.8, 1.1.1.1]
+    default-nameserver: [223.5.5.5]
+    nameserver: ['tls://8.8.4.4#🗡️ DNS', 'tls://1.0.0.1#🗡️ DNS']
     proxy-server-nameserver: ['https://223.6.6.6/dns-query']
     nameserver-policy: { 'geosite:cn,private': ['quic://223.5.5.5:853', 'https://1.12.12.12/dns-query'] }
-
-tun:
-  enable: true
-  stack: system
-  dns-hijack:
-    - 'any:53'
-  auto-route: true
-  auto-detect-interface: true
     
 geox-url:
   geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
@@ -40,7 +32,7 @@ geo-update-interval: 24
 profile:
     store-selected: true
     store-fake-ip: true
-    
+
 sniffer:
     enable: true
     sniff: { TLS: { ports: [443, 8443] }, HTTP: { ports: [80, 8080-8880], override-destination: true } }
