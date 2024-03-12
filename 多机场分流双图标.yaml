@@ -1,38 +1,64 @@
 mixed-port: 7890
-allow-lan: true
-external-controller: '127.0.0.1:9090'
-ipv6: false
-tcp-concurrent: true
-unified-delay: true
-global-client-fingerprint: chrome
-keep-alive-interval: 15
+unified-delay: false
 geodata-mode: true
-dns:
-    enable: true
-    listen: '0.0.0.0:1053'
-    use-hosts: true
-    ipv6: false
-    enhanced-mode: fake-ip
-    fake-ip-range: 28.0.0.1/8
-    fake-ip-filter: ['*', +.lan, +.local]
-    default-nameserver: [223.5.5.5]
-    nameserver: ['tls://8.8.4.4#🗡️ DNS', 'tls://1.0.0.1#🗡️ DNS']
-    proxy-server-nameserver: ['https://223.6.6.6/dns-query']
-    nameserver-policy: { 'geosite:cn,private': ['quic://223.5.5.5:853', 'https://1.12.12.12/dns-query'] }
+tcp-concurrent: true
+find-process-mode: strict
+global-client-fingerprint: chrome
+
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+
+external-controller: 127.0.0.1:9090
+#external-ui: ui
+secret: ""
+
 geox-url:
-    geoip: 'https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat'
-    geosite: 'https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
+  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
 geo-auto-update: true
 geo-update-interval: 24
-log-level: info
+
 profile:
-    store-selected: true
-    store-fake-ip: true
+  store-selected: true
+  store-fake-ip: true
+
 sniffer:
     enable: true
     sniff: { TLS: { ports: [443, 8443] }, HTTP: { ports: [80, 8080-8880], override-destination: true } }
     skip-domain: ['Mijia Cloud', dlg.io.mi.com, +.apple.com]
     force-domain: [google.com]
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - 'any:53'
+  auto-route: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 28.0.0.1/8
+  fake-ip-filter:
+  - '*'
+  - '+.lan'
+  default-nameserver:
+  - 223.5.5.5
+  nameserver:
+  - 'tls://8.8.4.4#dns'
+  - 'tls://1.0.0.1#dns'
+  proxy-server-nameserver:
+  - https://doh.pub/dns-query
+  nameserver-policy:
+    "geosite:cn,private":
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
 hosts:
     time.android.com: 203.107.6.88
     time.facebook.com: 203.107.6.88
