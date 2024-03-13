@@ -1422,7 +1422,7 @@ rules:
   - RULE-SET,Download,🎯 全球直连
   - RULE-SET,Media_cn,🎯 全球直连
   - RULE-SET,Bing,⚛️ AI
-  - RULE-SET,Bing,⚛️ Copilot
+  - RULE-SET,Copilot,⚛️ AI
   - RULE-SET,OPENAI,⚛️ AI
   - RULE-SET,Claude,⚛️ AI
   - RULE-SET,Notion,⚛️ AI
