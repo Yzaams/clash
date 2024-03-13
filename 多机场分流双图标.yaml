@@ -32,10 +32,10 @@ dns:
   proxy-server-nameserver:
     - https://doh.pub/dns-query
   nameserver-policy:
-    "rule-set:cn_domain,private":
+    "rule-set:CN_max,Lan":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
-    "rule-set:geolocation-!cn":
+    "rule-set:Global_proxy":
       - https://dns.cloudflare.com/dns-query
       - https://dns.google/dns-query
 
@@ -338,7 +338,8 @@ proxy-groups:
   - name: "🌏 国外代理"
     type: select
     proxies:
-      - 🚀 低倍节点
+      - 🇸🇬 狮城高级
+      - 🇺🇲 美国高级
       - 🚀 高级节点
       - 🚀 手动切换
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
