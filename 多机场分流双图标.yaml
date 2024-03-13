@@ -1,67 +1,31 @@
-unified-delay: false
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: false
+mode: Rule
+log-level: info
+external-controller: ':9990'
 tcp-concurrent: true
-find-process-mode: strict
-global-client-fingerprint: chrome
 
-tun:
-  enable: true
-  stack: mixed
-  dns-hijack:
-    - "any:53"
-    - "tcp://any:53"
-  auto-route: true
-  auto-detect-interface: true
-
-dns:
-  enable: true
-  listen: :1053
-  ipv6: true
-  enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
-  fake-ip-filter:
-    - "*"
-    - "+.lan"
-    - "+.local"
-  default-nameserver:
-    - tls://223.5.5.5
-    - tls://223.6.6.6
-    - tls://119.29.29.29
-  nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  proxy-server-nameserver:
-    - https://doh.pub/dns-query
-  nameserver-policy:
-    "rule-set:CN_max,Lan":
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
-    "rule-set:Global_proxy":
-      - https://dns.cloudflare.com/dns-query
-      - https://dns.google/dns-query
-
-sniffer:
-  enable: true
-  sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
-  skip-domain:
-    - "Mijia Cloud"
-
-geodata-mode: true
-geox-url:
-  geoip: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip-lite.dat"
-  geosite: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
-  mmdb: "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country-lite.mmdb"
-  geo-auto-update: true
-  geo-update-interval: 24
-  
 clash-for-android:
   append-system-dns: false
+  
+hosts:
+  mtalk.google.com: 108.177.125.188
+  raw.githubusercontent.com: 151.101.76.133
+
+dns:
+  enabled: true
+  ipv6: true
+  listen: '127.0.0.1:53'
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  nameserver-policy: {'*.google.com': 8.8.8.8, '*.tw': 1.1.1.1, testflight.apple.com: 8.8.8.8, '*.tmall.com': 223.5.5.5, '*.taobao.com': 223.5.5.5, '*.alicdn.com': 223.5.5.5, '*.aliyun.com': 223.5.5.5, '*.alipay*.com': 223.5.5.5, '*.alibaba*.com': 223.5.5.5, '*.alimama*.com': 223.5.5.5, '*.qq.com': 114.114.114.114, '*.tencent.com': 114.114.114.114, '*.weixin.com': 114.114.114.114, '*.qpic.cn': 114.114.114.114, '*.jd.com': 114.114.114.114, '*.bilibili.com': 114.114.114.114, hdslb.com: 114.114.114.114, '*.163.com': 119.29.29.29, '*.126.com': 119.29.29.29, '*.126.net': 114.114.114.114, '*.127.net': 114.114.114.114, '*.netease.com': 114.114.114.114, '*.10010.com': 114.114.114.114, '*.unicompayment.com': 114.114.114.114, '*.ximalaya.com': 114.114.114.114, '*.baidu.com': 114.114.114.114, '*.bdstatic.com': 114.114.114.114}
+  nameserver: ['https://dns.alidns.com/dns-query']
+  fallback: ['https://dns.cloudflare.com/dns-query', 'https://doh.mullvad.net/dns-query']
+  fallback-filter: {geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32]}
     
 # 机场
 proxy-providers:
