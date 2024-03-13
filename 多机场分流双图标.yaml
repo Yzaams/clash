@@ -10,6 +10,13 @@ tcp-concurrent: true
 
 clash-for-android:
   append-system-dns: false
+
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
+geo-auto-update: ture
+geo-update-interval: 24
   
 hosts:
   mtalk.google.com: 108.177.125.188
