@@ -109,7 +109,7 @@ proxy-groups:
       - 🇺🇲 美国高级
       - 🚀 高级节点
       - 🚀 手动切换
-    icon: https://img.icons8.com/?size=100&id=QPVGuIOz96x0&format=png&color=000000
+    icon: https://img.icons8.com/?size=100&id=TUk7vxvtu6hX&format=png&color=000000
 
   - name: "🛍️ GooglePlay"
     type: select
@@ -120,8 +120,8 @@ proxy-groups:
       - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
-    icon: https://img.icons8.com/?size=100&id=rZwnRdJyYqRi&format=png&color=000000
-
+    icon: https://img.icons8.com/?size=100&id=L1ws9zn2uD01&format=png&color=000000
+    
   - name: "📺 YouTube"
     type: select
     proxies:
@@ -148,7 +148,7 @@ proxy-groups:
     type: select
     proxies:
       - 🎯 全球直连
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/OneDrive.png
+    icon: https://img.icons8.com/?size=100&id=TE1wus253XM0&format=png&color=000000
 
   - name: "Ⓜ️ Microsoft"
     type: select
@@ -158,13 +158,13 @@ proxy-groups:
       - 🇸🇬 狮城高级
       - 🚀 高级节点
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+    icon: https://img.icons8.com/?size=100&id=22989&format=png&color=000000
 
   - name: "🍎 Apple"
     type: select
     proxies:
       - 🎯 全球直连
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
+    icon: https://img.icons8.com/?size=100&id=bCu25JrJ39EB&format=png&color=000000
 
   - name: "💳 Paypal"
     type: select
@@ -173,7 +173,7 @@ proxy-groups:
       - 🇸🇬 狮城高级
       - 🚀 高级节点
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
+    icon: https://img.icons8.com/?size=100&id=QgoCJM8CWbsc&format=png&color=000000
 
   - name: "🤝 Telegram"
     type: select
@@ -182,7 +182,7 @@ proxy-groups:
       - 🇸🇬 MESL低倍
       - 🇸🇬 CTC低倍
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+    icon: https://img.icons8.com/?size=100&id=zRDCam8LVyvc&format=png&color=000000
 
   - name: "🤝 Discord"
     type: select
@@ -190,7 +190,7 @@ proxy-groups:
       - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
+    icon: https://img.icons8.com/?size=100&id=30998&format=png&color=000000
 
   - name: "🤝 Facebook"
     type: select
@@ -198,7 +198,7 @@ proxy-groups:
       - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Facebook.png
+    icon: https://img.icons8.com/?size=100&id=118497&format=png&color=000000
 
   - name: "🤝 Twitter"
     type: select
@@ -206,7 +206,7 @@ proxy-groups:
       - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+    icon: https://img.icons8.com/?size=100&id=mcLuqBBfsOgP&format=png&color=000000
 
   - name: "🎧 Spotify"
     type: select
@@ -214,7 +214,7 @@ proxy-groups:
       - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+    icon: https://img.icons8.com/?size=100&id=pdPeHJ3ithwX&format=png&color=000000
 
   - name: "📺 TikTok"
     type: select
@@ -222,7 +222,7 @@ proxy-groups:
       - 🇯🇵 日本低倍
       - 🚀 低倍节点
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+    icon: https://img.icons8.com/?size=100&id=118638&format=png&color=000000
 
   - name: "📺 Netflix"
     type: select
@@ -230,13 +230,13 @@ proxy-groups:
       - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+    icon: https://img.icons8.com/?size=100&id=62YmgvjaywD2&format=png&color=000000
 
   - name: "📺 Emby"
     type: select
     proxies:
       - 🌏 守候线路
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+    icon: https://img.icons8.com/?size=100&id=FHnoYAFmyvu0&format=png&color=000000
 
   - name: "🎮 Bahamut"
     type: select
@@ -255,7 +255,7 @@ proxy-groups:
       - 🇺🇲 美国游戏
       - 🇰🇷 韩国游戏
       - 🚀 手动切换
-    icon: https://img.icons8.com/?size=100&id=92025&format=png&color=000000
+    icon: https://img.icons8.com/?size=100&id=dMZOIfD4Mqid&format=png&color=000000
 
   - name: "🎮 游戏下载"
     type: select
@@ -279,7 +279,7 @@ proxy-groups:
       - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
-    icon: https://img.icons8.com/?size=100&id=HFaRAjjhI1mq&format=png&color=000000
+    icon: https://img.icons8.com/?size=100&id=5DANichneoqj&format=png&color=000000
 
   - name: "🌏 国外代理"
     type: select
@@ -289,20 +289,20 @@ proxy-groups:
       - 🚀 低倍节点
       - 🚀 高级节点
       - 🚀 手动切换
-    icon: https://img.icons8.com/?size=100&id=DV7lQqWiMA9e&format=png&color=000000
+    icon: https://img.icons8.com/?size=100&id=Hh1B7BSHLkhc&format=png&color=000000
 
   - name: "🍃 应用净化"
     type: select
     proxies:
       - REJECT
       - DIRECT
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Reject.png
+    icon: https://img.icons8.com/?size=100&id=xuWmEXF3GRsU&format=png&color=000000
 
   - name: "🎯 全球直连"
     type: select
     proxies:
       - DIRECT
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png
+    icon: https://img.icons8.com/?size=100&id=f5TQ1D3KYo4n&format=png&color=000000
 
   - name: "🐟 漏网之鱼"
     type: select
@@ -310,7 +310,7 @@ proxy-groups:
       - 🚀 低倍节点
       - 🚀 高级节点
       - 🚀 手动切换
-    icon: https://img.icons8.com/?size=100&id=6cNzy7mwbbzR&format=png&color=000000
+    icon: https://img.icons8.com/?size=100&id=35cCJ0NU5XUV&format=png&color=000000
 
 # ----------------国家或地区策略组---------------------
 # timeout 超过时长判定超时（默认5s）
@@ -1029,7 +1029,7 @@ proxy-groups:
     interval: 60
     tolerance: 50
     lazy: true
-    icon: https://img.icons8.com/?size=100&id=48323&format=png&color=000000
+    icon: https://img.icons8.com/?size=100&id=p9jKUHLk5ejE&format=png&color=000000
     
 rule-providers:
 # 本地
