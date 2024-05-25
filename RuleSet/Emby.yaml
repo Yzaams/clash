@@ -5,7 +5,6 @@ payload:
   - DOMAIN-SUFFIX,misakaf.org
   - DOMAIN-SUFFIX,cn2gias.uk
   - DOMAIN-SUFFIX,charontv.com
-  - IP-CIDR,89.58.18.111
   - DOMAIN-SUFFIX,i109.com
   - DOMAIN-SUFFIX,embyplus.org
   - DOMAIN-SUFFIX,bili.bili.rip
