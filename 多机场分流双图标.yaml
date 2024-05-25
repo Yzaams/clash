@@ -26,7 +26,7 @@ clash-for-android:
 proxy-providers:
   ✈️ 守候网络:
     type: http
-    url: "****"
+    url: "***"
     interval: 86400
     path: ./守候网络.yaml
     health-check:
@@ -37,7 +37,7 @@ proxy-providers:
       
   ✈️ MESL:
     type: http
-    url: "****"
+    url: "***"
     interval: 86400
     path: ./MESL.yaml
     health-check:
@@ -48,7 +48,7 @@ proxy-providers:
 
   ✈️ CTC:
     type: http
-    url: "****"
+    url: "***"
     interval: 86400
     path: ./CTC.yaml
     health-check:
@@ -59,7 +59,7 @@ proxy-providers:
 
   ✈️ ETON:
     type: http
-    url: "****"
+    url: "***"
     interval: 86400
     path: ./ETON.yaml
     health-check:
@@ -80,7 +80,7 @@ proxy-groups:
       - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
-    icon: https://raw.githubusercontent.com/Yzaams/clash/main/ICON/icons8-270-degrees-64%20(1).png
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/low.png
 
   - name: "🚀 高级节点"
     type: select
@@ -91,7 +91,7 @@ proxy-groups:
       - 🇯🇵 日本高级
       - 🇺🇲 美国高级
       - 🇰🇷 韩国高级
-    icon: https://raw.githubusercontent.com/Yzaams/clash/main/ICON/icons8-90-degrees-64%20(1).png
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/high.png
 
   - name: "🚀 手动切换"
     type: select
@@ -100,7 +100,7 @@ proxy-groups:
       - ✈️ MESL
       - ✈️ CTC
       - ✈️ ETON
-    icon: https://img.icons8.com/?size=100&id=63318&format=png&color=000000
+    icon: https://img.icons8.com/?size=100&id=lBljwTZBLSUp&format=png&color=000000
 
   - name: "⚛️ AI"
     type: select
@@ -222,7 +222,7 @@ proxy-groups:
       - 🇯🇵 日本低倍
       - 🚀 低倍节点
       - 🚀 手动切换
-    icon: https://img.icons8.com/?size=100&id=118638&format=png&color=000000
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/tiktok.png
 
   - name: "📺 Netflix"
     type: select
@@ -230,20 +230,20 @@ proxy-groups:
       - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
-    icon: https://img.icons8.com/?size=100&id=62YmgvjaywD2&format=png&color=000000
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/Netflix.png
 
   - name: "📺 Emby"
     type: select
     proxies:
       - 🌏 守候线路
-    icon: https://img.icons8.com/?size=100&id=FHnoYAFmyvu0&format=png&color=000000
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/Emby.png
 
   - name: "🎮 Bahamut"
     type: select
     proxies:
       - 🇹🇼 台湾低倍
       - 🚀 手动切换
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/bahamut.png
 
   - name: "🎮 游戏加速"
     type: select
@@ -267,7 +267,7 @@ proxy-groups:
       - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
-    icon: https://raw.githubusercontent.com/Yzaams/clash/main/ICON/game%20download.png
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/game%20download.png
     
   - name: "🎮 游戏平台"
     type: select
@@ -1029,7 +1029,7 @@ proxy-groups:
     interval: 60
     tolerance: 50
     lazy: true
-    icon: https://img.icons8.com/?size=100&id=p9jKUHLk5ejE&format=png&color=000000
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/xttlove.png
     
 rule-providers:
 # 本地
