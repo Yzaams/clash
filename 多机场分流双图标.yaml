@@ -1305,7 +1305,7 @@ rule-providers:
   Emby_VPN:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E6%9C%BA%E5%9C%BAEmby.yaml"
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/Emby.yaml"
     path: ./ruleset/Emby_VPN.yaml
     interval: 86400
 
