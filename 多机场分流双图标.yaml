@@ -322,8 +322,8 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇭🇰 守候低倍
-      - 🇭🇰 MESL低倍
       - 🇭🇰 CTC低倍
+      - 🇭🇰 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -333,8 +333,8 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇹🇼 守候低倍
-      - 🇹🇼 MESL低倍
       - 🇹🇼 CTC低倍
+      - 🇹🇼 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -344,8 +344,8 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇸🇬 守候低倍
-      - 🇸🇬 MESL低倍
       - 🇸🇬 CTC低倍
+      - 🇸🇬 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -355,8 +355,8 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇯🇵 守候低倍
-      - 🇯🇵 MESL低倍
       - 🇯🇵 CTC低倍
+      - 🇯🇵 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -366,8 +366,8 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇺🇲 守候低倍
-      - 🇺🇲 MESL低倍
       - 🇺🇲 CTC低倍
+      - 🇺🇲 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -377,8 +377,8 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇰🇷 守候低倍
-      - 🇰🇷 MESL低倍
       - 🇰🇷 CTC低倍
+      - 🇰🇷 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
