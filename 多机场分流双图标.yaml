@@ -321,8 +321,7 @@ proxy-groups:
   - name: "🇭🇰 香港低倍"
     type: fallback
     proxies:
-      - 🇭🇰 守候低倍
-      - 🇭🇰 CTC低倍
+      - 🇭🇰 守候&CTC低倍
       - 🇭🇰 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -332,8 +331,7 @@ proxy-groups:
   - name: "🇹🇼 台湾低倍"
     type: fallback
     proxies:
-      - 🇹🇼 守候低倍
-      - 🇹🇼 CTC低倍
+      - 🇹🇼 守候&CTC低倍
       - 🇹🇼 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -343,8 +341,7 @@ proxy-groups:
   - name: "🇸🇬 狮城低倍"
     type: fallback
     proxies:
-      - 🇸🇬 守候低倍
-      - 🇸🇬 CTC低倍
+      - 🇸🇬 守候&CTC低倍
       - 🇸🇬 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -354,8 +351,7 @@ proxy-groups:
   - name: "🇯🇵 日本低倍"
     type: fallback
     proxies:
-      - 🇯🇵 守候低倍
-      - 🇯🇵 CTC低倍
+      - 🇯🇵 守候&CTC低倍
       - 🇯🇵 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -365,8 +361,7 @@ proxy-groups:
   - name: "🇺🇲 美国低倍"
     type: fallback
     proxies:
-      - 🇺🇲 守候低倍
-      - 🇺🇲 CTC低倍
+      - 🇺🇲 守候&CTC低倍
       - 🇺🇲 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -376,11 +371,89 @@ proxy-groups:
   - name: "🇰🇷 韩国低倍"
     type: fallback
     proxies:
-      - 🇰🇷 守候低倍
-      - 🇰🇷 CTC低倍
+      - 🇰🇷 守候&CTC低倍
       - 🇰🇷 MESL低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
+#  低倍高流量分组
+  - name: "🇭🇰 守候&CTC低倍"
+    type: url-test
+    proxies:
+      - 🇭🇰 守候低倍
+      - 🇭🇰 CTC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇹🇼 守候&CTC低倍"
+    type: url-test
+    proxies:
+      - 🇹🇼 守候低倍
+      - 🇹🇼 CTC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇸🇬 守候&CTC低倍"
+    type: url-test
+    proxies:
+      - 🇸🇬 守候低倍
+      - 🇸🇬 CTC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+  - name: "🇯🇵 守候&CTC低倍"
+    type: url-test
+    proxies:
+      - 🇯🇵 守候低倍
+      - 🇯🇵 CTC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: "🇺🇲 守候&CTC低倍"
+    type: url-test
+    proxies:
+      - 🇺🇲 守候低倍
+      - 🇺🇲 CTC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇰🇷 守候&CTC低倍"
+    type: url-test
+    proxies:
+      - 🇰🇷 守候低倍
+      - 🇰🇷 CTC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
