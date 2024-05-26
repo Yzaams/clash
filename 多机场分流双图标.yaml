@@ -178,9 +178,8 @@ proxy-groups:
   - name: "🤝 Telegram"
     type: select
     proxies:
-      - 🇸🇬 守候低倍
-      - 🇸🇬 MESL低倍
-      - 🇸🇬 CTC低倍
+      - 🇸🇬 狮城低倍
+      - 🚀 低倍节点
       - 🚀 手动切换
     icon: https://img.icons8.com/?size=100&id=zRDCam8LVyvc&format=png&color=000000
 
