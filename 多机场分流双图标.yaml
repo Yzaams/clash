@@ -57,9 +57,20 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204
 
+  ✈️ ESNC:
+    type: http
+    url: "****"
+    interval: 86400
+    path: ./ESNC.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204      
+
   ✈️ ETON:
     type: http
-    url: "***"
+    url: "****"
     interval: 86400
     path: ./ETON.yaml
     health-check:
@@ -99,6 +110,7 @@ proxy-groups:
       - ✈️ 守候网络
       - ✈️ MESL
       - ✈️ CTC
+      - ✈️ ESNC
       - ✈️ ETON
     icon: https://img.icons8.com/?size=100&id=lBljwTZBLSUp&format=png&color=000000
 
@@ -176,12 +188,10 @@ proxy-groups:
     icon: https://img.icons8.com/?size=100&id=QgoCJM8CWbsc&format=png&color=000000
 
   - name: "🤝 Telegram"
-    type: select
+    type: fallback
     proxies:
-      - 🇸🇬 CTC高级
+      - 🇸🇬 CTC低倍
       - 🇸🇬 狮城低倍
-      - 🚀 低倍节点
-      - 🚀 手动切换
     icon: https://img.icons8.com/?size=100&id=zRDCam8LVyvc&format=png&color=000000
 
   - name: "🤝 Discord"
@@ -323,7 +333,7 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇭🇰 守候&CTC低倍
-      - 🇭🇰 MESL低倍
+      - 🇭🇰 MESL&ESNC低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -333,7 +343,7 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇹🇼 守候&CTC低倍
-      - 🇹🇼 MESL低倍
+      - 🇹🇼 MESL&ESNC低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -343,7 +353,7 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇸🇬 守候&CTC低倍
-      - 🇸🇬 MESL低倍
+      - 🇸🇬 MESL&ESNC低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -353,7 +363,7 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇯🇵 守候&CTC低倍
-      - 🇯🇵 MESL低倍
+      - 🇯🇵 MESL&ESNC低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -363,7 +373,7 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇺🇲 守候&CTC低倍
-      - 🇺🇲 MESL低倍
+      - 🇺🇲 MESL&ESNC低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -373,13 +383,13 @@ proxy-groups:
     type: fallback
     proxies:
       - 🇰🇷 守候&CTC低倍
-      - 🇰🇷 MESL低倍
+      - 🇰🇷 MESL&ESNC低倍
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
-#  低倍率高流量分组
+#  低倍率大流量分组
   - name: "🇭🇰 守候&CTC低倍"
     type: url-test
     proxies:
@@ -458,13 +468,91 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
+#  低倍率小流量分组
+  - name: "🇭🇰 MESL&ESNC低倍"
+    type: url-test
+    proxies:
+      - 🇭🇰 MESL低倍
+      - 🇭🇰 ESNC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇹🇼 MESL&ESNC低倍"
+    type: url-test
+    proxies:
+      - 🇹🇼 MESL低倍
+      - 🇹🇼 ESNC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇸🇬 MESL&ESNC低倍"
+    type: url-test
+    proxies:
+      - 🇸🇬 MESL低倍
+      - 🇸🇬 ESNC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+  - name: "🇯🇵 MESL&ESNC低倍"
+    type: url-test
+    proxies:
+      - 🇯🇵 MESL低倍
+      - 🇯🇵 ESNC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: "🇺🇲 MESL&ESNC低倍"
+    type: url-test
+    proxies:
+      - 🇺🇲 MESL低倍
+      - 🇺🇲 ESNC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇰🇷 MESL&ESNC低倍"
+    type: url-test
+    proxies:
+      - 🇰🇷 MESL低倍
+      - 🇰🇷 ESNC低倍
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
 # 高级节点
   - name: "🇭🇰 香港高级"
     type: fallback
     proxies:
-      - 🇭🇰 MESL高级
-      - 🇭🇰 CTC高级
-      - 🇭🇰 守候高级
+      - 🇭🇰 MESL&ESNC高级
+      - 🇭🇰 守候&CTC高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -473,9 +561,8 @@ proxy-groups:
   - name: "🇹🇼 台湾高级"
     type: fallback
     proxies:
-      - 🇹🇼 MESL高级
-      - 🇹🇼 CTC高级
-      - 🇹🇼 守候高级
+      - 🇹🇼 MESL&ESNC高级
+      - 🇹🇼 守候&CTC高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -484,9 +571,8 @@ proxy-groups:
   - name: "🇸🇬 狮城高级"
     type: fallback
     proxies:
-      - 🇸🇬 MESL高级
-      - 🇸🇬 CTC高级
-      - 🇸🇬 守候高级
+      - 🇸🇬 MESL&ESNC高级
+      - 🇸🇬 守候&CTC高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -495,9 +581,8 @@ proxy-groups:
   - name: "🇯🇵 日本高级"
     type: fallback
     proxies:
-      - 🇯🇵 MESL高级
-      - 🇯🇵 CTC高级
-      - 🇯🇵 守候高级
+      - 🇯🇵 MESL&ESNC高级
+      - 🇯🇵 守候&CTC高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -506,9 +591,8 @@ proxy-groups:
   - name: "🇺🇲 美国高级"
     type: fallback
     proxies:
-      - 🇺🇲 MESL高级
-      - 🇺🇲 CTC高级
-      - 🇺🇲 守候高级
+      - 🇺🇲 MESL&ESNC高级
+      - 🇺🇲 守候&CTC高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
@@ -517,21 +601,19 @@ proxy-groups:
   - name: "🇰🇷 韩国高级"
     type: fallback
     proxies:
-      - 🇰🇷 MESL高级
-      - 🇰🇷 CTC高级
-      - 🇰🇷 守候高级
+      - 🇰🇷 MESL&ESNC高级
+      - 🇰🇷 守候&CTC高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
-# 游戏节点
-  - name: "🇭🇰 香港游戏"
+#  高倍率小流量分组
+  - name: "🇭🇰 MESL&ESNC高级"
     type: url-test
-    use:
-      - ✈️ MESL
-      - ✈️ ETON
-    filter: "(HK).*((?i)((game)|udpn)|(iepl))"
+    proxies:
+      - 🇭🇰 MESL高级
+      - 🇭🇰 ESNC高级
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -540,12 +622,11 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 
-  - name: "🇹🇼 台湾游戏"
+  - name: "🇹🇼 MESL&ESNC高级"
     type: url-test
-    use:
-      - ✈️ MESL
-      - ✈️ ETON
-    filter: "(TW).*((?i)((game)|udpn)|(iepl))"
+    proxies:
+      - 🇹🇼 MESL高级
+      - 🇹🇼 ESNC高级
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -554,12 +635,11 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 
-  - name: "🇸🇬 狮城游戏"
+  - name: "🇸🇬 MESL&ESNC高级"
     type: url-test
-    use:
-      - ✈️ MESL
-      - ✈️ ETON
-    filter: "(SG).*((?i)((game)|udpn)|(iepl))"
+    proxies:
+      - 🇸🇬 MESL高级
+      - 🇸🇬 ESNC高级
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -568,12 +648,11 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 
-  - name: "🇯🇵 日本游戏"
+  - name: "🇯🇵 MESL&ESNC高级"
     type: url-test
-    use:
-      - ✈️ MESL
-      - ✈️ ETON
-    filter: "(JP).*((?i)((game)|udpn)|(iepl))"
+    proxies:
+      - 🇯🇵 MESL高级
+      - 🇯🇵 ESNC高级
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -582,12 +661,11 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 
-  - name: "🇺🇲 美国游戏"
+  - name: "🇺🇲 MESL&ESNC高级"
     type: url-test
-    use:
-      - ✈️ MESL
-      - ✈️ ETON
-    filter: "(US).*((?i)((game)|udpn)|(iepl))"
+    proxies:
+      - 🇺🇲 MESL高级
+      - 🇺🇲 ESNC高级
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -596,12 +674,11 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 
-  - name: "🇰🇷 韩国游戏"
+  - name: "🇰🇷 MESL&ESNC高级"
     type: url-test
-    use:
-      - ✈️ MESL
-      - ✈️ ETON
-    filter: "(KR).*((?i)((game)|udpn)|(iepl))"
+    proxies:
+      - 🇰🇷 MESL高级
+      - 🇰🇷 ESNC高级
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -610,6 +687,151 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
+#  高倍率大流量分组
+  - name: "🇭🇰 守候&CTC高级"
+    type: url-test
+    proxies:
+      - 🇭🇰 守候高级
+      - 🇭🇰 CTC高级
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇹🇼 守候&CTC高级"
+    type: url-test
+    proxies:
+      - 🇹🇼 守候高级
+      - 🇹🇼 CTC高级
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇸🇬 守候&CTC高级"
+    type: url-test
+    proxies:
+      - 🇸🇬 守候高级
+      - 🇸🇬 CTC高级
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+  - name: "🇯🇵 守候&CTC高级"
+    type: url-test
+    proxies:
+      - 🇯🇵 守候高级
+      - 🇯🇵 CTC高级
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: "🇺🇲 守候&CTC高级"
+    type: url-test
+    proxies:
+      - 🇺🇲 守候高级
+      - 🇺🇲 CTC高级
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇰🇷 守候&CTC高级"
+    type: url-test
+    proxies:
+      - 🇰🇷 守候高级
+      - 🇰🇷 CTC高级
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    
+# 游戏节点
+  - name: "🇭🇰 香港游戏"
+    type: fallback
+    use:
+      - ✈️ ETON
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(HK).*((?i)((game)|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇹🇼 台湾游戏"
+    type: fallback
+    use:
+      - ✈️ ETON
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(TW).*((?i)((game)|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    
+  - name: "🇸🇬 狮城游戏"
+    type: fallback
+    use:
+      - ✈️ ETON
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(SG).*((?i)((game)|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    
+  - name: "🇯🇵 日本游戏"
+    type: fallback
+    use:
+      - ✈️ ETON
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(JP).*((?i)((game)|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    
+  - name: "🇺🇲 美国游戏"
+    type: fallback
+    use:
+      - ✈️ ETON
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(US).*((?i)((game)|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png    
+    
+  - name: "🇰🇷 韩国游戏"
+    type: fallback
+    use:
+      - ✈️ ETON
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(KR).*((?i)((game)|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
 # 倍率地区分组
 # 香港低倍
@@ -625,6 +847,19 @@ proxy-groups:
     tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    
+  - name: "🇭🇰 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(HK).*(0([.][0-9]+))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png    
 
   - name: "🇭🇰 MESL低倍"
     type: url-test
@@ -639,37 +874,24 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 
-  - name: "🇭🇰 CTC低倍"
+  - name: "🇭🇰 ESNC低倍"
     type: url-test
     use:
-      - ✈️ CTC
-    filter: "(HK).*(0([.][0-9]+))"
+      - ✈️ ESNC
+    filter: "(HK)(?!.*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
     tolerance: 100
     lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png    
 
 # 台湾低倍
   - name: "🇹🇼 守候低倍"
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(TW).*(0([.][0-9]+))"
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 100
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
-
-  - name: "🇹🇼 MESL低倍"
-    type: url-test
-    use:
-      - ✈️ MESL
     filter: "(TW).*(0([.][0-9]+))"
     health-check:
     enable: true
@@ -691,6 +913,32 @@ proxy-groups:
     tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    
+  - name: "🇹🇼 MESL低倍"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(TW).*(0([.][0-9]+))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇹🇼 ESNC低倍"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(TW)(?!.*(IEPL|IPLC|RES))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 
 # 狮城低倍
   - name: "🇸🇬 守候低倍"
@@ -705,7 +953,20 @@ proxy-groups:
     tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-
+    
+  - name: "🇸🇬 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(SG).*(0([.][0-9]+))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    
   - name: "🇸🇬 MESL低倍"
     type: url-test
     use:
@@ -719,11 +980,11 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 
-  - name: "🇸🇬 CTC低倍"
+  - name: "🇸🇬 ESNC低倍"
     type: url-test
     use:
-      - ✈️ CTC
-    filter: "(SG).*(0([.][0-9]+))"
+      - ✈️ ESNC
+    filter: "(SG)(?!.*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -746,6 +1007,19 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 
+  - name: "🇯🇵 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(JP).*(0([.][0-9]+))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    
   - name: "🇯🇵 MESL低倍"
     type: url-test
     use:
@@ -759,11 +1033,11 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 
-  - name: "🇯🇵 CTC低倍"
+  - name: "🇯🇵 ESNC低倍"
     type: url-test
     use:
-      - ✈️ CTC
-    filter: "(JP).*(0([.][0-9]+))"
+      - ✈️ ESNC
+    filter: "(JP)(?!.*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -786,6 +1060,19 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 
+  - name: "🇺🇲 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(US).*(0([.][0-9]+))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    
   - name: "🇺🇲 MESL低倍"
     type: url-test
     use:
@@ -799,11 +1086,11 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 
-  - name: "🇺🇲 CTC低倍"
+  - name: "🇺🇲 ESNC低倍"
     type: url-test
     use:
-      - ✈️ CTC
-    filter: "(US).*(0([.][0-9]+))"
+      - ✈️ ESNC
+    filter: "(US)(?!.*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -825,7 +1112,20 @@ proxy-groups:
     tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-
+    
+  - name: "🇰🇷 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(KR).*(0([.][0-9]+))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    
   - name: "🇰🇷 MESL低倍"
     type: url-test
     use:
@@ -839,11 +1139,11 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
-  - name: "🇰🇷 CTC低倍"
+  - name: "🇰🇷 ESNC低倍"
     type: url-test
     use:
-      - ✈️ CTC
-    filter: "(KR).*(0([.][0-9]+))"
+      - ✈️ ESNC
+    filter: "(KR)(?!.*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -853,11 +1153,11 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
 # 香港高级
-  - name: "🇭🇰 守候高级"
+  - name: "🇭🇰 MESL高级"
     type: url-test
     use:
-      - ✈️ 守候网络
-    filter: "(HK)(?!.*(0([.][0-9]+)))"
+      - ✈️ MESL
+    filter: "(HK).*(UDPN)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -866,10 +1166,23 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 
-  - name: "🇭🇰 MESL高级"
+  - name: "🇭🇰 ESNC高级"
     type: url-test
     use:
-      - ✈️ MESL
+      - ✈️ ESNC
+    filter: "(HK).*(IEPL|IPLC|RES)"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    
+  - name: "🇭🇰 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
     filter: "(HK)(?!.*(0([.][0-9]+)))"
     health-check:
     enable: true
@@ -893,11 +1206,11 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 
 # 台湾高级
-  - name: "🇹🇼 守候高级"
+  - name: "🇹🇼 MESL高级"
     type: url-test
     use:
-      - ✈️ 守候网络
-    filter: "(TW)(?!.*(0([.][0-9]+)))"
+      - ✈️ MESL
+    filter: "(TW).*(UDPN)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -906,10 +1219,23 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 
-  - name: "🇹🇼 MESL高级"
+  - name: "🇹🇼 ESNC高级"
     type: url-test
     use:
-      - ✈️ MESL
+      - ✈️ ESNC
+    filter: "(TW).*(IEPL|IPLC|RES)"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    
+  - name: "🇹🇼 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
     filter: "(TW)(?!.*(0([.][0-9]+)))"
     health-check:
     enable: true
@@ -933,11 +1259,11 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 
 # 狮城高级
-  - name: "🇸🇬 守候高级"
+  - name: "🇸🇬 MESL高级"
     type: url-test
     use:
-      - ✈️ 守候网络
-    filter: "(SG)(?!.*(0([.][0-9]+)))"
+      - ✈️ MESL
+    filter: "(SG).*(UDPN)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -946,10 +1272,23 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 
-  - name: "🇸🇬 MESL高级"
+  - name: "🇸🇬 ESNC高级"
     type: url-test
     use:
-      - ✈️ MESL
+      - ✈️ ESNC
+    filter: "(SG).*(IEPL|IPLC|RES)"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    
+  - name: "🇸🇬 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
     filter: "(SG)(?!.*(0([.][0-9]+)))"
     health-check:
     enable: true
@@ -973,11 +1312,11 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 
 # 日本高级
-  - name: "🇯🇵 守候高级"
+  - name: "🇯🇵 MESL高级"
     type: url-test
     use:
-      - ✈️ 守候网络
-    filter: "(JP)(?!.*(0([.][0-9]+)))"
+      - ✈️ MESL
+    filter: "(JP).*(UDPN)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -986,10 +1325,23 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 
-  - name: "🇯🇵 MESL高级"
+  - name: "🇯🇵 ESNC高级"
     type: url-test
     use:
-      - ✈️ MESL
+      - ✈️ ESNC
+    filter: "(JP).*(IEPL|IPLC|RES)"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    
+  - name: "🇯🇵 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
     filter: "(JP)(?!.*(0([.][0-9]+)))"
     health-check:
     enable: true
@@ -1013,11 +1365,11 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 
 # 美国高级
-  - name: "🇺🇲 守候高级"
+  - name: "🇺🇲 MESL高级"
     type: url-test
     use:
-      - ✈️ 守候网络
-    filter: "(US)(?!.*(0([.][0-9]+)))"
+      - ✈️ MESL
+    filter: "(US).*(UDPN)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1026,10 +1378,23 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 
-  - name: "🇺🇲 MESL高级"
+  - name: "🇺🇲 ESNC高级"
     type: url-test
     use:
-      - ✈️ MESL
+      - ✈️ ESNC
+    filter: "(US).*(IEPL|IPLC|RES)"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇺🇲 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
     filter: "(US)(?!.*(0([.][0-9]+)))"
     health-check:
     enable: true
@@ -1053,11 +1418,11 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 
 # 韩国高级
-  - name: "🇰🇷 守候高级"
+  - name: "🇰🇷 MESL高级"
     type: url-test
     use:
-      - ✈️ 守候网络
-    filter: "(Korea)(?!.*(0([.][0-9]+)))"
+      - ✈️ MESL
+    filter: "(KR).*(UDPN)"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1066,11 +1431,24 @@ proxy-groups:
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
-  - name: "🇰🇷 MESL高级"
+  - name: "🇰🇷 ESNC高级"
     type: url-test
     use:
-      - ✈️ MESL
-    filter: "(KR)(?!.*(0([.][0-9]+)))"
+      - ✈️ ESNC
+    filter: "(KR).*(IEPL|IPLC|RES)"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    
+  - name: "🇰🇷 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(Korea)(?!.*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1301,7 +1679,7 @@ rule-providers:
   BardAI:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BardAI/BardAI.list"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BardAI/BardAI.yaml"
     path: ./ruleset/BardAI.yaml
     interval: 86400
 
