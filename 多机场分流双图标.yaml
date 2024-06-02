@@ -391,159 +391,123 @@ proxy-groups:
 
 #  低倍率大流量分组
   - name: "🇭🇰 守候&CTC低倍"
-    type: url-test
+    type: fallback
     proxies:
       - 🇭🇰 守候低倍
       - 🇭🇰 CTC低倍
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 
   - name: "🇹🇼 守候&CTC低倍"
-    type: url-test
+    type: fallback
     proxies:
       - 🇹🇼 守候低倍
       - 🇹🇼 CTC低倍
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 
   - name: "🇸🇬 守候&CTC低倍"
-    type: url-test
+    type: fallback
     proxies:
       - 🇸🇬 守候低倍
       - 🇸🇬 CTC低倍
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 
   - name: "🇯🇵 守候&CTC低倍"
-    type: url-test
+    type: fallback
     proxies:
       - 🇯🇵 守候低倍
       - 🇯🇵 CTC低倍
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 
   - name: "🇺🇲 守候&CTC低倍"
-    type: url-test
+    type: fallback
     proxies:
       - 🇺🇲 守候低倍
       - 🇺🇲 CTC低倍
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 
   - name: "🇰🇷 守候&CTC低倍"
-    type: url-test
+    type: fallback
     proxies:
       - 🇰🇷 守候低倍
       - 🇰🇷 CTC低倍
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
 #  低倍率小流量分组
   - name: "🇭🇰 MESL&ESNC低倍"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇭🇰 MESL低倍
       - 🇭🇰 ESNC低倍
-    health-check:
-    enable: true
+      - 🇭🇰 MESL低倍
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 
   - name: "🇹🇼 MESL&ESNC低倍"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇹🇼 MESL低倍
       - 🇹🇼 ESNC低倍
-    health-check:
-    enable: true
+      - 🇹🇼 MESL低倍
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 
   - name: "🇸🇬 MESL&ESNC低倍"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇸🇬 MESL低倍
       - 🇸🇬 ESNC低倍
-    health-check:
-    enable: true
+      - 🇸🇬 MESL低倍
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 
   - name: "🇯🇵 MESL&ESNC低倍"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇯🇵 MESL低倍
       - 🇯🇵 ESNC低倍
-    health-check:
-    enable: true
+      - 🇯🇵 MESL低倍
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 
   - name: "🇺🇲 MESL&ESNC低倍"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇺🇲 MESL低倍
       - 🇺🇲 ESNC低倍
-    health-check:
-    enable: true
+      - 🇺🇲 MESL低倍
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 
   - name: "🇰🇷 MESL&ESNC低倍"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇰🇷 MESL低倍
       - 🇰🇷 ESNC低倍
-    health-check:
-    enable: true
+      - 🇰🇷 MESL低倍
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
@@ -610,59 +574,47 @@ proxy-groups:
 
 #  高倍率小流量分组
   - name: "🇭🇰 MESL&ESNC高级"
-    type: url-test
+    type: fallback
     proxies:
       - 🇭🇰 MESL高级
       - 🇭🇰 ESNC高级
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 
   - name: "🇹🇼 MESL&ESNC高级"
-    type: url-test
+    type: fallback
     proxies:
       - 🇹🇼 MESL高级
       - 🇹🇼 ESNC高级
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 
   - name: "🇸🇬 MESL&ESNC高级"
-    type: url-test
+    type: fallback
     proxies:
       - 🇸🇬 MESL高级
       - 🇸🇬 ESNC高级
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 
   - name: "🇯🇵 MESL&ESNC高级"
-    type: url-test
+    type: fallback
     proxies:
       - 🇯🇵 MESL高级
       - 🇯🇵 ESNC高级
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 
   - name: "🇺🇲 MESL&ESNC高级"
-    type: url-test
+    type: fallback
     proxies:
       - 🇺🇲 MESL高级
       - 🇺🇲 ESNC高级
@@ -670,99 +622,77 @@ proxy-groups:
     enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 
   - name: "🇰🇷 MESL&ESNC高级"
-    type: url-test
+    type: fallback
     proxies:
       - 🇰🇷 MESL高级
       - 🇰🇷 ESNC高级
-    health-check:
-    enable: true
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
 #  高倍率大流量分组
   - name: "🇭🇰 守候&CTC高级"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇭🇰 守候高级
       - 🇭🇰 CTC高级
-    health-check:
-    enable: true
+      - 🇭🇰 守候高级
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 
   - name: "🇹🇼 守候&CTC高级"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇹🇼 守候高级
       - 🇹🇼 CTC高级
-    health-check:
-    enable: true
+      - 🇹🇼 守候高级
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 
   - name: "🇸🇬 守候&CTC高级"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇸🇬 守候高级
       - 🇸🇬 CTC高级
-    health-check:
-    enable: true
+      - 🇸🇬 守候高级
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 
   - name: "🇯🇵 守候&CTC高级"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇯🇵 守候高级
       - 🇯🇵 CTC高级
-    health-check:
-    enable: true
+      - 🇯🇵 守候高级
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 
   - name: "🇺🇲 守候&CTC高级"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇺🇲 守候高级
       - 🇺🇲 CTC高级
-    health-check:
-    enable: true
+      - 🇺🇲 守候高级
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 
   - name: "🇰🇷 守候&CTC高级"
-    type: url-test
+    type: fallback
     proxies:
-      - 🇰🇷 守候高级
       - 🇰🇷 CTC高级
-    health-check:
-    enable: true
+      - 🇰🇷 守候高级
     url: https://www.gstatic.com/generate_204
     interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
     
