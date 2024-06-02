@@ -108,9 +108,9 @@ proxy-groups:
     type: select
     use:
       - ✈️ 守候网络
-      - ✈️ MESL
       - ✈️ CTC
       - ✈️ ESNC
+      - ✈️ MESL
       - ✈️ ETON
     icon: https://img.icons8.com/?size=100&id=lBljwTZBLSUp&format=png&color=000000
 
@@ -190,7 +190,7 @@ proxy-groups:
   - name: "🤝 Telegram"
     type: fallback
     proxies:
-      - 🇸🇬 CTC低倍
+      - 🇸🇬 CTC高级
       - 🇸🇬 狮城低倍
     icon: https://img.icons8.com/?size=100&id=zRDCam8LVyvc&format=png&color=000000
 
