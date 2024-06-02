@@ -105,7 +105,7 @@ proxy-groups:
   - name: "⚛️ AI"
     type: select
     proxies:
-      - 🇸🇬 狮城高级
+      - 🇯🇵 日本高级
       - 🇺🇲 美国高级
       - 🚀 高级节点
       - 🚀 手动切换
@@ -154,8 +154,8 @@ proxy-groups:
     type: select
     proxies:
       - 🎯 全球直连
+      - 🇯🇵 日本高级
       - 🇺🇲 美国高级
-      - 🇸🇬 狮城高级
       - 🚀 高级节点
       - 🚀 手动切换
     icon: https://img.icons8.com/?size=100&id=22989&format=png&color=000000
@@ -178,6 +178,7 @@ proxy-groups:
   - name: "🤝 Telegram"
     type: select
     proxies:
+      - 🇸🇬 SG-SGGS-1X
       - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
