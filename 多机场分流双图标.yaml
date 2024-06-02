@@ -462,7 +462,8 @@ proxy-groups:
   - name: "🇭🇰 香港高级"
     type: fallback
     proxies:
-      - 🇭🇰 MESL&CTC高级
+      - 🇭🇰 MESL高级
+      - 🇭🇰 CTC高级
       - 🇭🇰 守候高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -472,7 +473,8 @@ proxy-groups:
   - name: "🇹🇼 台湾高级"
     type: fallback
     proxies:
-      - 🇹🇼 MESL&CTC高级
+      - 🇹🇼 MESL高级
+      - 🇹🇼 CTC高级
       - 🇹🇼 守候高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -482,7 +484,8 @@ proxy-groups:
   - name: "🇸🇬 狮城高级"
     type: fallback
     proxies:
-      - 🇸🇬 MESL&CTC高级
+      - 🇸🇬 MESL高级
+      - 🇸🇬 CTC高级
       - 🇸🇬 守候高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -492,7 +495,8 @@ proxy-groups:
   - name: "🇯🇵 日本高级"
     type: fallback
     proxies:
-      - 🇯🇵 MESL&CTC高级
+      - 🇯🇵 MESL高级
+      - 🇯🇵 CTC高级
       - 🇯🇵 守候高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -502,7 +506,8 @@ proxy-groups:
   - name: "🇺🇲 美国高级"
     type: fallback
     proxies:
-      - 🇺🇲 MESL&CTC高级
+      - 🇺🇲 MESL高级
+      - 🇺🇲 CTC高级
       - 🇺🇲 守候高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
@@ -512,89 +517,11 @@ proxy-groups:
   - name: "🇰🇷 韩国高级"
     type: fallback
     proxies:
-      - 🇰🇷 MESL&CTC高级
+      - 🇰🇷 MESL高级
+      - 🇰🇷 CTC高级
       - 🇰🇷 守候高级
     url: 'https://www.gstatic.com/generate_204'
     interval: 60
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-
-#  高倍率低流量分组
-  - name: "🇭🇰 MESL&CTC高级"
-    type: url-test
-    proxies:
-      - 🇭🇰 MESL高级
-      - 🇭🇰 CTC高级
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 100
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-
-  - name: "🇹🇼 MESL&CTC高级"
-    type: url-test
-    proxies:
-      - 🇹🇼 MESL高级
-      - 🇹🇼 CTC高级
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 100
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
-
-  - name: "🇸🇬 MESL&CTC高级"
-    type: url-test
-    proxies:
-      - 🇸🇬 MESL高级
-      - 🇸🇬 CTC高级
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 100
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-
-  - name: "🇯🇵 MESL&CTC高级"
-    type: url-test
-    proxies:
-      - 🇯🇵 MESL高级
-      - 🇯🇵 CTC高级
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 100
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-
-  - name: "🇺🇲 MESL&CTC高级"
-    type: url-test
-    proxies:
-      - 🇺🇲 MESL高级
-      - 🇺🇲 CTC高级
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 100
-    lazy: true
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-
-  - name: "🇰🇷 MESL&CTC高级"
-    type: url-test
-    proxies:
-      - 🇰🇷 MESL高级
-      - 🇰🇷 CTC高级
-    health-check:
-    enable: true
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 100
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 
