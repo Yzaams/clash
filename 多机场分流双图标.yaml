@@ -26,7 +26,7 @@ clash-for-android:
 proxy-providers:
   ✈️ 守候网络:
     type: http
-    url: "***"
+    url: "****"
     interval: 86400
     path: ./守候网络.yaml
     health-check:
@@ -37,7 +37,7 @@ proxy-providers:
       
   ✈️ MESL:
     type: http
-    url: "***"
+    url: "****"
     interval: 86400
     path: ./MESL.yaml
     health-check:
@@ -48,7 +48,7 @@ proxy-providers:
 
   ✈️ CTC:
     type: http
-    url: "***"
+    url: "****"
     interval: 86400
     path: ./CTC.yaml
     health-check:
@@ -154,8 +154,8 @@ proxy-groups:
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇯🇵 日本高级
       - 🇺🇲 美国高级
+      - 🇸🇬 狮城高级
       - 🚀 高级节点
       - 🚀 手动切换
     icon: https://img.icons8.com/?size=100&id=22989&format=png&color=000000
