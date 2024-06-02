@@ -178,7 +178,7 @@ proxy-groups:
   - name: "🤝 Telegram"
     type: select
     proxies:
-      - 🇸🇬 SG-SGGS-1X
+      - 🇸🇬 CTC高级
       - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
