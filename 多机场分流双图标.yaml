@@ -703,7 +703,7 @@ proxy-groups:
       - ✈️ ETON
       - ✈️ ESNC
       - ✈️ MESL
-    filter: "(HK).*((?i)((game)|udpn))"
+    filter: "(?i)((HK).*(game|udpn))"
     interval: 60
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
@@ -714,7 +714,7 @@ proxy-groups:
       - ✈️ ETON
       - ✈️ ESNC
       - ✈️ MESL
-    filter: "(TW).*((?i)((game)|udpn))"
+    filter: "(?i)((TW).*(game|udpn))"
     interval: 60
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
@@ -725,7 +725,7 @@ proxy-groups:
       - ✈️ ETON
       - ✈️ ESNC
       - ✈️ MESL
-    filter: "(SG).*((?i)((game)|udpn))"
+    filter: "(?i)((SG).*(game|udpn))"
     interval: 60
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
@@ -736,7 +736,7 @@ proxy-groups:
       - ✈️ ETON
       - ✈️ ESNC
       - ✈️ MESL
-    filter: "(JP).*((?i)((game)|udpn))"
+    filter: "(?i)((JP).*(game|udpn))"
     interval: 60
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -747,7 +747,7 @@ proxy-groups:
       - ✈️ ETON
       - ✈️ ESNC
       - ✈️ MESL
-    filter: "(US).*((?i)((game)|udpn))"
+    filter: "(?i)((US).*(game|udpn))"
     interval: 60
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png    
@@ -758,7 +758,7 @@ proxy-groups:
       - ✈️ ETON
       - ✈️ ESNC
       - ✈️ MESL
-    filter: "(KR).*((?i)((game)|udpn))"
+    filter: "(?i)((US).*(game|udpn))"
     interval: 60
     lazy: true
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
@@ -769,7 +769,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(HK).*(0([.][0-9]+))"
+    filter: "(?i)((HK).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -782,7 +782,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(HK).*(0([.][0-9]+))"
+    filter: "(?i)((HK).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -795,7 +795,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(HK).*(0([.][0-9]+))"
+    filter: "(?i)((HK).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -808,7 +808,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(HK)(?!.*(IEPL|IPLC|RES))"
+    filter: "(?i)((HK)(?!.*(IEPL|IPLC|RES|GAME)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -822,7 +822,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(TW).*(0([.][0-9]+))"
+    filter: "(?i)((TW).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -835,7 +835,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(TW).*(0([.][0-9]+))"
+    filter: "(?i)((TW).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -848,7 +848,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(TW).*(0([.][0-9]+))"
+    filter: "(?i)((TW).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -861,7 +861,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(TW)(?!.*(IEPL|IPLC|RES))"
+    filter: "(?i)((TW)(?!.*(IEPL|IPLC|RES|GAME)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -875,7 +875,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(SG).*(0([.][0-9]+))"
+    filter: "(?i)((SG).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -888,7 +888,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(SG).*(0([.][0-9]+))"
+    filter: "(?i)((SG).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -901,7 +901,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(SG).*(0([.][0-9]+))"
+    filter: "(?i)((SG).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -914,7 +914,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(SG)(?!.*(IEPL|IPLC|RES))"
+    filter: "(?i)((SG)(?!.*(IEPL|IPLC|RES|GAME)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -928,7 +928,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(JP).*(0([.][0-9]+))"
+    filter: "(?i)((JP).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -941,7 +941,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(JP).*(0([.][0-9]+))"
+    filter: "(?i)((JP).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -954,7 +954,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(JP).*(0([.][0-9]+))"
+    filter: "(?i)((JP).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -967,7 +967,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(JP)(?!.*(IEPL|IPLC|RES))"
+    filter: "(?i)((JP)(?!.*(IEPL|IPLC|RES|GAME)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -981,7 +981,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(US).*(0([.][0-9]+))"
+    filter: "(?i)((US).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -994,7 +994,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(US).*(0([.][0-9]+))"
+    filter: "(?i)((US).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1007,7 +1007,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(US).*(0([.][0-9]+))"
+    filter: "(?i)((US).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1020,7 +1020,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(US)(?!.*(IEPL|IPLC|RES))"
+    filter: "(?i)((US)(?!.*(IEPL|IPLC|RES|GAME)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1034,7 +1034,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(Korea).*(0([.][0-9]+))"
+    filter: "(?i)((Korea).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1047,7 +1047,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(KR).*(0([.][0-9]+))"
+    filter: "(?i)((KR).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1060,7 +1060,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(KR).*(0([.][0-9]+))"
+    filter: "(?i)((KR).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1073,7 +1073,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(KR)(?!.*(IEPL|IPLC|RES))"
+    filter: "(?i)((KR)(?!.*(IEPL|IPLC|RES|GAME)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1087,7 +1087,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(HK).*(UDPN)"
+    filter: "(?i)((HK).*(UDPN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1100,7 +1100,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(HK).*(IEPL|IPLC|RES)"
+    filter: "(?i)((HK).*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1113,7 +1113,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(HK)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((HK)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1126,7 +1126,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(HK)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((HK)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1140,7 +1140,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(TW).*(UDPN)"
+    filter: "(?i)((TW).*(UDPN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1153,7 +1153,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(TW).*(IEPL|IPLC|RES)"
+    filter: "(?i)((TW).*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1166,7 +1166,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(TW)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((TW)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1179,7 +1179,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(TW)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((TW)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1193,7 +1193,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(SG).*(UDPN)"
+    filter: "(?i)((SG).*(UDPN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1206,7 +1206,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(SG).*(IEPL|IPLC|RES)"
+    filter: "(?i)((TW).*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1219,7 +1219,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(SG)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((SG)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1232,7 +1232,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(SG)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((SG)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1246,7 +1246,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(JP).*(UDPN)"
+    filter: "(?i)((JP).*(UDPN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1259,7 +1259,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(JP).*(IEPL|IPLC|RES)"
+    filter: "(?i)((JP).*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1272,7 +1272,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(JP)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((JP)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1285,7 +1285,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(JP)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((JP)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1299,7 +1299,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(US).*(UDPN)"
+    filter: "(?i)((US).*(UDPN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1312,7 +1312,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(US).*(IEPL|IPLC|RES)"
+    filter: "(?i)((US).*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1325,7 +1325,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(US)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((US)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1338,7 +1338,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(US)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((US)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1352,7 +1352,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ MESL
-    filter: "(KR).*(UDPN)"
+    filter: "(?i)((KR).*(UDPN))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1365,7 +1365,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(KR).*(IEPL|IPLC|RES)"
+    filter: "(?i)((KR).*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1378,7 +1378,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(Korea)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((Korea)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1391,7 +1391,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(KR)(?!.*(0([.][0-9]+)))"
+    filter: "(?i)((Korea)(?!.*(0([.][0-9]+))))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1404,7 +1404,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ 守候网络
-    filter: "(HK|TW|SG|JP).*(0([.][0-9]+))"
+    filter: "(?i)((HK|TW|SG|JP).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
@@ -1417,7 +1417,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ CTC
-    filter: "(HK|TW|SG|JP).*(0([.][0-9]+))"
+    filter: "(?i)((HK|TW|SG|JP).*(0([.][0-9]+)))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
