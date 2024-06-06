@@ -1206,7 +1206,7 @@ proxy-groups:
     type: url-test
     use:
       - ✈️ ESNC
-    filter: "(?i)((TW).*(IEPL|IPLC|RES))"
+    filter: "(?i)((SG).*(IEPL|IPLC|RES))"
     health-check:
     enable: true
     url: https://www.gstatic.com/generate_204
