@@ -115,17 +115,6 @@ proxy-providers:
       # lazy: true
       url: http://www.gstatic.com/generate_204      
 
-  ✈️ ETON:
-    type: http
-    url: "****"
-    interval: 86400
-    path: ./ETON.yaml
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204
-
 # 规则分组
 # 引用proxy-providers用use，其他proxies
 proxy-groups:
