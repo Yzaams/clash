@@ -121,10 +121,10 @@ proxy-groups:
   - name: "🚀 低倍节点"
     type: select
     proxies:
-      - 🇯🇵 日本低倍
+      - 🇸🇬 狮城低倍
       - 🇭🇰 香港低倍
       - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
     icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/low.png
@@ -132,10 +132,10 @@ proxy-groups:
   - name: "🚀 高级节点"
     type: select
     proxies:
-      - 🇯🇵 日本高级
+      - 🇸🇬 狮城高级
       - 🇭🇰 香港高级
       - 🇹🇼 台湾高级
-      - 🇸🇬 狮城高级
+      - 🇯🇵 日本高级
       - 🇺🇲 美国高级
       - 🇰🇷 韩国高级
     icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/high.png
@@ -161,10 +161,10 @@ proxy-groups:
   - name: "🛍️ GooglePlay"
     type: select
     proxies:
-      - 🇯🇵 日本低倍
+      - 🇸🇬 狮城低倍
       - 🇭🇰 香港低倍
       - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
     icon: https://img.icons8.com/?size=100&id=L1ws9zn2uD01&format=png&color=000000
@@ -172,10 +172,10 @@ proxy-groups:
   - name: "📺 YouTube"
     type: select
     proxies:
-      - 🇯🇵 日本低倍
+      - 🇸🇬 狮城低倍
       - 🇭🇰 香港低倍
       - 🇹🇼 台湾低倍
-      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
       - 🇺🇲 美国低倍
       - 🇰🇷 韩国低倍
     icon: https://img.icons8.com/?size=100&id=108794&format=png&color=000000
@@ -183,10 +183,10 @@ proxy-groups:
   - name: "🌐 Google"
     type: select
     proxies:
-      - 🇯🇵 日本高级
+      - 🇸🇬 狮城高级
       - 🇭🇰 香港高级
       - 🇹🇼 台湾高级
-      - 🇸🇬 狮城高级
+      - 🇯🇵 日本高级
       - 🇺🇲 美国高级
       - 🇰🇷 韩国高级
     icon: https://img.icons8.com/?size=100&id=17949&format=png&color=000000
@@ -231,7 +231,7 @@ proxy-groups:
   - name: "🤝 Discord"
     type: select
     proxies:
-      - 🇯🇵 日本低倍
+      - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
     icon: https://img.icons8.com/?size=100&id=30998&format=png&color=000000
@@ -239,7 +239,7 @@ proxy-groups:
   - name: "🤝 Facebook"
     type: select
     proxies:
-      - 🇯🇵 日本低倍
+      - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
     icon: https://img.icons8.com/?size=100&id=118497&format=png&color=000000
@@ -247,7 +247,7 @@ proxy-groups:
   - name: "🤝 Twitter"
     type: select
     proxies:
-      - 🇯🇵 日本低倍
+      - 🇸🇬 狮城低倍
       - 🚀 低倍节点
       - 🚀 手动切换
     icon: https://img.icons8.com/?size=100&id=mcLuqBBfsOgP&format=png&color=000000
@@ -263,7 +263,7 @@ proxy-groups:
   - name: "📺 TikTok"
     type: select
     proxies:
-      - 🇯🇵 日本低倍
+      - 🇭🇰 香港低倍
       - 🚀 低倍节点
       - 🚀 手动切换
     icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/tiktok.png
@@ -329,7 +329,7 @@ proxy-groups:
   - name: "🌏 国外代理"
     type: select
     proxies:
-      - 🇯🇵 日本高级
+      - 🇸🇬 狮城高级
       - 🇺🇲 美国高级
       - 🚀 低倍节点
       - 🚀 高级节点
