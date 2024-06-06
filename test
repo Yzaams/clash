@@ -1237,7 +1237,7 @@ rule-providers:
   Lan:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan_No_Resolve.yaml"
     path: ./RuleSet/Lan.yaml
     interval: 86400
 
@@ -1253,7 +1253,7 @@ rule-providers:
   Hijacking:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking_No_Resolve.yaml"
     path: ./ruleset/Hijacking.yaml
     interval: 86400
   
@@ -1275,7 +1275,7 @@ rule-providers:
   Privacy:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical_No_Resolve.yaml"
     path: ./ruleset/Privacy.yaml
     interval: 86400
 
@@ -1283,7 +1283,7 @@ rule-providers:
   BlockHttpDNS:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BlockHttpDNS/BlockHttpDNS_No_Resolve.yaml"
     path: ./ruleset/BlockHttpDNS.yaml
     interval: 86400
 
@@ -1291,7 +1291,7 @@ rule-providers:
   Download:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download_No_Resolve.yaml"
     path: ./RuleSet/Download.yaml
     interval: 86400
 
@@ -1314,28 +1314,28 @@ rule-providers:
   Copilot:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot_No_Resolve.yaml"
     path: ./ruleset/Copilot.yaml
     interval: 86400
 
   OPENAI:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml"
     path: ./ruleset/OPENAI.yaml
     interval: 86400
 
   Claude:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude_No_Resolve.yaml"
     path: ./ruleset/Claude.yaml
     interval: 86400
 
   Notion:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion_No_Resolve.yaml"
     path: ./ruleset/Notion.yaml
     interval: 86400
 
@@ -1408,7 +1408,7 @@ rule-providers:
   BardAI:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BardAI/BardAI.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BardAI/BardAI_No_Resolve.yaml"
     path: ./ruleset/BardAI.yaml
     interval: 86400
 
@@ -1436,70 +1436,70 @@ rule-providers:
   Paypal:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal_No_Resolve.yaml"
     path: ./ruleset/Paypal.yaml
     interval: 86400
 
   Telegram:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml"
     path: ./ruleset/Telegram.yaml
     interval: 86400
 
   Discord:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord_No_Resolve.yaml"
     path: ./ruleset/Discord.yaml
     interval: 86400
 
   Facebook:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook_No_Resolve.yaml"
     path: ./ruleset/Facebook.yaml
     interval: 86400
 
   Twitter:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml"
     path: ./ruleset/Twitter.yaml
     interval: 86400
 
   Spotify:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify_No_Resolve.yaml"
     path: ./ruleset/Spotify.yaml
     interval: 86400
 
   TikTok:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml"
     path: ./ruleset/TikTok.yaml
     interval: 86400
     
   Netflix:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml"
     path: ./ruleset/Netflix.yaml
     interval: 86400
 
   Bahamut:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut_No_Resolve.yaml"
     path: ./ruleset/Bahamut.yaml
     interval: 86400  
     
   Emby:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby_No_Resolve.yaml"
     path: ./ruleset/Emby.yaml
     interval: 86400
     
@@ -1513,57 +1513,64 @@ rule-providers:
   Game_Dwonload:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload_No_Resolve.yaml"
     path: ./ruleset/GameDownload.yaml
     interval: 86400
 
   Game_Downloadcn:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN_No_Resolve.yaml"
     path: ./ruleset/GameDownloadCN.yaml
     interval: 86400
 
   gaming_platform:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game_No_Resolve.yaml"
     path: ./ruleset/gaming_platform.yaml
     interval: 86400
     
   Global_proxy:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical_No_Resolve.yaml"
     path: ./ruleset/Global_proxy.yaml
+    interval: 86400
+
+  Speedtest:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest_No_Resolve.yaml"
+    path: ./ruleset/Speedtest.yaml
     interval: 86400
 
   CN_max:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical_No_Resolve.yaml"
     path: ./RuleSet/ChinaMax_Classical.yaml
     interval: 86400
 
 # 规则
 rules:
-  - RULE-SET,Lan,🎯 全球直连,no-resolve
-  - RULE-SET,Game_acceleration,🎮 游戏加速
-  - RULE-SET,Adobe,🍃 应用净化,no-resolve
-  - RULE-SET,AdobeActivation,🍃 应用净化,no-resolve
-  - RULE-SET,Hijacking,🍃 应用净化,no-resolve
-  - RULE-SET,Privacy,🍃 应用净化,no-resolve
-  - RULE-SET,BlockHttpDNS,🍃 应用净化,no-resolve
+  - RULE-SET,Lan,🎯 全球直连
+  - RULE-SET,Game_acceleration,🎮 游戏加速,no-resolve
+  - RULE-SET,Adobe,🍃 应用净化
+  - RULE-SET,AdobeActivation,🍃 应用净化
+  - RULE-SET,Hijacking,🍃 应用净化
+  - RULE-SET,Privacy,🍃 应用净化
+  - RULE-SET,BlockHttpDNS,🍃 应用净化
   - RULE-SET,Download,🎯 全球直连
-  - RULE-SET,Media_cn,🎯 全球直连
+  - RULE-SET,Media_cn,🎯 全球直连,no-resolve
   - RULE-SET,Bing,⚛️ AI
   - RULE-SET,Copilot,⚛️ AI
   - RULE-SET,OPENAI,⚛️ AI
   - RULE-SET,Claude,⚛️ AI
   - RULE-SET,Notion,⚛️ AI
-  - RULE-SET,AI_tools,⚛️ AI
-  - RULE-SET,GooglePlay_my,🛍️ GooglePlay
-  - RULE-SET,GooglePlay,🛍️ GooglePlay
+  - RULE-SET,AI_tools,⚛️ AI,no-resolve
+  - RULE-SET,GooglePlay_my,🛍️ GooglePlay,no-resolve
+  - RULE-SET,GooglePlay,🛍️ GooglePlay,no-resolve
   - RULE-SET,YouTube,📺 YouTube
   - RULE-SET,YouTubeMusic,📺 YouTube
   - RULE-SET,Google,🌐 Google
@@ -1583,12 +1590,13 @@ rules:
   - RULE-SET,TikTok,📺 TikTok
   - RULE-SET,Netflix,📺 Netflix
   - RULE-SET,Emby,📺 Emby
-  - RULE-SET,Emby_VPN,📺 Emby
+  - RULE-SET,Emby_VPN,📺 Emby,no-resolve
   - RULE-SET,Bahamut,🎮 Bahamut
   - RULE-SET,Game_Dwonload,🎮 游戏下载
   - RULE-SET,Game_Downloadcn,🎮 游戏下载
   - RULE-SET,gaming_platform,🎮 游戏平台
   - RULE-SET,Global_proxy,🌏 国外代理
+  - RULE-SET,Speedtest,🚀 手动切换
   - RULE-SET,CN_max,🎯 全球直连
   - GEOSITE,CN,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
