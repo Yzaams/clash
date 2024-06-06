@@ -352,6 +352,7 @@ proxy-groups:
   - name: "🐟 漏网之鱼"
     type: select
     proxies:
+      - 🎯 全球直连
       - 🚀 低倍节点
       - 🚀 高级节点
       - 🚀 手动切换
