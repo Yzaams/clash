@@ -1,0 +1,1615 @@
+mixed-port: 10801
+allow-lan: true
+bind-address: "*"
+find-process-mode: strict
+mode: rule
+geodata-mode: true
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb"
+log-level: debug
+ipv6: true
+global-client-fingerprint: chrome
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - 0.0.0.0:53
+  auto-detect-interface: true
+  auto-route: true
+  mtu: 9000
+profile:
+  store-selected: false
+  store-fake-ip: true
+sniffer:
+  enable: true
+  override-destination: false
+  sniff:
+    TLS:
+      ports: [443, 8443]
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+dns:
+  enable: true
+  prefer-h3: true
+  listen: 0.0.0.0:53
+  ipv6: true
+  ipv6-timeout: 300
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - system
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://dns.google/dns-query
+    - https://1.1.1.1/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw
+    ipcidr:
+      - 240.0.0.0/4
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+  nameserver-policy:
+    "geosite:cn,private":
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+    "geosite:category-ads-all": rcode://success
+
+clash-for-android:
+    append-system-dns: false
+    
+# 机场
+proxy-providers:
+  ✈️ 守候网络:
+    type: http
+    url: "****"
+    interval: 86400
+    path: ./守候网络.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+      
+  ✈️ MESL:
+    type: http
+    url: "****"
+    interval: 86400
+    path: ./MESL.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
+  ✈️ CTC:
+    type: http
+    url: "****"
+    interval: 86400
+    path: ./CTC.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
+  ✈️ ESNC:
+    type: http
+    url: "****"
+    interval: 86400
+    path: ./ESNC.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204      
+
+  ✈️ ETON:
+    type: http
+    url: "****"
+    interval: 86400
+    path: ./ETON.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
+# 规则分组
+# 引用proxy-providers用use，其他proxies
+proxy-groups:
+  - name: "🚀 低倍节点"
+    type: select
+    proxies:
+      - 🇸🇬 狮城低倍
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/low.png
+
+  - name: "🚀 高级节点"
+    type: select
+    proxies:
+      - 🇸🇬 狮城高级
+      - 🇭🇰 香港高级
+      - 🇹🇼 台湾高级
+      - 🇯🇵 日本高级
+      - 🇺🇲 美国高级
+      - 🇰🇷 韩国高级
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/high.png
+
+  - name: "🚀 手动切换"
+    type: select
+    use:
+      - ✈️ 守候网络
+      - ✈️ CTC
+      - ✈️ ESNC
+      - ✈️ MESL
+      - ✈️ ETON
+    icon: https://img.icons8.com/?size=100&id=lBljwTZBLSUp&format=png&color=000000
+
+  - name: "⚛️ AI"
+    type: select
+    proxies:
+      - 🇯🇵 日本高级
+      - 🇺🇲 美国高级
+      - 🚀 高级节点
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=TUk7vxvtu6hX&format=png&color=000000
+
+  - name: "🛍️ GooglePlay"
+    type: select
+    proxies:
+      - 🇸🇬 狮城低倍
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
+    icon: https://img.icons8.com/?size=100&id=L1ws9zn2uD01&format=png&color=000000
+    
+  - name: "📺 YouTube"
+    type: select
+    proxies:
+      - 🇸🇬 狮城低倍
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
+    icon: https://img.icons8.com/?size=100&id=108794&format=png&color=000000
+
+  - name: "🌐 Google"
+    type: select
+    proxies:
+      - 🇸🇬 狮城高级
+      - 🇭🇰 香港高级
+      - 🇹🇼 台湾高级
+      - 🇯🇵 日本高级
+      - 🇺🇲 美国高级
+      - 🇰🇷 韩国高级
+    icon: https://img.icons8.com/?size=100&id=17949&format=png&color=000000
+
+  - name: "☁️ Onedrive"
+    type: select
+    proxies:
+      - 🎯 全球直连
+    icon: https://img.icons8.com/?size=100&id=TE1wus253XM0&format=png&color=000000
+
+  - name: "Ⓜ️ Microsoft"
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇺🇲 美国高级
+      - 🇸🇬 狮城高级
+      - 🚀 高级节点
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=22989&format=png&color=000000
+
+  - name: "🍎 Apple"
+    type: select
+    proxies:
+      - 🎯 全球直连
+    icon: https://img.icons8.com/?size=100&id=bCu25JrJ39EB&format=png&color=000000
+
+  - name: "💳 Paypal"
+    type: select
+    proxies:
+      - 🇺🇲 美国高级
+      - 🇸🇬 狮城高级
+      - 🚀 高级节点
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=QgoCJM8CWbsc&format=png&color=000000
+
+  - name: "🤝 Telegram"
+    type: fallback
+    proxies:
+      - 🇸🇬 CTC高级
+      - 🇸🇬 狮城低倍
+    icon: https://img.icons8.com/?size=100&id=zRDCam8LVyvc&format=png&color=000000
+
+  - name: "🤝 Discord"
+    type: select
+    proxies:
+      - 🇸🇬 狮城低倍
+      - 🚀 低倍节点
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=30998&format=png&color=000000
+
+  - name: "🤝 Facebook"
+    type: select
+    proxies:
+      - 🇸🇬 狮城低倍
+      - 🚀 低倍节点
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=118497&format=png&color=000000
+
+  - name: "🤝 Twitter"
+    type: select
+    proxies:
+      - 🇸🇬 狮城低倍
+      - 🚀 低倍节点
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=mcLuqBBfsOgP&format=png&color=000000
+
+  - name: "🎧 Spotify"
+    type: select
+    proxies:
+      - 🇸🇬 狮城低倍
+      - 🚀 低倍节点
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=pdPeHJ3ithwX&format=png&color=000000
+
+  - name: "📺 TikTok"
+    type: select
+    proxies:
+      - 🇯🇵 日本低倍
+      - 🚀 低倍节点
+      - 🚀 手动切换
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/tiktok.png
+
+  - name: "📺 Netflix"
+    type: select
+    proxies:
+      - 🇸🇬 狮城低倍
+      - 🚀 低倍节点
+      - 🚀 手动切换
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/Netflix.png
+
+  - name: "📺 Emby"
+    type: select
+    proxies:
+      - 🌏 守候线路
+      - 🌏 CTC线路
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/Emby.png
+
+  - name: "🎮 Bahamut"
+    type: select
+    proxies:
+      - 🇹🇼 台湾低倍
+      - 🚀 手动切换
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/bahamut.png
+
+  - name: "🎮 游戏加速"
+    type: select
+    proxies:
+      - 🇭🇰 香港游戏
+      - 🇹🇼 台湾游戏
+      - 🇸🇬 狮城游戏
+      - 🇯🇵 日本游戏
+      - 🇺🇲 美国游戏
+      - 🇰🇷 韩国游戏
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=dMZOIfD4Mqid&format=png&color=000000
+
+  - name: "🎮 游戏下载"
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/game%20download.png
+    
+  - name: "🎮 游戏平台"
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇭🇰 香港低倍
+      - 🇹🇼 台湾低倍
+      - 🇸🇬 狮城低倍
+      - 🇯🇵 日本低倍
+      - 🇺🇲 美国低倍
+      - 🇰🇷 韩国低倍
+    icon: https://img.icons8.com/?size=100&id=5DANichneoqj&format=png&color=000000
+
+  - name: "🌏 国外代理"
+    type: select
+    proxies:
+      - 🇸🇬 狮城高级
+      - 🇺🇲 美国高级
+      - 🚀 低倍节点
+      - 🚀 高级节点
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=Hh1B7BSHLkhc&format=png&color=000000
+
+  - name: "🍃 应用净化"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+    icon: https://img.icons8.com/?size=100&id=xuWmEXF3GRsU&format=png&color=000000
+
+  - name: "🎯 全球直连"
+    type: select
+    proxies:
+      - DIRECT
+    icon: https://img.icons8.com/?size=100&id=f5TQ1D3KYo4n&format=png&color=000000
+
+  - name: "🐟 漏网之鱼"
+    type: select
+    proxies:
+      - 🚀 低倍节点
+      - 🚀 高级节点
+      - 🚀 手动切换
+    icon: https://img.icons8.com/?size=100&id=35cCJ0NU5XUV&format=png&color=000000
+
+# ----------------国家或地区策略组---------------------
+# timeout 超过时长判定超时（默认5s）
+# interval 测试间隔（默认86400s（24h）默认60s）
+# tolerance 超过差值才会切换（默认100ms）
+
+# 低倍节点
+  - name: "🇭🇰 香港低倍"
+    type: fallback
+    proxies:
+      - 🇭🇰 守候低倍
+      - 🇭🇰 CTC低倍
+      - 🇭🇰 ESNC低倍
+      - 🇭🇰 MESL低倍
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇹🇼 台湾低倍"
+    type: fallback
+    proxies:
+      - 🇹🇼 守候低倍
+      - 🇹🇼 CTC低倍
+      - 🇹🇼 ESNC低倍
+      - 🇹🇼 MESL低倍
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇸🇬 狮城低倍"
+    type: fallback
+    proxies:
+      - 🇸🇬 守候低倍
+      - 🇸🇬 CTC低倍
+      - 🇸🇬 ESNC低倍
+      - 🇸🇬 MESL低倍
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+  - name: "🇯🇵 日本低倍"
+    type: fallback
+    proxies:
+      - 🇯🇵 守候低倍
+      - 🇯🇵 CTC低倍
+      - 🇯🇵 ESNC低倍
+      - 🇯🇵 MESL低倍
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: "🇺🇲 美国低倍"
+    type: fallback
+    proxies:
+      - 🇺🇲 守候低倍
+      - 🇺🇲 CTC低倍
+      - 🇺🇲 ESNC低倍
+      - 🇺🇲 MESL低倍
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇰🇷 韩国低倍"
+    type: fallback
+    proxies:
+      - 🇰🇷 守候低倍
+      - 🇰🇷 CTC低倍
+      - 🇰🇷 ESNC低倍
+      - 🇰🇷 MESL低倍
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
+# 高级节点
+  - name: "🇭🇰 香港高级"
+    type: fallback
+    proxies:
+      - 🇭🇰 MESL高级
+      - 🇭🇰 CTC高级
+      - 🇭🇰 ESNC高级
+      - 🇭🇰 守候高级
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇹🇼 台湾高级"
+    type: fallback
+    proxies:
+      - 🇹🇼 MESL高级
+      - 🇹🇼 CTC高级
+      - 🇹🇼 ESNC高级
+      - 🇹🇼 守候高级
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇸🇬 狮城高级"
+    type: fallback
+    proxies:
+      - 🇸🇬 MESL高级
+      - 🇸🇬 CTC高级
+      - 🇸🇬 ESNC高级
+      - 🇸🇬 守候高级
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+  - name: "🇯🇵 日本高级"
+    type: fallback
+    proxies:
+      - 🇯🇵 MESL高级
+      - 🇯🇵 CTC高级
+      - 🇯🇵 ESNC高级
+      - 🇯🇵 守候高级
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: "🇺🇲 美国高级"
+    type: fallback
+    proxies:
+      - 🇺🇲 MESL高级
+      - 🇺🇲 CTC高级
+      - 🇺🇲 ESNC高级
+      - 🇺🇲 守候高级
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇰🇷 韩国高级"
+    type: fallback
+    proxies:
+      - 🇰🇷 MESL高级
+      - 🇰🇷 CTC高级
+      - 🇰🇷 ESNC高级
+      - 🇰🇷 守候高级
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
+# 游戏节点
+  - name: "🇭🇰 香港游戏"
+    type: fallback
+    use:
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(?i)((HK).*(game|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇹🇼 台湾游戏"
+    type: fallback
+    use:
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(?i)((TW).*(game|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    
+  - name: "🇸🇬 狮城游戏"
+    type: fallback
+    use:
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(?i)((SG).*(game|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    
+  - name: "🇯🇵 日本游戏"
+    type: fallback
+    use:
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(?i)((JP).*(game|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    
+  - name: "🇺🇲 美国游戏"
+    type: fallback
+    use:
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(?i)((US).*(game|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png    
+    
+  - name: "🇰🇷 韩国游戏"
+    type: fallback
+    use:
+      - ✈️ ESNC
+      - ✈️ MESL
+    filter: "(?i)((US).*(game|udpn))"
+    interval: 60
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
+# 倍率地区分组
+# 香港低倍
+  - name: "🇭🇰 守候低倍"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((HK).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    
+  - name: "🇭🇰 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((HK).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png    
+
+  - name: "🇭🇰 MESL低倍"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((HK).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇭🇰 ESNC低倍"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((HK)(?!.*(IEPL|IPLC|RES|GAME)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png    
+
+# 台湾低倍
+  - name: "🇹🇼 守候低倍"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((TW).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇹🇼 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((TW).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    
+  - name: "🇹🇼 MESL低倍"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((TW).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇹🇼 ESNC低倍"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((TW)(?!.*(IEPL|IPLC|RES|GAME)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+# 狮城低倍
+  - name: "🇸🇬 守候低倍"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((SG).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    
+  - name: "🇸🇬 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((SG).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    
+  - name: "🇸🇬 MESL低倍"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((SG).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+  - name: "🇸🇬 ESNC低倍"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((SG)(?!.*(IEPL|IPLC|RES|GAME)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+# 日本低倍
+  - name: "🇯🇵 守候低倍"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((JP).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: "🇯🇵 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((JP).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    
+  - name: "🇯🇵 MESL低倍"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((JP).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: "🇯🇵 ESNC低倍"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((JP)(?!.*(IEPL|IPLC|RES|GAME)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+# 美国低倍
+  - name: "🇺🇲 守候低倍"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((US).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇺🇲 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((US).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    
+  - name: "🇺🇲 MESL低倍"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((US).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇺🇲 ESNC低倍"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((US)(?!.*(IEPL|IPLC|RES|GAME)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+# 韩国低倍
+  - name: "🇰🇷 守候低倍"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((Korea).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    
+  - name: "🇰🇷 CTC低倍"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((KR).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    
+  - name: "🇰🇷 MESL低倍"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((KR).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
+  - name: "🇰🇷 ESNC低倍"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((KR)(?!.*(IEPL|IPLC|RES|GAME)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
+# 香港高级
+  - name: "🇭🇰 MESL高级"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((HK).*(UDPN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇭🇰 ESNC高级"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((HK).*(IEPL|IPLC|RES))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    
+  - name: "🇭🇰 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((HK)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+  - name: "🇭🇰 CTC高级"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((HK)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+
+# 台湾高级
+  - name: "🇹🇼 MESL高级"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((TW).*(UDPN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇹🇼 ESNC高级"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((TW).*(IEPL|IPLC|RES))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+    
+  - name: "🇹🇼 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((TW)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+  - name: "🇹🇼 CTC高级"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((TW)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+
+# 狮城高级
+  - name: "🇸🇬 MESL高级"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((SG).*(UDPN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+  - name: "🇸🇬 ESNC高级"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((SG).*(IEPL|IPLC|RES))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    
+  - name: "🇸🇬 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((SG)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+  - name: "🇸🇬 CTC高级"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((SG)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+
+# 日本高级
+  - name: "🇯🇵 MESL高级"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((JP).*(UDPN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: "🇯🇵 ESNC高级"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((JP).*(IEPL|IPLC|RES))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    
+  - name: "🇯🇵 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((JP)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+  - name: "🇯🇵 CTC高级"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((JP)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+
+# 美国高级
+  - name: "🇺🇲 MESL高级"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((US).*(UDPN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇺🇲 ESNC高级"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((US).*(IEPL|IPLC|RES))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇺🇲 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((US)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+  - name: "🇺🇲 CTC高级"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((US)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+
+# 韩国高级
+  - name: "🇰🇷 MESL高级"
+    type: url-test
+    use:
+      - ✈️ MESL
+    filter: "(?i)((KR).*(UDPN))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
+  - name: "🇰🇷 ESNC高级"
+    type: url-test
+    use:
+      - ✈️ ESNC
+    filter: "(?i)((KR).*(IEPL|IPLC|RES))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    
+  - name: "🇰🇷 守候高级"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((Korea)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
+  - name: "🇰🇷 CTC高级"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((Korea)(?!.*(0([.][0-9]+))))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+
+  - name: "🌏 守候线路"
+    type: url-test
+    use:
+      - ✈️ 守候网络
+    filter: "(?i)((HK|TW|SG|JP).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/xttlove.png
+
+  - name: "🌏 CTC线路"
+    type: url-test
+    use:
+      - ✈️ CTC
+    filter: "(?i)((HK|TW|SG|JP).*(0([.][0-9]+)))"
+    health-check:
+    enable: true
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 100
+    lazy: true
+    icon: https://raw.githubusercontent.com/Yzaams/clash/main/Icon/CTC.png
+    
+rule-providers:
+# 本地
+  Lan:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    path: ./RuleSet/Lan.yaml
+    interval: 86400
+
+  360:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/360/360.yaml"
+    path: ./RuleSet/360.yaml
+    interval: 86400
+
+# 自用抓包游戏域名
+  Game_acceleration:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E6%B8%B8%E6%88%8F%E5%8A%A0%E9%80%9F.yaml"
+    path: ./ruleset/Game_acceleration.yaml
+    interval: 86400
+
+# 反劫持
+  Hijacking:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml"
+    path: ./ruleset/Hijacking.yaml
+    interval: 86400
+  
+  Adobe:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Adobe/Adobe_No_Resolve.yaml"
+    path: ./ruleset/Hijacking.yaml
+    interval: 86400
+    
+  AdobeActivation:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdobeActivation/AdobeActivation_No_Resolve.yaml"
+    path: ./ruleset/Hijacking.yaml
+    interval: 86400
+
+# 隐私保护
+  Privacy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical.yaml"
+    path: ./ruleset/Privacy.yaml
+    interval: 86400
+
+# 国内DNS劫持
+  BlockHttpDNS:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml"
+    path: ./ruleset/BlockHttpDNS.yaml
+    interval: 86400
+
+# 常用下载软件
+  Download:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml"
+    path: ./RuleSet/Download.yaml
+    interval: 86400
+
+# 自用域名
+  Media_cn:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/%E5%9B%BD%E5%86%85%E4%BB%A3%E7%90%86.yaml"
+    path: ./ruleset/Media_cn.yaml
+    interval: 86400
+
+# 常用域名
+  Bing:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bing.yaml"
+    path: ./ruleset/Bing.yaml
+    interval: 86400
+
+  Copilot:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml"
+    path: ./ruleset/Copilot.yaml
+    interval: 86400
+
+  OPENAI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
+    path: ./ruleset/OPENAI.yaml
+    interval: 86400
+
+  Claude:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
+    path: ./ruleset/Claude.yaml
+    interval: 86400
+
+  Notion:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion.yaml"
+    path: ./ruleset/Notion.yaml
+    interval: 86400
+
+# 自用AI
+  AI_tools:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/AI%E5%90%88%E9%9B%86.yaml"
+    path: ./ruleset/Common AI_tools.yaml
+    interval: 86400
+
+# 谷歌商店添加规则
+  GooglePlay_my:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/Googleplay.yaml"
+    path: ./ruleset/GooglePlay_my.yaml
+    interval: 86400
+
+# ACL4SSR 谷歌商店IP
+  GooglePlay:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCNProxyIP.yaml"
+    path: ./ruleset/GooglePlay.yaml
+    interval: 86400
+
+  YouTube:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTube.yaml"
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/YouTubeMusic.yaml"
+    path: ./ruleset/YouTubeMusic.yaml
+    interval: 86400
+
+  Google:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Google.yaml"
+    path: ./ruleset/Google.yaml
+    interval: 86400
+ 
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleCN.yaml"
+    path: ./ruleset/GoogleCN.yaml
+    interval: 86400
+
+  GoogleEarth:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleEarth.yaml"
+    path: ./ruleset/GoogleEarth.yaml
+    interval: 86400
+
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/GoogleFCM.yaml"
+    path: ./ruleset/GoogleFCM.yaml
+    interval: 86400
+
+  BardAI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BardAI/BardAI.yaml"
+    path: ./ruleset/BardAI.yaml
+    interval: 86400
+
+  OneDrive:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/OneDrive.yaml"
+    path: ./ruleset/OneDrive.yaml
+    interval: 86400
+
+  Microsoft:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+
+  Apple:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Apple.yaml"
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+
+  Paypal:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml"
+    path: ./ruleset/Paypal.yaml
+    interval: 86400
+
+  Telegram:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+
+  Discord:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml"
+    path: ./ruleset/Discord.yaml
+    interval: 86400
+
+  Facebook:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml"
+    path: ./ruleset/Facebook.yaml
+    interval: 86400
+
+  Twitter:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
+    path: ./ruleset/Twitter.yaml
+    interval: 86400
+
+  Spotify:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml"
+    path: ./ruleset/Spotify.yaml
+    interval: 86400
+
+  TikTok:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml"
+    path: ./ruleset/TikTok.yaml
+    interval: 86400
+    
+  Netflix:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical.yaml"
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+
+  Bahamut:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml"
+    path: ./ruleset/Bahamut.yaml
+    interval: 86400  
+    
+  Emby:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml"
+    path: ./ruleset/Emby.yaml
+    interval: 86400
+    
+  Emby_VPN:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/Emby.yaml"
+    path: ./ruleset/Emby_VPN.yaml
+    interval: 86400
+
+  Game_Dwonload:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.yaml"
+    path: ./ruleset/GameDownload.yaml
+    interval: 86400
+
+  Game_Downloadcn:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownloadCN/GameDownloadCN.yaml"
+    path: ./ruleset/GameDownloadCN.yaml
+    interval: 86400
+
+  gaming_platform:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml"
+    path: ./ruleset/gaming_platform.yaml
+    interval: 86400
+    
+  Global_proxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml"
+    path: ./ruleset/Global_proxy.yaml
+    interval: 86400
+
+  CN_max:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
+    path: ./RuleSet/ChinaMax_Classical.yaml
+    interval: 86400
+
+# 规则
+rules:
+  - RULE-SET,Lan,🎯 全球直连,no-resolve
+  - RULE-SET,360,🎯 全球直连,no-resolve
+  - RULE-SET,Game_acceleration,🎮 游戏加速
+  - RULE-SET,Adobe,🍃 应用净化
+  - RULE-SET,AdobeActivation,🍃 应用净化
+  - RULE-SET,Hijacking,🍃 应用净化
+  - RULE-SET,Privacy,🍃 应用净化
+  - RULE-SET,BlockHttpDNS,🍃 应用净化
+  - RULE-SET,Download,🎯 全球直连,no-resolve
+  - RULE-SET,Media_cn,🎯 全球直连,no-resolve
+  - RULE-SET,Bing,⚛️ AI
+  - RULE-SET,Copilot,⚛️ AI
+  - RULE-SET,OPENAI,⚛️ AI
+  - RULE-SET,Claude,⚛️ AI
+  - RULE-SET,Notion,⚛️ AI
+  - RULE-SET,AI_tools,⚛️ AI
+  - RULE-SET,GooglePlay_my,🛍️ GooglePlay
+  - RULE-SET,GooglePlay,🛍️ GooglePlay
+  - RULE-SET,YouTube,📺 YouTube
+  - RULE-SET,YouTubeMusic,📺 YouTube
+  - RULE-SET,Google,🌐 Google
+  - RULE-SET,GoogleCN,🌐 Google
+  - RULE-SET,GoogleEarth,🌐 Google
+  - RULE-SET,GoogleFCM,🌐 Google
+  - RULE-SET,BardAI,🌐 Google
+  - RULE-SET,OneDrive,☁️ Onedrive
+  - RULE-SET,Microsoft,Ⓜ️ Microsoft
+  - RULE-SET,Apple,🍎 Apple
+  - RULE-SET,Paypal,💳 Paypal
+  - RULE-SET,Telegram,🤝 Telegram
+  - RULE-SET,Discord,🤝 Discord
+  - RULE-SET,Facebook,🤝 Facebook
+  - RULE-SET,Twitter,🤝 Twitter
+  - RULE-SET,Spotify,🎧 Spotify
+  - RULE-SET,TikTok,📺 TikTok
+  - RULE-SET,Netflix,📺 Netflix
+  - RULE-SET,Emby,📺 Emby
+  - RULE-SET,Emby_VPN,📺 Emby
+  - RULE-SET,Bahamut,🎮 Bahamut
+  - RULE-SET,Game_Dwonload,🎮 游戏下载
+  - RULE-SET,Game_Downloadcn,🎮 游戏下载
+  - RULE-SET,gaming_platform,🎮 游戏平台
+  - RULE-SET,Global_proxy,🌏 国外代理
+  - RULE-SET,CN_max,🎯 全球直连,no-resolve
+  - GEOIP,CN,🎯 全球直连,no-resolve
+  - MATCH,🐟 漏网之鱼
