@@ -1546,7 +1546,7 @@ rule-providers:
     path: ./ruleset/Speedtest.yaml
     interval: 86400
 
-  Speedtest:
+  jichang%26Emby:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/jichang%26Emby.yaml"
