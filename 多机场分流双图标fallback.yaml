@@ -1546,6 +1546,13 @@ rule-providers:
     path: ./ruleset/Speedtest.yaml
     interval: 86400
 
+  Speedtest:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/Yzaams/clash/main/RuleSet/jichang%26Emby.yaml"
+    path: ./ruleset/jichang%26Emby.yaml
+    interval: 86400
+
   CN_max:
     type: http
     behavior: classical
@@ -1597,6 +1604,7 @@ rules:
   - RULE-SET,Game_Downloadcn,🎮 游戏下载
   - RULE-SET,gaming_platform,🎮 游戏平台
   - RULE-SET,Global_proxy,🌏 国外代理
+  - RULE-SET,jichang%26Emby,🌏 国外代理
   - RULE-SET,Speedtest,🚀 手动切换
   - RULE-SET,CN_max,🎯 全球直连
   - GEOSITE,CN,🎯 全球直连
