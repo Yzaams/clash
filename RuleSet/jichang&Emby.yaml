@@ -14,8 +14,3 @@ payload:
   - DOMAIN-SUFFIX,h2.i109.com
 # 兜底
   - DOMAIN-KEYWORD,emby
-#机场
-  - DOMAIN-SUFFIX,xttlove.uk
-  - DOMAIN-SUFFIX,jinglongyu.com
-  - DOMAIN-SUFFIX,mesl.cloud
-  - DOMAIN-SUFFIX,esncnet.com
