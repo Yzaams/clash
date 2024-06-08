@@ -73,7 +73,7 @@ clash-for-android:
 proxy-providers:
   ✈️ 守候网络:
     type: http
-    url: "https://subcc.sntp.uk/api/v1/client/subscribe?token=2ca6dc7d0c378ab5990d020225d28b0b"
+    url: "***"
     interval: 86400
     path: ./守候网络.yaml
     health-check:
@@ -84,7 +84,7 @@ proxy-providers:
       
   ✈️ MESL:
     type: http
-    url: "https://911tg3rs.com/api/v1/client/subscribe?token=6ec6c307c4b6514cb331f64ba633e038"
+    url: "***"
     interval: 86400
     path: ./MESL.yaml
     health-check:
@@ -95,7 +95,7 @@ proxy-providers:
 
   ✈️ CTC:
     type: http
-    url: "https://38.47.221.60:10000/api/v1/client/subscribe?token=5374aed78d88b5c25fd48f329c181516"
+    url: "***"
     interval: 86400
     path: ./CTC.yaml
     health-check:
@@ -106,7 +106,7 @@ proxy-providers:
 
   ✈️ ESNC:
     type: http
-    url: "https://link.esnclink.com/api/v1/client/subscribe?token=f46f8c1b8952a0ce9d3e2c36e3842575"
+    url: "***"
     interval: 86400
     path: ./ESNC.yaml
     health-check:
