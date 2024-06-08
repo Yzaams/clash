@@ -6,11 +6,10 @@ payload:
 # 纸片人
   - DOMAIN-SUFFIX,embyplus.org
 # hxd
-  - DOMAIN-SUFFIX,bili.bili.rip
-  - DOMAIN-SUFFIX,cdn.bili.rip
+  - DOMAIN-SUFFIX,bili.rip
 # heisi
-  - DOMAIN-SUFFIX,heisi.nekobox.best
-  - DOMAIN-SUFFIX,h1.i109.com
-  - DOMAIN-SUFFIX,h2.i109.com
+  - DOMAIN-SUFFIX,nekobox.best
+  - DOMAIN-SUFFIX,i109.com
+  - DOMAIN-SUFFIX,i109.com
 # 兜底
   - DOMAIN-KEYWORD,emby
