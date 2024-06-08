@@ -1,19 +1,21 @@
 payload:
 #守候
-  - DOMAIN,emby.cn2gias.uk
+  - DOMAIN-SUFFIX,cn2gias.uk
 # ACA
-  - DOMAIN,emby.aca.best
+  - DOMAIN-SUFFIX,aca.best
 # 纸片人
-  - DOMAIN,embyplus.org
+  - DOMAIN-SUFFIX,embyplus.org
 # hxd
-  - DOMAIN,bili.bili.rip
-  - DOMAIN,cdn.bili.rip
+  - DOMAIN-SUFFIX,bili.bili.rip
+  - DOMAIN-SUFFIX,cdn.bili.rip
 # heisi
-  - DOMAIN,heisi.nekobox.best
-  - DOMAIN,h1.i109.com
-  - DOMAIN,h2.i109.com
+  - DOMAIN-SUFFIX,heisi.nekobox.best
+  - DOMAIN-SUFFIX,h1.i109.com
+  - DOMAIN-SUFFIX,h2.i109.com
+# 兜底
+  - DOMAIN-KEYWORD,emby
 #机场
-  - DOMAIN,dashboard.xttlove.uk
-  - DOMAIN,www.jinglongyu.com
-  - DOMAIN,in.mesl.cloud
-  - DOMAIN,esnc.esncnet.com
+  - DOMAIN-SUFFIX,xttlove.uk
+  - DOMAIN-SUFFIX,jinglongyu.com
+  - DOMAIN-SUFFIX,mesl.cloud
+  - DOMAIN-SUFFIX,esncnet.com
