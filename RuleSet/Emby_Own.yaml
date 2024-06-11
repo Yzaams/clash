@@ -11,5 +11,8 @@ payload:
 # heisi
   - DOMAIN-SUFFIX,nekobox.best
   - DOMAIN-SUFFIX,i109.com
+# 飞跃彩虹
+  - DOMAIN-KEYWORD,581658.best
+
 # 兜底
   - DOMAIN-KEYWORD,emby
