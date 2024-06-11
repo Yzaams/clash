@@ -13,6 +13,8 @@ payload:
   - DOMAIN-SUFFIX,i109.com
 # 飞跃彩虹
   - DOMAIN-KEYWORD,581658.best
-
+  - DOMAIN-KEYWORD,feiyuefun.fun
+  - IP-CIDR6,2a03:4000:6:2150:849c:80ff:fe8c:edb3/32
+  
 # 兜底
   - DOMAIN-KEYWORD,emby
