@@ -18,8 +18,6 @@ payload:
   - DOMAIN-KEYWORD,581658.best
   - DOMAIN-KEYWORD,feiyuefun.fun
   - IP-CIDR6,2a03:4000:6:2150:849c:80ff:fe8c:edb3/32
-# 飞跃彩虹星空
-  - DOMAIN-KEYWORD,6666666.buzz
 
 # 兜底
   - DOMAIN-KEYWORD,emby
