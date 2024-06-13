@@ -1,0 +1,5 @@
+payload:
+# Huggingface
+  - DOMAIN-SUFFIX,huggingface.co
+# Civitai
+ - DOMAIN-SUFFIX,civitai.com
