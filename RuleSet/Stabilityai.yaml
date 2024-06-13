@@ -3,3 +3,4 @@ payload:
   - DOMAIN-SUFFIX,huggingface.co
 # Civitai
  - DOMAIN-SUFFIX,civitai.com
+ - DOMAIN-KEYWORD,civitai-delivery-worker-prod
