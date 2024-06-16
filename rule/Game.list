@@ -1,4 +1,7 @@
 # 魔兽大作战
 DOMAIN-SUFFIX,braze.com
 DOMAIN-SUFFIX,blizzard.com
+DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,battle.net
+DOMAIN-SUFFIX,skugry.dev
+IP-CIDR,35.198.62.0/24
