@@ -4,7 +4,3 @@ payload:
   - DOMAIN-SUFFIX,blizzard.com
   - DOMAIN-SUFFIX,blizzard.arc
   - DOMAIN-SUFFIX,battle.net
-  - DOMAIN-SUFFIX,appsflyer.com
-  - DOMAIN-SUFFIX,backtrace.io
-  - DOMAIN-SUFFIX,skugry.dev
-  - DOMAIN-SUFFIX,app-measurement.com
