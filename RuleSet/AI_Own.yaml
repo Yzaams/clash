@@ -1,6 +1,7 @@
 payload:
 # 内容：自用ai
   - DOMAIN-SUFFIX,leonardo.ai
+  - DOMAIN-SUFFIX, umalabs.ai
   - DOMAIN-SUFFIX,geospy.ai
   - DOMAIN-SUFFIX,originality.ai
   - DOMAIN-SUFFIX,fliki.ai
