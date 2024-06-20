@@ -18,6 +18,7 @@ payload:
 # 飞跃彩虹
   - DOMAIN-KEYWORD,581658.best
   - DOMAIN-KEYWORD,feiyuefun.fun
+  - IP-CIDR,5.45.109.91/32
   - IP-CIDR6,2a03:4000:6:2150:849c:80ff:fe8c:edb3/32
 
 # 兜底
