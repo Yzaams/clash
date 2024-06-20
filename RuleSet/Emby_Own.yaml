@@ -1,8 +1,6 @@
 payload:
 # 守候
   - DOMAIN-SUFFIX,cn2gias.uk
-# 私房菜
-  - DOMAIN-notnetflix.cos.cat
 # ACA
   - DOMAIN-SUFFIX,aca.best
   - DOMAIN-SUFFIX,misakaf.org
