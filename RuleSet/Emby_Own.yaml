@@ -7,6 +7,7 @@ payload:
 # MJJ
   - DOMAIN,direct.mjjemby.org,DIRECT
   - DOMAIN-SUFFIX,mjjemby.org
+  - IP-CIDR,85.239.235.232/32
 # 纸片人
   - DOMAIN-SUFFIX,embyplus.org
 # hxd
