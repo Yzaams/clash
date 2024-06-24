@@ -1,3 +1,10 @@
 payload:
 # 内容：魔兽大作战
   - DOMAIN-SUFFIX,braze.com
+  - DOMAIN-SUFFIX,blizzard.com
+  - DOMAIN-SUFFIX,blizzard.arc
+  - DOMAIN-SUFFIX,battle.net
+  - DOMAIN-SUFFIX,skugry.dev
+  - DOMAIN-SUFFIX,appsflyer.com
+  - DOMAIN-SUFFIX,backtrace.io
+  - DOMAIN-SUFFIX,app-measurement.com
