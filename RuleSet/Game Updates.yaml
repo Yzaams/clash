@@ -3,5 +3,4 @@ payload:
   - DOMAIN,level3.blizzard.com
   - DOMAIN-SUFFIX,appsflyer.com
   - DOMAIN-SUFFIX,backtrace.io
-  - DOMAIN-SUFFIX,skugry.dev
   - DOMAIN-SUFFIX,app-measurement.com
