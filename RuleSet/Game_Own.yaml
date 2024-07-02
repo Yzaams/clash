@@ -8,3 +8,4 @@ payload:
   - DOMAIN-SUFFIX,appsflyer.com
   - DOMAIN-SUFFIX,backtrace.io
   - DOMAIN-SUFFIX,app-measurement.com
+  - DOMAIN-SUFFIX,appsflyersdk.com
