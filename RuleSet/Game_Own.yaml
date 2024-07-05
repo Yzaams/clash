@@ -9,3 +9,4 @@ payload:
   - DOMAIN-SUFFIX,backtrace.io
   - DOMAIN-SUFFIX,app-measurement.com
   - DOMAIN-SUFFIX,appsflyersdk.com
+  - IP-CIDR,35.187.148.219/32
