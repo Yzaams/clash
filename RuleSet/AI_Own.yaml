@@ -30,3 +30,4 @@ payload:
   - DOMAIN-SUFFIX,sentry.io
   - DOMAIN-SUFFIX,stripe.com
   - DOMAIN,o33249.ingest.sentry.io
+  - DOMAIN,perplexity.ai
