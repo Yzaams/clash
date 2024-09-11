@@ -15,6 +15,11 @@ payload:
 # heisi
   - DOMAIN-SUFFIX,nekobox.best
   - DOMAIN-SUFFIX,i109.com
+# 终点站
+  - DOMAIN-SUFFIX,emby.wtf
+  - DOMAIN-SUFFIX,term.wtf
+# AWA
+  - DOMAIN-SUFFIX,811861.xyz
 
 # 兜底
   - DOMAIN-KEYWORD,emby
