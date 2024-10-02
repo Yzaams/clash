@@ -23,6 +23,8 @@ payload:
   - IP-CIDR,38.58.181.218/32
 # 天南小筑
   - DOMAIN-SUFFIX,nanflix.net
-
+# HKA
+  - DOMAIN,hka-emby.aliz.work
+  
 # 兜底
   - DOMAIN-KEYWORD,emby
