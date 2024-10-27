@@ -1,3 +1,5 @@
 payload:
 # 直连域名
   - DOMAIN-SUFFIX,immersivetranslate.com
+  - DOMAIN-SUFFIX, westerndigital.com
+  - DOMAIN-SUFFIX,seagate.com
