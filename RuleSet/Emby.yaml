@@ -1,0 +1,35 @@
+payload:
+# 守候
+  - DOMAIN-SUFFIX,emby.cn2gias.uk
+  - DOMAIN-SUFFIX,post.cn2gias.uk
+# 终点站
+  - DOMAIN-SUFFIX,emby.wtf
+  - DOMAIN-SUFFIX,term.wtf
+# PiliPili
+  - DOMAIN-SUFFIX,emby77.cf
+  - DOMAIN-SUFFIX,emby77.org
+  - DOMAIN-SUFFIX,pilipiliultra.top
+  - DOMAIN-SUFFIX,pilipiliultra.com
+  - DOMAIN-SUFFIX,pilipili.club
+# Nya
+  - DOMAIN-SUFFIX,bangumi.ca
+# MJJ
+  - DOMAIN-SUFFIX,mjjemby.org
+# 纸片人
+  - DOMAIN-SUFFIX,9521732.xyz
+  - DOMAIN-SUFFIX,embyplus.org
+# AWA
+  - DOMAIN-SUFFIX,811861.xyz
+# 飞跃彩虹
+  - DOMAIN-KEYWORD,581658.best
+  - DOMAIN-KEYWORD,feiyuefun.fun
+# 飞跃星空
+  - DOMAIN-KEYWORD,123456.buzz
+  - DOMAIN-KEYWORD,7777777.buzz
+# hxd
+  - DOMAIN-SUFFIX,hxd.as174.com
+  - DOMAIN-SUFFIX,emby.as174.com
+  - DOMAIN-SUFFIX,bili.rip
+  - DOMAIN-SUFFIX,nvidia.rip
+# 兜底
+  - DOMAIN-KEYWORD,emby
