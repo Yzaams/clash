@@ -31,5 +31,7 @@ payload:
   - DOMAIN-SUFFIX,emby.as174.com
   - DOMAIN-SUFFIX,bili.rip
   - DOMAIN-SUFFIX,nvidia.rip
+# 星云
+  - DOMAIN-SUFFIX,nebula-media.org
 # 兜底
   - DOMAIN-KEYWORD,emby
